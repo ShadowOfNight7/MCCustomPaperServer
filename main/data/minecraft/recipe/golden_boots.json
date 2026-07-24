@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "X": "#minecraft:gold_tool_materials"
+    "x": "#minecraft:gold_tool_materials"
   },
   "pattern": [
-    "X X",
-    "X X"
+    "x x",
+    "x x"
   ],
   "result": {
     "id": "minecraft:golden_boots"
