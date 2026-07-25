@@ -87,9 +87,9 @@ kill @e[tag=ClonedShulkerBullet,scores={time=50..}]
 
 execute as @e[type=ender_dragon] at @s run function gameify:enhanced_ender_dragon/enhanced_ender_dragon with entity @s
 execute as @e[tag=TrackingDragonFireball] at @s run function gameify:enhanced_ender_dragon/enhanced_dragon_fireball with entity @s
-execute as @e[type=end_crystal] at @s run function gameify:enhanced_ender_dragon/enhanced_end_crystal with entity @s
+execute as @e[type=end_crystal] at @s if entity @e[type=ender_dragon] run function gameify:enhanced_ender_dragon/enhanced_end_crystal with entity @s
 execute as @e[tag=TheEyes] at @s run function gameify:enhanced_ender_dragon/enhanced_eye2 with entity @s
-execute as @e[tag=EndCrystalMarker] at @s run function gameify:enhanced_ender_dragon/end_crystal_death with entity @s
+execute as @e[tag=EndCrystalMarker] at @s if entity @e[type=ender_dragon] run function gameify:enhanced_ender_dragon/end_crystal_death with entity @s
 
 
 execute as @e[scores={cooldown=1..}] at @s run scoreboard players remove @s cooldown 1
