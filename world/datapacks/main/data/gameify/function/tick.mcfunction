@@ -93,6 +93,7 @@ execute as @e[type=shulker_bullet,scores={time=1},tag=!ClonedShulkerBullet] at @
 
 execute as @e[tag=ClonedShulkerBullet] at @s if entity @p[distance=..1] run effect give @p[distance=..1] levitation 10 1
 execute as @e[tag=ClonedShulkerBullet] at @s if entity @p[distance=..1] run kill @s
+kill @e[tag=ClonedShulkerBullet,scores={time=50..}]
 
 execute as @e[type=ender_dragon] at @s run function gameify:enhanced_ender_dragon/enhanced_ender_dragon with entity @s
 execute as @e[tag=TrackingDragonFireball] at @s run function gameify:enhanced_ender_dragon/enhanced_dragon_fireball with entity @s
