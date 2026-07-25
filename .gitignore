@@ -137,9 +137,6 @@ world/data/minecraft/scoreboard.dat
 world/data/minecraft/stopwatches.dat
 world/data/minecraft/world_clocks.dat
 world/datapacks/bukkit/pack.mcmeta
-world/datapacks/main/data/gameify/function/tick.mcfunction
-world/datapacks/main/data/gameify/function/enhanced_shulker/enhanced_shulker_bullet.mcfunction
-world/datapacks/main/data/gameify/function/enhanced_shulker/enhanced_shulker.mcfunction
 world/dimensions/minecraft/overworld/paper-world.yml
 world/dimensions/minecraft/overworld/data/minecraft/chunk_tickets.dat
 world/dimensions/minecraft/overworld/data/minecraft/game_rules.dat
