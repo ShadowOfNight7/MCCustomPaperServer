@@ -10,5 +10,6 @@ execute as @s[scores={time=350..}] at @s if score @s random matches 1..2 run sum
 
 execute as @s[scores={time=350..}] run scoreboard players set @s time 100
 
+execute as @s[tag=!Phase2] at @s store result score @s health run data get entity @s Health 10000
 execute as @s[tag=!Phase2,scores={health=..500000}] at @s run scoreboard players set @e[type=marker,tag=!AliveEndCrystal] random 8790
 execute as @s[tag=!Phase2,scores={health=..500000}] at @s run tag @s add Phase2
