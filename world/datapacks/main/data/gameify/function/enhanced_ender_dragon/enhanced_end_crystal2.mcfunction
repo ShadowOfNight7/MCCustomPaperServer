@@ -1,0 +1,8 @@
+execute as @s if entity @p[distance=..22] facing entity @p eyes unless entity @p[distance=..1] if block ~ ~0.35 ~ #air positioned ~ ~-1 ~ unless entity @p[distance=..1] positioned ~ ~1 ~ run particle dragon_breath ~ ~ ~ 0 0 0 0.01 2 force
+execute as @s if entity @p[distance=..22] facing entity @p eyes unless entity @p[distance=..1] if block ~ ~0.35 ~ bedrock positioned ~ ~-1 ~ unless entity @p[distance=..1] positioned ~ ~1 ~ run particle dragon_breath ~ ~ ~ 0 0 0 0.01 2 force
+
+execute as @s if entity @p[distance=..22] facing entity @p eyes if entity @p[distance=..1] as @p at @s run damage @s 3 magic by @e[type=end_crystal,limit=1,sort=nearest] from @e[type=end_crystal,limit=1,sort=nearest]
+execute as @s if entity @p[distance=..22] facing entity @p eyes positioned ~ ~-1 ~ if entity @p[distance=..1] as @p at @s run damage @s 3 magic by @e[type=end_crystal,limit=1,sort=nearest] from @e[type=end_crystal,limit=1,sort=nearest]
+
+execute as @s if entity @p[distance=..22] facing entity @p eyes unless entity @p[distance=..1] if block ~ ~0.35 ~ #air positioned ~ ~-1 ~ unless entity @p[distance=..1] positioned ~ ~1 ~ positioned ^ ^ ^0.5 run function gameify:enhanced_ender_dragon/enhanced_end_crystal2 with entity @s
+execute as @s if entity @p[distance=..22] facing entity @p eyes unless entity @p[distance=..1] if block ~ ~0.35 ~ bedrock positioned ~ ~-1 ~ unless entity @p[distance=..1] positioned ~ ~1 ~ positioned ^ ^ ^0.5 run function gameify:enhanced_ender_dragon/enhanced_end_crystal2 with entity @s

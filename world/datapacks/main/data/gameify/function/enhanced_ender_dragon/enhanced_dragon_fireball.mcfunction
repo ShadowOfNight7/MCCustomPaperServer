@@ -1,3 +1,6 @@
+execute as @s at @s run attribute @s max_health base set 500
+execute as @s[scores={time=1}] at @s run data merge entity @s {Health:500f}
+
 execute as @s at @s if score @s time = @s posX store result score @s random run random value 1..10
 execute as @s at @s if score @s time = @s posX if score @s random matches 1 facing entity @p feet positioned 0.001 0.001 0.001 positioned ^ ^ ^0.6 run summon interaction ~ ~ ~ {Tags:["DragonFireballGuide"]}
 execute as @s at @s if score @s time = @s posX if score @s random matches 2 facing entity @p feet positioned 0.001 0.001 0.001 positioned ^ ^ ^0.8 run summon interaction ~ ~ ~ {Tags:["DragonFireballGuide"]}

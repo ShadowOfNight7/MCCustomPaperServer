@@ -81,16 +81,6 @@ execute as @e[type=ghast] at @s run function gameify:enhanced_ghast/enhanced_gha
 execute as @e[type=shulker] at @s run function gameify:enhanced_shulker/enhanced_shulker with entity @s
 execute as @e[type=shulker_bullet,scores={time=1},tag=!ClonedShulkerBullet] at @s run function gameify:enhanced_shulker/enhanced_shulker_bullet with entity @s
 
-# execute as @e[type=shulker_bullet,scores={time=1},tag=!ClonedShulkerBullet] at @s run summon shulker_bullet ~ ~ ~ {Tags:["ClonedShulkerBullet"],Motion:[0.1d,0.7d,0d],HasBeenShot:1b}
-# execute as @e[type=shulker_bullet,scores={time=1},tag=!ClonedShulkerBullet] at @s run summon shulker_bullet ~ ~ ~ {Tags:["ClonedShulkerBullet"],Motion:[-0.1d,0.7d,0d],HasBeenShot:1b}
-# execute as @e[type=shulker_bullet,scores={time=1},tag=!ClonedShulkerBullet] at @s run summon shulker_bullet ~ ~ ~ {Tags:["ClonedShulkerBullet"],Motion:[0d,0.7d,0.1d],HasBeenShot:1b}
-# execute as @e[type=shulker_bullet,scores={time=1},tag=!ClonedShulkerBullet] at @s run summon shulker_bullet ~ ~ ~ {Tags:["ClonedShulkerBullet"],Motion:[0d,0.7d,-0.1d],HasBeenShot:1b}
-# execute as @e[type=shulker_bullet,scores={time=1},tag=!ClonedShulkerBullet] at @s run summon shulker_bullet ~ ~ ~ {Tags:["ClonedShulkerBullet"],Motion:[0.1d,0.7d,0.1d],HasBeenShot:1b}
-# execute as @e[type=shulker_bullet,scores={time=1},tag=!ClonedShulkerBullet] at @s run summon shulker_bullet ~ ~ ~ {Tags:["ClonedShulkerBullet"],Motion:[0.1d,0.7d,-0.1d],HasBeenShot:1b}
-# execute as @e[type=shulker_bullet,scores={time=1},tag=!ClonedShulkerBullet] at @s run summon shulker_bullet ~ ~ ~ {Tags:["ClonedShulkerBullet"],Motion:[-0.1d,0.7d,0.1d],HasBeenShot:1b}
-# execute as @e[type=shulker_bullet,scores={time=1},tag=!ClonedShulkerBullet] at @s run summon shulker_bullet ~ ~ ~ {Tags:["ClonedShulkerBullet"],Motion:[-0.1d,0.7d,-0.1d],HasBeenShot:1b}
-
-
 execute as @e[tag=ClonedShulkerBullet] at @s if entity @p[distance=..1] run effect give @p[distance=..1] levitation 10 1
 execute as @e[tag=ClonedShulkerBullet] at @s if entity @p[distance=..1] run kill @s
 kill @e[tag=ClonedShulkerBullet,scores={time=50..}]
@@ -98,6 +88,8 @@ kill @e[tag=ClonedShulkerBullet,scores={time=50..}]
 execute as @e[type=ender_dragon] at @s run function gameify:enhanced_ender_dragon/enhanced_ender_dragon with entity @s
 execute as @e[tag=TrackingDragonFireball] at @s run function gameify:enhanced_ender_dragon/enhanced_dragon_fireball with entity @s
 execute as @e[type=end_crystal] at @s run function gameify:enhanced_ender_dragon/enhanced_end_crystal with entity @s
+execute as @e[tag=TheEyes] at @s run function gameify:enhanced_ender_dragon/enhanced_eye2 with entity @s
+execute as @e[tag=EndCrystalMarker] at @s run function gameify:enhanced_ender_dragon/end_crystal_death with entity @s
 
 
 execute as @e[scores={cooldown=1..}] at @s run scoreboard players remove @s cooldown 1
