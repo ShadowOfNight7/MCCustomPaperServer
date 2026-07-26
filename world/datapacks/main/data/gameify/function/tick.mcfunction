@@ -29,7 +29,7 @@ execute as @e[type=#skeletons,tag=!Exception,scores={time=1}] at @s run team joi
 #Enemies
 execute as @e[type=arrow] at @s run function gameify:enhanced_skeleton/arrow with entity @s
 
-execute as @e[type=#skeletons,tag=Enhanced] at @s run function gameify:enhanced_skeleton/enhanced_skeleton with entity @s
+execute as @e[type=#skeletons,type=!wither_skeleton,tag=Enhanced] at @s run function gameify:enhanced_skeleton/enhanced_skeleton with entity @s
 execute as @e[tag=TeleportationSkeleton] at @s run function gameify:teleportskeleton with entity @s
 
 execute as @e[type=#zombies] at @s run function gameify:enhanced_zombie/enhanced_zombie with entity @s
@@ -46,7 +46,7 @@ execute as @e[type=area_effect_cloud,nbt={potion_contents:{custom_effects:[{id:"
 execute as @e[type=#sensitive_to_bane_of_arthropods] at @s run function gameify:enhanced_spider/enhanced_spider with entity @s
 execute as @e[type=enderman] at @s run function gameify:enhanced_enderman/enhanced_enderman with entity @s
 execute as @e[type=phantom] at @s run function gameify:enhanced_phantom/enhanced_phantom with entity @s
-execute as @e[type=silverfish] at @s run function gameify:enhanced_silverfish/enhanced_silverfish with entity @s
+execute as @e[type=silverfish,tag=!Ignored] at @s run function gameify:enhanced_silverfish/enhanced_silverfish with entity @s
 execute as @e[type=endermite] at @s run function gameify:enhanced_silverfish/enhanced_silverfish with entity @s
 execute as @e[type=slime] at @s run function gameify:enhanced_slime/enhanced_slime with entity @s
 execute as @e[type=magma_cube] at @s run function gameify:enhanced_slime/enhanced_slime with entity @s
@@ -96,9 +96,9 @@ execute as @e[type=dragon_fireball] at @s unless entity @e[type=ender_dragon] ru
 execute as @e[tag=StaringEyes] at @s unless entity @e[type=ender_dragon] run kill @s
 
 execute as @e[type=wither] at @s run function gameify:enhanced_wither/enhanced_wither with entity @s
-
-
-
+execute unless entity @e[type=wither] as @e[scores={witherCorrode=1..}] run scoreboard players set @s witherCorrode 0
+execute unless entity @e[type=wither] run kill @e[tag=WitherLaser]
+execute as @e[tag=WitherBeam] at @s run function gameify:enhanced_wither/wither_beam with entity @s
 
 
 execute as @e[scores={cooldown=1..}] at @s run scoreboard players remove @s cooldown 1

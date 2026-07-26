@@ -92,3 +92,11 @@ scoreboard objectives add conceal trigger
 #Knight
 scoreboard objectives add knightAbility1 dummy
 scoreboard players set @e knightAbility1 0
+
+
+
+
+
+#Wither
+scoreboard objectives add witherCorrode dummy
+scoreboard players set @e witherCorrode 0
