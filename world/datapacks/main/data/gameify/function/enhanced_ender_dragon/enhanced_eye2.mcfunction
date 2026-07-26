@@ -10,7 +10,7 @@ execute as @s at @s on passengers if entity @s[type=interaction] on attacker if 
 execute as @s[scores={random=..0}] at @s run kill @e[tag=Eyes]
 execute as @s[scores={random=..101}] at @s run scoreboard players add @s random 1
 
-execute as @s[scores={time=6000..}] at @s run kill @e[tag=Eyes]
+execute as @s[scores={time=3600..}] at @s run kill @e[tag=Eyes]
 
 tag @s remove Eyes
 execute as @s at @s on passengers run tag @s remove Eyes

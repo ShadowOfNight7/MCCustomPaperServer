@@ -4,6 +4,8 @@ execute as @s at @s unless entity @e[type=end_crystal,nbt={ShowBottom:1b},distan
 execute as @s at @s unless entity @e[type=end_crystal,nbt={ShowBottom:1b},distance=..1] if entity @s[tag=AliveEndCrystal] in the_end positioned 0 100 0 run function gameify:enhanced_ender_dragon/enhanced_eye with entity @s
 execute as @s at @s unless entity @e[type=end_crystal,nbt={ShowBottom:1b},distance=..1] if entity @s[tag=AliveEndCrystal] in the_end positioned 0 100 0 run function gameify:enhanced_ender_dragon/enhanced_eye with entity @s
 
+execute as @s at @s unless entity @e[type=end_crystal,nbt={ShowBottom:1b},distance=..1] if entity @s[tag=AliveEndCrystal] in the_end run damage @e[type=ender_dragon,limit=1] 13 explosion
+
 execute as @s at @s unless entity @e[type=end_crystal,nbt={ShowBottom:1b},distance=..1] if entity @s[tag=AliveEndCrystal] run tag @s remove AliveEndCrystal
 execute as @s at @s if entity @e[type=end_crystal,nbt={ShowBottom:1b},distance=..1] unless entity @s[tag=AliveEndCrystal] run tag @s add AliveEndCrystal
 

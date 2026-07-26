@@ -91,6 +91,15 @@ execute as @e[type=end_crystal] at @s if entity @e[type=ender_dragon] run functi
 execute as @e[tag=TheEyes] at @s run function gameify:enhanced_ender_dragon/enhanced_eye2 with entity @s
 execute as @e[tag=EndCrystalMarker] at @s if entity @e[type=ender_dragon] run function gameify:enhanced_ender_dragon/end_crystal_death with entity @s
 execute as @e[tag=EndCrystalMarker] at @s unless entity @e[type=ender_dragon] run scoreboard players set @s random 0
+execute as @e[tag=DragonLaser] at @s unless entity @e[type=ender_dragon] run kill @s
+execute as @e[type=dragon_fireball] at @s unless entity @e[type=ender_dragon] run kill @s
+execute as @e[tag=StaringEyes] at @s unless entity @e[type=ender_dragon] run kill @s
+
+execute as @e[type=wither] at @s run function gameify:enhanced_wither/enhanced_wither with entity @s
+
+
+
+
 
 execute as @e[scores={cooldown=1..}] at @s run scoreboard players remove @s cooldown 1
 execute as @e[scores={cooldown2=1..}] at @s run scoreboard players remove @s cooldown2 1
