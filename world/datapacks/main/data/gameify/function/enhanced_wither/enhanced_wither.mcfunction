@@ -97,14 +97,6 @@ execute as @s[scores={posY=0,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["
 execute as @s[scores={posY=0,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
 execute as @s[scores={posY=0,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
 execute as @s[scores={posY=0,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=0,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=0,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=0,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=0,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=0,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=0,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=0,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=0,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
 
 execute as @s[scores={posY=-40,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
 execute as @s[scores={posY=-40,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
@@ -114,23 +106,7 @@ execute as @s[scores={posY=-40,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:
 execute as @s[scores={posY=-40,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
 execute as @s[scores={posY=-40,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
 execute as @s[scores={posY=-40,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=-40,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=-40,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=-40,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=-40,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=-40,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=-40,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=-40,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=-40,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
 
-execute as @s[scores={posY=-80,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=-80,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=-80,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=-80,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=-80,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=-80,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=-80,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
-execute as @s[scores={posY=-80,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
 execute as @s[scores={posY=-80,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
 execute as @s[scores={posY=-80,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
 execute as @s[scores={posY=-80,posZ=1..20}] at @s run summon marker ~ ~ ~ {Tags:["WitherBeam"]}
