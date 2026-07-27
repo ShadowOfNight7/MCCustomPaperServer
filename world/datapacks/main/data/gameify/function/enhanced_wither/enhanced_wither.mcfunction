@@ -62,6 +62,7 @@ execute as @s[scores={posX=..-31,random=1..20}] at @s run scoreboard players set
 execute as @s[scores={posX=0,random=21..40}] at @s run summon wither_skeleton ~ ~ ~ {Tags:["WitherMinion"],equipment:{mainhand:{id:"iron_sword",count:1,components:{enchantments:{sharpness:2,vanishing_curse:1}}}},Motion:[0d,-1d,0d],Health:7f,attributes:[{id:"max_health",base:10f}]}
 execute as @s[scores={posX=0,random=21..40}] at @s run summon wither_skeleton ~ ~ ~ {Tags:["WitherMinion"],equipment:{mainhand:{id:"iron_sword",count:1,components:{enchantments:{sharpness:2,vanishing_curse:1}}}},Motion:[0d,-1d,0d],Health:7f,attributes:[{id:"max_health",base:10f}]}
 execute as @s[scores={posX=0,random=21..40}] at @s run summon wither_skeleton ~ ~ ~ {Tags:["WitherMinion"],equipment:{mainhand:{id:"iron_sword",count:1,components:{enchantments:{sharpness:2,vanishing_curse:1}}}},Motion:[0d,-1d,0d],Health:7f,attributes:[{id:"max_health",base:10f}]}
+execute as @s[scores={posX=0,random=21..40}] at @s as @e[tag=WitherMinion] at @s run attribute @s max_health base set 15
 execute as @s[scores={posX=0,random=21..40}] at @s run effect give @e[tag=WitherMinion] glowing infinite 0 true
 execute as @s[scores={posX=0,random=21..40}] at @s run tellraw @a[distance=..25] ["The Wither has summoned minions! Kill them to make the wither vulnerable again."]
 execute as @s[scores={posX=..0,random=21..40}] at @s run scoreboard players set @s posX 800
