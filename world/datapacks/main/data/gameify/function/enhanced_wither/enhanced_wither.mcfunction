@@ -33,8 +33,17 @@ scoreboard players set @a[distance=10.001..,scores={witherCorrode=1..}] witherCo
 execute as @s at @s run kill @e[type=falling_block,distance=..50]
 
 execute as @s at @s run scoreboard players remove @s posX 1
+
+#PreHealth
+execute as @s at @s store result score @s healthAfter run data get entity @s Health 10000
+execute as @s at @s run scoreboard players operation @s health -= @s healthAfter
+execute as @s[scores={health=50001..}] at @s run function gameify:enhanced_wither/health_imtigate with entity @s
+#After Health
 execute as @s at @s store result score @s health run data get entity @s Health 10000
 execute as @s[scores={health=..3000000}] at @s run scoreboard players remove @s posY 1
+execute as @s[scores={health=..500000}] at @s run item replace entity @s weapon.mainhand with air
+execute as @s[scores={health=500001..}] at @s run item replace entity @s weapon.mainhand with wither_rose[death_protection={},item_model="minecraft:air",max_stack_size=99] 99
+
 
 #ATTACKS
 execute as @s[scores={posX=0}] at @s store result score @s random run random value 1..80

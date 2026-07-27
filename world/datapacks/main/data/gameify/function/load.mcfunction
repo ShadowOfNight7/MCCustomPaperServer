@@ -18,7 +18,9 @@ scoreboard objectives add deaths deathCount
 
 scoreboard objectives add lives dummy
 
+scoreboard objectives add healthBefore dummy
 scoreboard objectives add health dummy
+scoreboard objectives add healthAfter dummy
 
 scoreboard objectives add clock dummy
 
