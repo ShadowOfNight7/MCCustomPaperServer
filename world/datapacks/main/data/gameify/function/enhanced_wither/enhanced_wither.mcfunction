@@ -35,9 +35,9 @@ execute as @s at @s run kill @e[type=falling_block,distance=..50]
 execute as @s at @s run scoreboard players remove @s posX 1
 
 #PreHealth
-execute as @s at @s store result score @s healthAfter run data get entity @s Health 10000
-execute as @s at @s run scoreboard players operation @s health -= @s healthAfter
-execute as @s[scores={health=50001..}] at @s run function gameify:enhanced_wither/health_imtigate with entity @s
+# execute as @s at @s store result score @s healthAfter run data get entity @s Health 10000
+# execute as @s at @s run scoreboard players operation @s health -= @s healthAfter
+# execute as @s[scores={health=50001..}] at @s run function gameify:enhanced_wither/health_imtigate with entity @s
 #After Health
 execute as @s at @s store result score @s health run data get entity @s Health 10000
 execute as @s[scores={health=..3000000}] at @s run scoreboard players remove @s posY 1
