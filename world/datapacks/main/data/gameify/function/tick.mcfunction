@@ -98,6 +98,7 @@ execute as @e[tag=StaringEyes] at @s unless entity @e[type=ender_dragon] run kil
 execute as @e[type=wither] at @s run function gameify:enhanced_wither/enhanced_wither with entity @s
 execute unless entity @e[type=wither] as @e[scores={witherCorrode=1..}] run scoreboard players set @s witherCorrode 0
 execute unless entity @e[type=wither] run kill @e[tag=WitherLaser]
+execute unless entity @e[type=wither] run kill @e[tag=WitherStill]
 execute as @e[tag=WitherBeam] at @s run function gameify:enhanced_wither/wither_beam with entity @s
 
 
