@@ -5,7 +5,7 @@ execute as @s[scores={time=..5}] at @s run scoreboard players set @s posX 200
 execute as @s[scores={time=..5}] at @s run scoreboard players set @s posY 100
 execute as @s[scores={time=1}] at @s run spreadplayers ~ ~ 0 1 true @s
 execute as @s[scores={time=1}] at @s run attribute @s follow_range base set 256
-execute as @s[scores={time=1}] at @s run attribute @s gravity base set 1
+execute as @s[scores={time=1..5}] at @s run attribute @s gravity base set 1
 execute as @s[scores={time=6..}] at @s run scoreboard players add @a[distance=..10] witherCorrode 1
 
 execute as @e[scores={witherCorrode=20..}] at @s run effect give @s wither 2 0 false
