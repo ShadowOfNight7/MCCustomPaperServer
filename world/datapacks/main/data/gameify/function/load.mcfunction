@@ -8,6 +8,7 @@ scoreboard objectives add posX dummy
 scoreboard objectives add posY dummy
 scoreboard objectives add posZ dummy
 scoreboard objectives add random dummy
+scoreboard objectives add blank dummy
 
 scoreboard objectives add globalScore dummy
 scoreboard players set @a globalScore -2147483648

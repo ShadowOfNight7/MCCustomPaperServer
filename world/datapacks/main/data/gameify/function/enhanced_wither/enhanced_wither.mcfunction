@@ -41,9 +41,15 @@ execute as @s at @s run scoreboard players operation @s health -= @s healthAfter
 execute as @s[scores={health=500001..}] at @s run function gameify:enhanced_wither/health_imtigate with entity @s
 #After Health
 execute as @s at @s store result score @s health run data get entity @s Health 10000
+
+execute as @s[scores={health=..3000000}] at @s run scoreboard players add @s blank 1
+execute as @s[scores={health=3000001..}] at @s run scoreboard players set @s blank 0
 execute as @s[scores={health=..3000000}] at @s run scoreboard players remove @s posY 1
 execute as @s[scores={health=..500000}] at @s run item replace entity @s weapon.mainhand with air
 execute as @s[scores={health=500001..}] at @s run item replace entity @s weapon.mainhand with wither_rose[death_protection={},item_model="minecraft:air",max_stack_size=99] 99
+
+execute as @s[scores={blank=1}] at @s run tellraw @a[distance=..25] ["You feel The Wither's lifeforce weaken... Their lifesteal has been disabled for a while!"]
+execute as @s[scores={blank=600}] at @s run tellraw @a[distance=..25] ["Brace yourself! The Wither's lifesteal has returned!"]
 
 execute as @s[scores={posX=..0}] at @s unless score @s posX matches 1..20 unless score @s posZ matches 21..40 unless entity @e[tag=WitherStill] run summon marker ~ ~ ~ {Tags:["WitherStill"]}
 execute as @s[scores={posX=..0}] unless score @s posX matches 1..20 unless score @s posZ matches 21..40 at @s at @e[tag=WitherStill,limit=1,sort=nearest] run tp @s ~ ~ ~
@@ -143,7 +149,7 @@ execute as @s[scores={posY=..-10,posZ=21..40}] at @s run scoreboard players set 
 execute as @s[nbt={Invulnerable:false}] at @s if entity @e[tag=WitherMinion] run data merge entity @s {Invulnerable:true}
 execute as @s[nbt={Invulnerable:true}] at @s unless entity @e[tag=WitherMinion] run data merge entity @s {Invulnerable:false}
 
-execute as @s at @s as @e[type=!glow_item_frame,type=!armor_stand,type=!item_frame,type=!item,type=!painting,type=!#boat,type=!#redirectable_projectile,type=!#arrows,type=!#wither_friends,nbt={HurtTime:9s}] unless entity @e[tag=WitherMinion] at @s run function gameify:enhanced_wither/lifesteal with entity @s
+execute as @s at @s unless entity @s[scores={health=..3000000,blank=..600}] as @e[type=!glow_item_frame,type=!armor_stand,type=!item_frame,type=!item,type=!painting,type=!#boat,type=!#redirectable_projectile,type=!#arrows,type=!#wither_friends,nbt={HurtTime:9s}] unless entity @e[tag=WitherMinion] at @s run function gameify:enhanced_wither/lifesteal with entity @s
 
 
 
