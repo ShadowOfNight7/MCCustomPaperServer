@@ -68,6 +68,7 @@ execute as @s[scores={posX=..0,random=21..40}] at @s run scoreboard players set 
 
 #EXPLODE
 execute as @s[scores={posX=0,random=41..60}] at @s run tellraw @a[distance=..25] ["The Wither seems to be charging something..."]
+execute as @s[scores={posX=0,random=41..60}] at @s run attribute @s flying_speed base set 0.2
 execute as @s[scores={posX=-150..0,random=41..60}] at @s run particle smoke ~ ~2 ~ 0 0 0 0.2 5 force
 execute as @s[scores={posX=-150..-30,random=41..60}] at @s run particle smoke ~ ~2 ~ 0.05 0.05 0.05 0.4 10 force
 execute as @s[scores={posX=-150..-60,random=41..60}] at @s run particle smoke ~ ~2 ~ 0.1 0.1 0.1 0.6 15 force
@@ -75,6 +76,7 @@ execute as @s[scores={posX=-150..-90,random=41..60}] at @s run particle smoke ~ 
 execute as @s[scores={posX=-150..-120,random=41..60}] at @s run particle smoke ~ ~2 ~ 0.2 0.2 0.2 1 25 force
 execute as @s[scores={posX=-150,random=41..60}] at @s run particle minecraft:smoke ~ ~2 ~ 1 1 1 1.5 3000 force
 execute as @s[scores={posX=-150,random=41..60}] at @s as @e[type=!#minecraft:wither_friends,distance=..10] at @s run damage @s 45 explosion by @e[tag=WitherMarker,limit=1] from @e[tag=WitherMarker,limit=1]
+execute as @s[scores={posX=..-150,random=41..60}] at @s run attribute @s flying_speed base reset
 execute as @s[scores={posX=..-150,random=41..60}] at @s run scoreboard players set @s posX 400
 
 #Targetted laser
