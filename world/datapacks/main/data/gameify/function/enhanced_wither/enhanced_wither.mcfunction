@@ -44,8 +44,8 @@ execute as @s[scores={health=..3000000}] at @s run scoreboard players remove @s 
 execute as @s[scores={health=..500000}] at @s run item replace entity @s weapon.mainhand with air
 execute as @s[scores={health=500001..}] at @s run item replace entity @s weapon.mainhand with wither_rose[death_protection={},item_model="minecraft:air",max_stack_size=99] 99
 
-execute as @s[scores={posY=..0}] at @s run attribute @s flying_speed base set 0
-execute as @s[scores={posY=1..}] at @s run attribute @s flying_speed base reset
+execute as @s[scores={posX=..0}] at @s run attribute @s flying_speed base set 0
+execute as @s[scores={posX=1..}] at @s run attribute @s flying_speed base reset
 
 
 #ATTACKS
