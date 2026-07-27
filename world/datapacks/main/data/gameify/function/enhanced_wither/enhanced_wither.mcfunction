@@ -44,9 +44,11 @@ execute as @s[scores={health=..3000000}] at @s run scoreboard players remove @s 
 execute as @s[scores={health=..500000}] at @s run item replace entity @s weapon.mainhand with air
 execute as @s[scores={health=500001..}] at @s run item replace entity @s weapon.mainhand with wither_rose[death_protection={},item_model="minecraft:air",max_stack_size=99] 99
 
-execute as @s[scores={posX=..0}] at @s unless entity @e[tag=WitherStill] run summon marker ~ ~ ~ {Tags:["WitherStill"]}
-execute as @s[scores={posX=..0}] at @s at @e[tag=WitherStill,limit=1,sort=nearest] run tp @s ~ ~ ~
+execute as @s[scores={posX=..0}] at @s unless score @s posX matches 1..20 unless score @s posZ matches 21..40 unless entity @e[tag=WitherStill] run summon marker ~ ~ ~ {Tags:["WitherStill"]}
+execute as @s[scores={posX=..0}] unless score @s posX matches 1..20 unless score @s posZ matches 21..40 at @s at @e[tag=WitherStill,limit=1,sort=nearest] run tp @s ~ ~ ~
 execute as @s[scores={posX=1..}] at @s run kill @e[tag=WitherStill,distance=..3]
+execute as @s at @s if score @s posX matches 1..20 run kill @e[tag=WitherStill]
+execute as @s at @s if score @s posZ matches 21..40 run kill @e[tag=WitherStill]
 
 #ATTACKS
 execute as @s[scores={posX=0}] at @s store result score @s random run random value 1..80
