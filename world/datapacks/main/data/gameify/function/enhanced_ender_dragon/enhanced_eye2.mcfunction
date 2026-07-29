@@ -14,3 +14,5 @@ execute as @s[scores={time=3600..}] at @s run kill @e[tag=Eyes]
 
 tag @s remove Eyes
 execute as @s at @s on passengers run tag @s remove Eyes
+
+effect give @s invisibility infinite 255 true

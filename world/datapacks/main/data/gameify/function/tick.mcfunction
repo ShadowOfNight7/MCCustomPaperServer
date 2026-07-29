@@ -101,6 +101,9 @@ execute unless entity @e[type=wither] run kill @e[tag=WitherLaser]
 execute unless entity @e[type=wither] run kill @e[tag=WitherStill]
 execute as @e[tag=WitherBeam] at @s run function gameify:enhanced_wither/wither_beam with entity @s
 
+execute as @e[type=warden] at @s run function gameify:enhanced_warden/enhanced_warden with entity @s
+
+
 
 execute as @e[scores={cooldown=1..}] at @s run scoreboard players remove @s cooldown 1
 execute as @e[scores={cooldown2=1..}] at @s run scoreboard players remove @s cooldown2 1
