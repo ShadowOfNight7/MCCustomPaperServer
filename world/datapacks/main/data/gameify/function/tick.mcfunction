@@ -103,6 +103,8 @@ execute as @e[tag=WitherBeam] at @s run function gameify:enhanced_wither/wither_
 
 execute as @e[type=warden] at @s run function gameify:enhanced_warden/enhanced_warden with entity @s
 
+execute as @e[type=elder_guardian] at @s run function gameify:enhanced_elder_guardian/enhanced_elder_guardian with entity @s
+
 
 
 execute as @e[scores={cooldown=1..}] at @s run scoreboard players remove @s cooldown 1
