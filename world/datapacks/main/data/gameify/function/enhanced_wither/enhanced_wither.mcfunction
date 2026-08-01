@@ -3,7 +3,10 @@ execute as @s[scores={time=..5}] at @s run attribute @s max_health base set 600
 execute as @s[scores={time=..5}] at @s run data merge entity @s {Health:600f}
 execute as @s[scores={time=..5}] at @s run scoreboard players set @s posX 200
 execute as @s[scores={time=..5}] at @s run scoreboard players set @s posY 100
-execute as @s[scores={time=1}] at @s run spreadplayers ~ ~ 0 1 true @s
+execute as @s[scores={time=1}] in minecraft:overworld if entity @s[distance=..0] at @s run spreadplayers ~ ~ 0 1 true @s
+execute as @s[scores={time=1}] in minecraft:the_end if entity @s[distance=..0] at @s run spreadplayers ~ ~ 0 1 true @s
+execute as @s[scores={time=1}] in minecraft:the_nether if entity @s[distance=..0] at @s run spreadplayers ~ ~ 0 1 under 125 true @s
+
 execute as @s[scores={time=1}] at @s run attribute @s follow_range base set 256
 execute as @s[scores={time=1..5}] at @s run attribute @s gravity base set 1
 execute as @s[scores={time=6..}] at @s run scoreboard players add @a[distance=..10] witherCorrode 1

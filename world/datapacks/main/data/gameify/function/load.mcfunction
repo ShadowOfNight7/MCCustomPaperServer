@@ -103,3 +103,8 @@ scoreboard players set @e knightAbility1 0
 #Wither
 scoreboard objectives add witherCorrode dummy
 scoreboard players set @e witherCorrode 0
+
+#ElderGuardian
+scoreboard objectives add elderCurse dummy
+scoreboard players set @e elderCurse 0
+
