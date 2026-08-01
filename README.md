@@ -46,7 +46,7 @@ _"You hear the horrific screams of anguish from a comrades soul as it is dissipa
 Souls are harvested from player via the Occultist's abilities (see Roles Descriptions for more information). Each player only has one soul per life, and will loose three max hearts if they have lost their soul. Souls can be used when standing in the AoE of an enemy banner to weaken its effects. Each soul lasts for 20 minutes and the duration stacks, however, as each soul expires the effect will also be reduced. 
 
 First soul used: 
-- Defenders' buff reduced:
+- Defenders' buffs reduced:
     - Regeneration ~~III~~ -> **II**
     - Resistance ~~II~~ -> **I**
     - Strength ~~II~~ -> **I**
@@ -56,7 +56,7 @@ First soul used:
     - Haste ~~I~~ -> **Nullified**
     - Dolphin's Grace​‌ ~~I~~ -> **Nullified**
     - Water Breathing ~~I~~ -> **Nullified**
-- Attackers' debuff reduced:
+- Attackers' debuffs reduced:
     - Weakness ~~II~~ -> **I**
     - Slowness ~~I~~ -> **Nullified**
     - Hunger ~~III~~ -> **II**
@@ -64,19 +64,19 @@ First soul used:
     - Darkness ~~I~~ -> **Nullified**
 
 Second soul used: 
-- Attackers' debuff nullified:
+- Attackers' debuffs nullified:
     - Weakness ~~II~~ -> **Nullified**
     - Slowness ~~I~~ -> **Nullified**
     - Hunger ~~III~~ -> **Nullified**
     - Mining Fatigue ~~II~~ -> **Nullified**
     - Darkness ~~I~~ -> **Nullified**
-- Flag defense reduced:
+- Flag passive defense reduced:
     - Flag health regeneration ~~21hp/sec~~ -> **14hp/sec**
     - Flag thorns damage ~~0.5dmg/hit~~ -> **0.35dmg/hit**
 - All effects of the first soul
 
 Third soul used:
-- Defenders' buff nullified:
+- Defenders' buffs nullified:
     - Regeneration ~~III~~ -> **Nullified**
     - Resistance ~~II~~ -> **Nullified**
     - Strength ~~II~~ -> **Nullified**
@@ -90,7 +90,7 @@ Third soul used:
     - Weakness I
     - Slowness I
     - Hunger I
-- Flag defense reduced:
+- Flag passive defense reduced:
     - Flag health regeneration ~~21hp/sec~~ -> **7hp/sec**
     - Flag thorns damage ~~0.5dmg/hit~~ -> **0.25dmg/hit**
     - Flag knockback reduced by 50%
