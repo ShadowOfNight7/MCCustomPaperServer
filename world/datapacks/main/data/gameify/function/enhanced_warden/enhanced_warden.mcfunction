@@ -28,8 +28,8 @@ execute as @s at @s as @a[distance=..50] at @s if block ~ ~-1 ~ sculk_vein run a
 execute as @s at @s as @a[distance=..50] at @s if block ~ ~-1 ~ sculk_vein run attribute @s step_height base set 0
 
 
-execute as @s at @s as @a[distance=..50] at @s unless block ~ ~-1 ~ sculk_vein unless block ~ ~-1 ~ sculk unless block ~ ~-2 ~ sculk run attribute @s gravity base reset
-execute as @s at @s as @a[distance=..50] at @s unless block ~ ~-1 ~ sculk_vein unless block ~ ~-1 ~ sculk unless block ~ ~-2 ~ sculk run attribute @s step_height base reset
+execute as @s at @s as @a at @s unless block ~ ~-1 ~ sculk_vein unless block ~ ~-1 ~ sculk unless block ~ ~-2 ~ sculk run attribute @s gravity base reset
+execute as @s at @s as @a at @s unless block ~ ~-1 ~ sculk_vein unless block ~ ~-1 ~ sculk unless block ~ ~-2 ~ sculk run attribute @s step_height base reset
 
 
 execute as @s at @s on target run tag @s add WardenTarget
