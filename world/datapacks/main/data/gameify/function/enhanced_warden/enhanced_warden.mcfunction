@@ -37,10 +37,10 @@ execute as @s at @s if entity @p[distance=..3,gamemode=!creative,gamemode=!spect
 
 
 execute as @s[nbt={HurtTime:9s}] at @s run fill ~ ~-1 ~ ~ ~-1 ~ sculk_catalyst replace #sculk_replaceable
-execute as @s[nbt={HurtTime:9s}] at @s run summon drowned ~ ~ ~ {Silent:true,Invulnerable:true,CanPickUpLoot:false,NoAI:true,active_effects:[{id:"invisibility",duration:-1,show_particles:false,amplifier:0b}],Tags:["SculkSpread"],DeathLootTable:""}
-execute as @s[nbt={HurtTime:9s}] at @s run summon drowned ~ ~ ~ {Silent:true,Invulnerable:true,CanPickUpLoot:false,NoAI:true,active_effects:[{id:"invisibility",duration:-1,show_particles:false,amplifier:0b}],Tags:["SculkSpread"],DeathLootTable:""}
-execute as @s[nbt={HurtTime:9s}] at @s run summon drowned ~ ~ ~ {Silent:true,Invulnerable:true,CanPickUpLoot:false,NoAI:true,active_effects:[{id:"invisibility",duration:-1,show_particles:false,amplifier:0b}],Tags:["SculkSpread"],DeathLootTable:""}
-execute as @s[nbt={HurtTime:9s}] at @s run summon drowned ~ ~ ~ {Silent:true,Invulnerable:true,CanPickUpLoot:false,NoAI:true,active_effects:[{id:"invisibility",duration:-1,show_particles:false,amplifier:0b}],Tags:["SculkSpread"],DeathLootTable:""}
+execute as @s[nbt={HurtTime:9s}] at @s run summon drowned ~1 ~ ~ {Silent:true,Invulnerable:true,CanPickUpLoot:false,NoAI:true,active_effects:[{id:"invisibility",duration:-1,show_particles:false,amplifier:0b}],Tags:["SculkSpread"],DeathLootTable:""}
+execute as @s[nbt={HurtTime:9s}] at @s run summon drowned ~-1 ~ ~ {Silent:true,Invulnerable:true,CanPickUpLoot:false,NoAI:true,active_effects:[{id:"invisibility",duration:-1,show_particles:false,amplifier:0b}],Tags:["SculkSpread"],DeathLootTable:""}
+execute as @s[nbt={HurtTime:9s}] at @s run summon drowned ~ ~ ~1 {Silent:true,Invulnerable:true,CanPickUpLoot:false,NoAI:true,active_effects:[{id:"invisibility",duration:-1,show_particles:false,amplifier:0b}],Tags:["SculkSpread"],DeathLootTable:""}
+execute as @s[nbt={HurtTime:9s}] at @s run summon drowned ~ ~ ~-1 {Silent:true,Invulnerable:true,CanPickUpLoot:false,NoAI:true,active_effects:[{id:"invisibility",duration:-1,show_particles:false,amplifier:0b}],Tags:["SculkSpread"],DeathLootTable:""}
 execute as @s[nbt={HurtTime:9s}] at @s run summon drowned ~ ~ ~ {Silent:true,Invulnerable:true,CanPickUpLoot:false,NoAI:true,active_effects:[{id:"invisibility",duration:-1,show_particles:false,amplifier:0b}],Tags:["SculkSpread"],DeathLootTable:""}
 
 execute as @s[nbt={HurtTime:9s}] at @s run kill @e[tag=SculkSpread]
