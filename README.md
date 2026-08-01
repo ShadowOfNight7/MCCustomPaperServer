@@ -1,8 +1,6 @@
 # MCCustomPaperServer
 ## Overview
 TBA
-### Lives
-TBA
 ### Banners
 The three banners form basis of your base, they provide you with stability and safety. The banners are placed by the emperor and can not be moved afterwards, so select their location wisely. Keep in mind that the banner creates particles in its AoE so it is very hard to hide. Banners have 250 health, each time an enemy hits the flag they will take 1 damage, breaking upon reaching 0 health. After being placed down all allied players will receive the following buffs when within 30 blocks:
 - Regeneration III
@@ -25,6 +23,22 @@ Enemies in the AoE will also be inflected with negative status effects:
 - Darkness I
 - Darkness I (triggers once every 30 seconds)
 
+## Lives
+Each player will start with 7 lives and will loose a life upon death. However, if a player's lives count reaches the team's minimum lives threshold they will loose no more. At three banners the minimum lives is 5, but each time a banner is broken the entire team will be vulnerable to loosing more lives, their current lives will not be reduced.
+
+Three banners left:
+- 2 of 7 lives vulnerable (min. 5 lives)
+
+Two banners left:
+- ~~2 of 7 lives vulnerable (min. 5 lives)~~ -> **4 of 7 lives vulnerable** (min. 3 lives)
+
+Last banner left:
+- ~~2 of 7 lives vulnerable (min. 5 lives)~~ -> **6 of 7 lives vulnerable** (min. 1 lives)
+
+No banners left:
+- ~~2 of 7 lives vulnerable (min. 5 lives)~~ -> **7 of 7 lives vulnerable** (min. 0 lives)
+
+When a player looses all of their lives they will have their gamemode set to adventure and will not be able to pick up any blocks. When the last banner is broken, all players with 0 lives will be respawned with 1 life and some basic gear, in one final battle against the enemy team.
 
 ### Souls
 _"You hear the horrific screams of anguish from a comrades soul as it is dissipates into nothingness. It would have floated downwards but we are already stuck in hell..."_
