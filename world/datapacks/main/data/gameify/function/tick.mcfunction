@@ -102,6 +102,8 @@ execute unless entity @e[type=wither] run kill @e[tag=WitherStill]
 execute as @e[tag=WitherBeam] at @s run function gameify:enhanced_wither/wither_beam with entity @s
 
 execute as @e[type=warden] at @s run function gameify:enhanced_warden/enhanced_warden with entity @s
+execute unless entity @e[type=warden] as @a run attribute @s gravity base reset
+execute unless entity @e[type=warden] as @a run attribute @s step_height base reset
 
 execute as @e[type=elder_guardian] at @s run function gameify:enhanced_elder_guardian/enhanced_elder_guardian with entity @s
 
