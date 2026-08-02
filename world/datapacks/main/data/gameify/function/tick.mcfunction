@@ -4,11 +4,21 @@ execute as @a at @s if score @s shifting matches 1.. run scoreboard players set 
 execute as @a at @s if score @s shifting matches 0 run scoreboard players set @s shiftingCheck 0
 execute as @a at @s if score @s shifting matches 1.. run scoreboard players set @s shifting 0
 
-execute as @a unless score @s lives = @s lives run scoreboard players set @s lives 4
+execute as @e[team=Golden] at @s run scoreboard players set @s flagNums 0
+execute as @e[team=Golden] at @s as @e[tag=GoldenFlag] at @s run scoreboard players add @s flagNums 1
+execute as @e[team=Royal] at @s run scoreboard players set @s flagNums 0
+execute as @e[team=Royal] at @s as @e[tag=RoyalFlag] at @s run scoreboard players add @s flagNums 1
+
+
+execute as @a unless score @s lives = @s lives run scoreboard players set @s lives 7
 
 execute as @a at @s if score @s deaths matches 1.. run scoreboard players remove @s lives 1
 execute as @a at @s if score @s deaths matches 1.. run tag @s remove NoSoul
 execute as @a at @s if score @s deaths matches 1.. run scoreboard players remove @s deaths 1
+
+execute as @a at @s if score @s flagNums matches 3 if score @s lives matches ..4 run scoreboard players set @s lives 5
+execute as @a at @s if score @s flagNums matches 2 if score @s lives matches ..2 run scoreboard players set @s lives 3
+execute as @a at @s if score @s flagNums matches 1 if score @s lives matches ..0 run scoreboard players set @s lives 1
 
 execute as @a at @s if score @s lives matches ..0 run gamemode adventure @s
 
@@ -168,8 +178,8 @@ execute as @a[scores={occultistAbility2=42001..}] at @s run effect give @s glowi
 execute as @e[tag=SoulBinding] at @s run tp @s ^ ^ ^0.5
 execute as @e[tag=SoulBinding] at @s run particle dust{color:[0,0,0],scale:2} ~ ~0.5 ~ 0 0 0 0 0 force
 execute as @e[tag=SoulBinding] at @s positioned ~ ~0.5 ~ as @a[scores={occultistAbility2=42000..},distance=..1.5] at @s run tag @s add NoSoul
-execute as @e[tag=SoulBinding] at @s positioned ~ ~0.5 ~ as @a[scores={occultistAbility2=42000..},distance=..1.5,team=Golden] at @s run give @a[tag=Occultist,team=Royal] enchanted_book[custom_name=[{"text":"Soul","bold":true,"italic":false,"color":"blue"}],lore=[[{"text":"Used to break flags!","italic":false,"color":"gray"}]],damage_resistant={types:"minecraft:on_fire"},item_model="minecraft:ender_pearl"]
-execute as @e[tag=SoulBinding] at @s positioned ~ ~0.5 ~ as @a[scores={occultistAbility2=42000..},distance=..1.5,team=Royal] at @s run give @a[tag=Occultist,team=Golden] enchanted_book[custom_name=[{"text":"Soul","bold":true,"italic":false,"color":"blue"}],lore=[[{"text":"Used to break flags!","italic":false,"color":"gray"}]],damage_resistant={types:"minecraft:on_fire"},item_model="minecraft:ender_pearl"]
+execute as @e[tag=SoulBinding] at @s positioned ~ ~0.5 ~ as @a[scores={occultistAbility2=42000..},distance=..1.5,team=Golden] at @s run give @a[tag=Occultist,team=Royal] command_block[custom_name=[{"text":"Soul","bold":true,"italic":false,"color":"blue"}],lore=[[{"text":"Used to weaken flags!","italic":false,"color":"gray"}]],damage_resistant={types:"minecraft:on_fire"},item_model="minecraft:ender_pearl",custom_data={soul:true}]
+execute as @e[tag=SoulBinding] at @s positioned ~ ~0.5 ~ as @a[scores={occultistAbility2=42000..},distance=..1.5,team=Royal] at @s run give @a[tag=Occultist,team=Golden] command_block[custom_name=[{"text":"Soul","bold":true,"italic":false,"color":"blue"}],lore=[[{"text":"Used to weaken flags!","italic":false,"color":"gray"}]],damage_resistant={types:"minecraft:on_fire"},item_model="minecraft:ender_pearl",custom_data={soul:true}]
 
 execute as @e[tag=SoulBinding] at @s positioned ~ ~0.5 ~ as @a[scores={occultistAbility2=42000..},distance=..1.5,team=Golden] at @s run tag @s add NoSoul
 execute as @e[tag=SoulBinding] at @s positioned ~ ~0.5 ~ as @a[scores={occultistAbility2=42000..},distance=..1.5,team=Royal] at @s run tag @s add NoSoul

@@ -80,6 +80,15 @@ scoreboard objectives add flagHealth dummy
 scoreboard objectives add flagNumber dummy
 
 
+scoreboard objectives add flagRandom1 dummy
+scoreboard objectives add flagRandom2 dummy
+scoreboard objectives add flagRandom3 dummy
+
+scoreboard objectives add flagSouled dummy
+scoreboard objectives add flagNums dummy
+
+
+
 #Occultist
 scoreboard objectives add occultistAbility1 dummy
 scoreboard players set @e occultistAbility1 0
