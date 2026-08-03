@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6bd6436-eabe-4f0f-a982-77ff3a981abc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../world/datapacks/main/data/gameify/function/abilities/emperor_2.mcfunction" beforeDir="false" afterPath="$PROJECT_DIR$/../world/datapacks/main/data/gameify/function/abilities/emperor_2.mcfunction" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../world/datapacks/main/data/gameify/function/load.mcfunction" beforeDir="false" afterPath="$PROJECT_DIR$/../world/datapacks/main/data/gameify/function/load.mcfunction" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../world/datapacks/main/data/gameify/function/tick.mcfunction" beforeDir="false" afterPath="$PROJECT_DIR$/../world/datapacks/main/data/gameify/function/tick.mcfunction" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../world/dimensions/minecraft/overworld/region/r.-2.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../world/dimensions/minecraft/overworld/region/r.-2.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../world/dimensions/minecraft/overworld/region/r.-2.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../world/dimensions/minecraft/overworld/region/r.-2.0.mca" afterDir="false" />
-    </list>
+    <list default="true" id="b6bd6436-eabe-4f0f-a982-77ff3a981abc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,10 +10,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3HLEQKyg1t6JAD9mtKi7rlzmZT6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -34,14 +28,14 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/brand/OneDrive/Download/NewServer/plugins"
+    "last_opened_file_path": "D:/Users/brand/OneDrive/Download/NewServer/plugins"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.337" />
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.337" />
+        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.258" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.258" />
       </set>
     </attachedChunks>
   </component>

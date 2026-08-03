@@ -326,3 +326,6 @@ execute as @a[tag=!Alive] at @s run attribute @s jump_strength base reset
 
 
 execute as @e[tag=CustomCrafter] at @s run function gameify:custom_crafter_2 with entity @s
+
+execute as @e[type=player,nbt={SelectedItem:{components:{"minecraft:custom_data":{invisibility:true}}}}] at @s run effect give @s invisibility 1 0 true
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{invisibility:true}}}}] at @s run particle soul ~ ~ ~ 0 0 0 0.005 1 force
