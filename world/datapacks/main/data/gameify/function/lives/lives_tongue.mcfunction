@@ -1,0 +1,16 @@
+execute as @s at @s run effect clear @s regeneration
+execute as @s at @s run effect clear @s absorption
+execute as @s at @s run effect clear @s strength
+execute as @s at @s run effect clear @s saturation
+execute as @s at @s run effect clear @s conduit_power
+execute as @s at @s run effect clear @s water_breathing
+execute as @s at @s run effect clear @s fire_resistance
+execute as @s at @s run effect clear @s slow_falling
+execute as @s at @s run effect clear @s speed
+execute as @s at @s run effect clear @s breath_of_the_nautilus
+execute as @s at @s run effect clear @s dolphins_grace
+execute as @s at @s run effect clear @s haste
+execute as @s at @s run effect clear @s health_boost
+execute as @s at @s run effect clear @s hero_of_the_village
+execute as @s at @s run effect clear @s jump_boost
+execute as @s at @s run effect clear @s night_vision

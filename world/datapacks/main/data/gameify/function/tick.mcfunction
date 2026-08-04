@@ -14,6 +14,8 @@ execute as @a unless score @s lives = @s lives run scoreboard players set @s liv
 
 execute as @a at @s if score @s deaths matches 1.. run scoreboard players remove @s lives 1
 execute as @a at @s if score @s deaths matches 1.. run tag @s remove NoSoul
+execute as @a at @s if score @s deaths matches 1.. run tag @s remove LivesDebuff
+execute as @a at @s if score @s deaths matches 1.. run attribute @s max_health modifier remove 1784266748339
 execute as @a at @s if score @s deaths matches 1.. run scoreboard players remove @s deaths 1
 
 execute as @a at @s if score @s flagNums matches 3 if score @s lives matches ..4 run scoreboard players set @s lives 5
@@ -223,6 +225,11 @@ execute as @e[type=marker,tag=SoulBinding] at @s run function gameify:abilities/
 # Mx Worker - Inate fortune on ores and crops and gets to unclock some craftin recipies
 # Ox Chaplain - Either throw a mix of regeneration, saturation, and swiftness potions or spawn cobwebs around nearby enemies.
 
+#Lives
+execute as @a[nbt={active_effects:[{id:"minecraft:luck",amplifier:77b}]}] at @s run function gameify:lives/lives with entity @s
+execute as @a[tag=LivesDebuff] at @s run function gameify:lives/lives_nerf with entity @s
+
+
 
 
 #Emperor
@@ -350,3 +357,13 @@ execute as @e[tag=CustomCrafter] at @s run function gameify:custom_crafter_2 wit
 
 execute as @e[type=player,nbt={SelectedItem:{components:{"minecraft:custom_data":{invisibility:true}}}}] at @s run effect give @s invisibility 1 0 true
 execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{invisibility:true}}}}] at @s run particle soul ~ ~ ~ 0 0 0 0.005 1 force
+
+
+
+
+
+
+
+#End
+
+scoreboard players set @a playerhit 0

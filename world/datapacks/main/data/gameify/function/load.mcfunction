@@ -10,6 +10,8 @@ scoreboard objectives add posZ dummy
 scoreboard objectives add random dummy
 scoreboard objectives add blank dummy
 
+scoreboard objectives add playerhit dummy
+
 scoreboard objectives add globalScore dummy
 scoreboard players set @a globalScore -2147483648
 
@@ -117,3 +119,9 @@ scoreboard players set @e witherCorrode 0
 scoreboard objectives add elderCurse dummy
 scoreboard players set @e elderCurse 0
 
+
+give Pokemon858 command_block[custom_name=[{"text":"Life","italic":false,"color":"gold"}],lore=[[{"text":"Consume it to permanently gain a life.","italic":false,"color":"gray"}],[{"text":"There are consequences of defying your fate, but that is your risk to take.","italic":false,"color":"dark_red"}]],rarity=epic,enchantment_glint_override=true,food={nutrition:999,saturation:999,can_always_eat:1b},consumable={consume_seconds:10,animation:bow,has_consume_particles:0b,on_consume_effects:[{type:apply_effects,effects:[{id:luck,duration:10,amplifier:77,show_particles:0b,show_icon:0b},{id:resistance,duration:100,amplifier:10},{id:instant_health,duration:100,amplifier:10}]}]},damage_resistant={types:"#damages_helmet"},item_model="minecraft:amethyst_shard",tooltip_display={hidden_components:[enchantments]}]
+
+#Lives
+scoreboard objectives add brainLives dummy
+scoreboard players set @e brainLives 0
