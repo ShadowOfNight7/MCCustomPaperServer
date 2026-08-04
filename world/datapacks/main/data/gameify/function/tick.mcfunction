@@ -151,46 +151,68 @@ execute as @a[tag=HighPriest,scores={highPriestTraitor=102000..}] run scoreboard
 
 
 #Occultist
-execute as @a[scores={occultistAbility1=1..},team=Golden] at @s as @a[team=Royal,distance=..7] run tag @s add Alive
-execute as @a[scores={occultistAbility1=1..},team=Golden] at @s as @a[team=Royal,distance=..7,tag=!NoSoul] run scoreboard players add @s occultistAbility2 8
-execute as @a[scores={occultistAbility1=1..},team=Royal] at @s as @a[team=Golden,distance=..7] run tag @s add Alive
-execute as @a[scores={occultistAbility1=1..},team=Royal] at @s as @a[team=Golden,distance=..7,tag=!NoSoul] run scoreboard players add @s occultistAbility2 8
-execute as @a[scores={occultistAbility1=1..}] at @s run scoreboard players remove @s occultistAbility1 1
+#Add Corruption
+execute as @a[tag=Occultist,scores={occultistAbility1=1..},team=Golden] at @s as @a[team=Royal,distance=..8,tag=!NoSoul,scores={occultistAbility2=..9600}] run scoreboard players add @s occultistAbility2 3
+execute as @a[tag=Occultist,scores={occultistAbility1=1..},team=Royal] at @s as @a[team=Golden,distance=..8,tag=!NoSoul,scores={occultistAbility2=..9600}] run scoreboard players add @s occultistAbility2 3
+execute as @a[tag=Occultist,scores={occultistAbility1=1..}] at @s run scoreboard players remove @s occultistAbility1 1
 execute as @a[scores={occultistAbility2=1..}] run scoreboard players remove @s occultistAbility2 1
 
-execute as @a[scores={occultistAbility1=1..},team=Golden] at @s as @a[team=Royal,distance=7.001..] run tag @s remove Alive
-execute as @a[scores={occultistAbility1=1..},team=Royal] at @s as @a[team=Golden,distance=7.001..] run tag @s remove Alive
+#Remove Alive
+execute as @a[tag=Occultist,team=Golden] at @s as @a[team=Royal,distance=8.001..] run tag @s remove Alive
+execute as @a[tag=Occultist,team=Royal] at @s as @a[team=Golden,distance=8.001..] run tag @s remove Alive
 
-execute unless entity @a[scores={occultistAbility1=1..},team=Golden] run tag @a[team=Royal] remove Alive
-execute unless entity @a[scores={occultistAbility1=1..},team=Royal] run tag @a[team=Golden] remove Alive
+#Radius Outline
+execute as @a[tag=Occultist,scores={occultistAbility1=1..},team=Golden] at @s run function gameify:particles/golden_black_circle with entity @s
+execute as @a[tag=Occultist,scores={occultistAbility1=1..},team=Royal] at @s run function gameify:particles/royal_black_circle with entity @s
 
+#Remove 'KeepAlive' outside of radius
+execute unless entity @a[tag=Occultist,scores={occultistAbility1=1..},team=Golden] run tag @a[team=Royal] remove Alive
+execute unless entity @a[tag=Occultist,scores={occultistAbility1=1..},team=Royal] run tag @a[team=Golden] remove Alive
 
-execute as @a[scores={occultistAbility2=1..6000}] at @s run particle dust{color:[0.6,0,0],scale:1} ~ ~ ~ 0.5 1 0.5 0.1 1
-execute as @a[scores={occultistAbility2=6001..12000}] at @s run particle dust{color:[0.5,0,0],scale:1} ~ ~ ~ 0.5 1 0.5 0.1 1
-execute as @a[scores={occultistAbility2=12001..18000}] at @s run particle dust{color:[0.4,0,0],scale:1} ~ ~ ~ 0.5 1 0.5 0.1 1
-execute as @a[scores={occultistAbility2=18001..24000}] at @s run particle dust{color:[0.3,0,0],scale:1} ~ ~ ~ 0.5 1 0.5 0.1 1
-execute as @a[scores={occultistAbility2=24001..30000}] at @s run particle dust{color:[0.2,0,0],scale:1} ~ ~ ~ 0.5 1 0.5 0.1 1
-execute as @a[scores={occultistAbility2=30001..36000}] at @s run particle dust{color:[0.1,0,0],scale:1} ~ ~ ~ 0.5 1 0.5 0.1 1
-execute as @a[scores={occultistAbility2=36001..42000}] at @s run particle dust{color:[0,0,0],scale:1} ~ ~ ~ 0.5 1 0.5 0.1 1
-execute as @a[scores={occultistAbility2=42001..}] at @s run particle dust{color:[0,0,0],scale:1.5} ~ ~ ~ 0.5 1 0.5 0.1 1
-execute as @a[scores={occultistAbility2=42001..}] at @s run effect give @s glowing 1 1 true
+#Add 'KeepAlive' within radius
+execute as @a[scores={occultistAbility1=1..},team=Golden] at @s as @a[team=Royal,distance=..8,scores={occultistAbility2=2400..}] run tag @s add Alive
+execute as @a[scores={occultistAbility1=1..},team=Royal] at @s as @a[team=Golden,distance=..8,scores={occultistAbility2=2400..}] run tag @s add Alive
 
-execute as @e[tag=SoulBinding] at @s run tp @s ^ ^ ^0.5
-execute as @e[tag=SoulBinding] at @s run particle dust{color:[0,0,0],scale:2} ~ ~0.5 ~ 0 0 0 0 0 force
-execute as @e[tag=SoulBinding] at @s positioned ~ ~0.5 ~ as @a[scores={occultistAbility2=42000..},distance=..1.5] at @s run tag @s add NoSoul
-execute as @e[tag=SoulBinding] at @s positioned ~ ~0.5 ~ as @a[scores={occultistAbility2=42000..},distance=..1.5,team=Golden] at @s run give @a[tag=Occultist,team=Royal] command_block[custom_name=[{"text":"Soul","bold":true,"italic":false,"color":"blue"}],lore=[[{"text":"Used to weaken flags!","italic":false,"color":"gray"}]],damage_resistant={types:"minecraft:on_fire"},item_model="minecraft:ender_pearl",custom_data={soul:true}]
-execute as @e[tag=SoulBinding] at @s positioned ~ ~0.5 ~ as @a[scores={occultistAbility2=42000..},distance=..1.5,team=Royal] at @s run give @a[tag=Occultist,team=Golden] command_block[custom_name=[{"text":"Soul","bold":true,"italic":false,"color":"blue"}],lore=[[{"text":"Used to weaken flags!","italic":false,"color":"gray"}]],damage_resistant={types:"minecraft:on_fire"},item_model="minecraft:ender_pearl",custom_data={soul:true}]
+#Visibility past 2 min
+execute as @a[scores={occultistAbility2=4801..9600}] at @s run particle dust{color:[0.6,0,0],scale:1} ~ ~ ~ 0.5 1 0.5 0.1 1
+execute as @a[scores={occultistAbility2=5401..9600}] at @s run particle dust{color:[0.5,0,0],scale:1} ~ ~ ~ 0.5 1 0.5 0.1 1
+execute as @a[scores={occultistAbility2=6001..9600}] at @s run particle dust{color:[0.4,0,0],scale:1} ~ ~ ~ 0.5 1 0.5 0.1 1
+execute as @a[scores={occultistAbility2=6601..9600}] at @s run particle dust{color:[0.3,0,0],scale:1} ~ ~ ~ 0.5 1 0.5 0.1 1
+execute as @a[scores={occultistAbility2=7201..9600}] at @s run particle dust{color:[0.2,0,0],scale:1} ~ ~ ~ 0.5 1 0.5 0.1 1
+execute as @a[scores={occultistAbility2=7801..9600}] at @s run particle dust{color:[0.1,0,0],scale:1} ~ ~ ~ 0.5 1 0.5 0.1 1
+execute as @a[scores={occultistAbility2=8401..9600}] at @s run particle dust{color:[0,0,0],scale:1} ~ ~ ~ 0.5 1 0.5 0.1 1
+execute as @a[scores={occultistAbility2=9001..9600}] at @s run particle dust{color:[0,0,0],scale:1.5} ~ ~ ~ 0.5 1 0.5 0.1 1
+execute as @a[scores={occultistAbility2=9601..}] at @s run effect give @s glowing 1 1 true
 
-execute as @e[tag=SoulBinding] at @s positioned ~ ~0.5 ~ as @a[scores={occultistAbility2=42000..},distance=..1.5,team=Golden] at @s run tag @s add NoSoul
-execute as @e[tag=SoulBinding] at @s positioned ~ ~0.5 ~ as @a[scores={occultistAbility2=42000..},distance=..1.5,team=Royal] at @s run tag @s add NoSoul
+#Debuffs
+execute as @a[scores={occultistAbility2=200..}] at @s if entity @a[tag=Occultist,distance=..8] run effect give @s resistance 1 3 true
 
-execute as @e[tag=SoulBinding] at @s positioned ~ ~0.5 ~ as @a[scores={occultistAbility2=42000..},distance=..1.5,team=Golden] at @s run scoreboard players set @s occultistAbility2 0
-execute as @e[tag=SoulBinding] at @s positioned ~ ~0.5 ~ as @a[scores={occultistAbility2=42000..},distance=..1.5,team=Royal] at @s run scoreboard players set @s occultistAbility2 0
+execute as @a[scores={occultistAbility2=600..}] at @s if entity @a[tag=Occultist,distance=..8] run effect give @s weakness 1 0 true
 
-execute as @e[tag=SoulBinding] at @s positioned ~ ~0.5 ~ as @a[scores={occultistAbility2=42000..},distance=..1.5] at @s run tag @s add NoSoul
+execute as @a[scores={occultistAbility2=1200..}] at @s if entity @a[tag=Occultist,distance=..8] run effect give @s weakness 1 2 true
+execute as @a[scores={occultistAbility2=1200..}] at @s if entity @a[tag=Occultist,distance=..8] run effect give @s slowness 1 0 true
 
-execute as @e[tag=SoulBinding] at @s positioned ~ ~0.5 ~ as @a[scores={occultistAbility2=..41999},distance=..1.5] at @s run effect give @s wither 10 3 false
-execute as @e[tag=SoulBinding,scores={time=200..}] at @s run kill @s
+execute as @a[scores={occultistAbility2=2400..}] at @s if entity @a[tag=Occultist,distance=..8] run effect give @s weakness 1 9 true
+execute as @a[scores={occultistAbility2=2400..}] at @s if entity @a[tag=Occultist,distance=..8] as @e[type=ender_pearl] at @s run function gameify:abilities/occultist_3 with entity @s
+
+execute as @a[scores={occultistAbility2=3600..}] at @s run effect give @s slowness 1 2 true
+
+execute as @a[scores={occultistAbility2=4800..}] at @s run effect give @s slowness 1 4 true
+execute as @a[scores={occultistAbility2=4800..}] at @s run effect give @s blindness 2 0 true
+execute as @a[scores={occultistAbility2=4800..}] at @s as @e[type=ender_pearl] at @s run function gameify:abilities/occultist_3 with entity @s
+execute as @a[scores={occultistAbility2=4800..}] at @s run effect give @s weakness 1 9 true
+execute as @a[scores={occultistAbility2=4800..}] at @s run tag @s add Alive
+
+execute as @a[scores={occultistAbility2=6000..}] at @s run effect give @s mining_fatigue 1 9 true
+
+execute as @a[scores={occultistAbility2=7200..}] at @s facing entity @a[tag=Occultist,scores={occultistAbility1=1..},limit=1,sort=nearest] feet if block ^ ^ ^0.3 air run tp @s ^ ^ ^0.3
+
+execute as @a[scores={occultistAbility2=9600..9700}] at @s run scoreboard players set @s occultistAbility2 10000
+execute as @a[scores={occultistAbility2=10000..}] at @s run scoreboard players add @s occultistAbility2 2
+execute as @a[scores={occultistAbility2=11200..}] at @s run particle dust{color:[0,0,0],scale:1.5} ~ ~ ~ 0.5 1 0.5 1 1000
+execute as @a[scores={occultistAbility2=11200..}] at @s run scoreboard players set @s occultistAbility2 5280
+
+execute as @e[type=marker,tag=SoulBinding] at @s run function gameify:abilities/occultist_4 with entity @s
 #1x Emperor - Aboslute Power, /exile command, places banners, players will have to obey him, wears the the crown of absolute control which grants protection and strength, weilds the strongest of the three royal heirlooms, gains the powers of the elder sages if they die, 20 hearts
 # 1x High Priest - Sense traitors nearby grants healing and negative effect cleansing, gains the power of Occultist if he dies
 # 1x Occultist - Only people who can create revives, has an ability to keep an enemy alive and after a long period of time in their ability radius harvest their soul. the souls are used to break banners
@@ -319,7 +341,6 @@ execute as @a[tag=!Worker] at @s run attribute @s movement_efficiency base reset
 
 #Other
 execute as @a[tag=Alive] at @s if score @s health matches 10001.. run damage @s 1 out_of_world
-execute as @a[tag=Alive] at @s run effect give @s slowness 1 4 true
 execute as @a[tag=Alive] at @s run effect give @s resistance 1 10 true
 execute as @a[tag=Alive] at @s run attribute @s jump_strength base set 0
 execute as @a[tag=!Alive] at @s run attribute @s jump_strength base reset
