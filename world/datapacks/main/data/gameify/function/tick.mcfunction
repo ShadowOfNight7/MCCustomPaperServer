@@ -229,6 +229,9 @@ execute as @e[type=marker,tag=SoulBinding] at @s run function gameify:abilities/
 execute as @a[nbt={active_effects:[{id:"minecraft:luck",amplifier:77b}]}] at @s run function gameify:lives/lives with entity @s
 execute as @a[tag=LivesDebuff] at @s run function gameify:lives/lives_nerf with entity @s
 
+execute as @a[nbt={active_effects:[{id:"minecraft:luck",amplifier:76b}]},tag=!Occultist,tag=!LivesDebuff] at @s run function gameify:lives/ritual with entity @s
+execute as @a[nbt={active_effects:[{id:"minecraft:luck",amplifier:76b}]},tag=Occultist,tag=!LivesDebuff] at @s run function gameify:lives/ritual_occultist with entity @s
+execute as @a[nbt={active_effects:[{id:"minecraft:luck",amplifier:76b}]},tag=!Occultist,tag=LivesDebuff] at @s run function gameify:lives/ritual_already with entity @s
 
 
 

@@ -1,4 +1,6 @@
-execute as @s[tag=LivesEye] at @s run effect give @s darkness infinite 0 true
+execute as @s[tag=LivesEye] at @s run scoreboard players add @s eyeLives 1
+execute as @s[tag=LivesEye] at @s if score @s eyeLives matches 600.. run effect give @s darkness 10 0 true
+execute as @s[tag=LivesEye] at @s if score @s eyeLives matches 600.. run scoreboard players set @s eyeLives 0
 
 execute as @s[tag=LivesArm] at @s run function gameify:lives/lives_arm with entity @s
 
@@ -15,7 +17,7 @@ execute as @s[tag=LivesLiver] at @s run experience set @s 0 points
 
 execute as @s[tag=LivesTongue] at @s run function gameify:lives/lives_tongue with entity @s
 
-execute as @s[tag=LivesSkull] at @s if entity @s[predicate=gameify:sunlight] run summon minecraft:small_fireball ~ ~1 ~ {Motion:[0d,-3d,0d]}
+execute as @s[tag=LivesSkull] at @s if entity @s[predicate=gameify:sunlight] if predicate gameify:daytime unless block ~ ~ ~ water unless block ~ ~1 ~ water run damage @s 1.5 on_fire
 
 execute as @s[tag=LivesLung] at @s if block ~ ~ ~ #minecraft:underwater_bonemeals run damage @s 5 in_wall
 execute as @s[tag=LivesLung] at @s if block ~ ~1 ~ #minecraft:underwater_bonemeals run damage @s 5 in_wall

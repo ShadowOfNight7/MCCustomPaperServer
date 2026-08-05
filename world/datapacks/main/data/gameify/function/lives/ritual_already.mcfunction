@@ -1,0 +1,5 @@
+give @s command_block[custom_name=[{"text":"Ritual Sword","italic":false,"color":"dark_red"}],lore=[[{"text":"Only those who are pure can use it.","italic":false,"color":"gray"}],[{"text":"Take out a piece of your essence. Only applies significant damage to self.","italic":false,"color":"dark_red"}]],rarity=epic,enchantment_glint_override=true,food={nutrition:0,saturation:0,can_always_eat:1b},consumable={consume_seconds:3,animation:block,has_consume_particles:0b,on_consume_effects:[{type:apply_effects,effects:[{id:luck,duration:10,amplifier:76,show_particles:0b,show_icon:0b},{id:instant_damage,duration:1,amplifier:2}]}]},item_model="minecraft:iron_sword",tooltip_display={hidden_components:[enchantments]},max_stack_size=1]
+
+tellraw @s ["You are not pure enough due to your curse. The ritual has failed."]
+
+effect clear @s luck
