@@ -105,7 +105,7 @@ execute as @e[tag=EndCrystalMarker] at @s if entity @e[type=ender_dragon] run fu
 execute as @e[tag=EndCrystalMarker] at @s unless entity @e[type=ender_dragon] run scoreboard players set @s random 0
 execute as @e[tag=DragonLaser] at @s unless entity @e[type=ender_dragon] run kill @s
 execute as @e[type=dragon_fireball] at @s unless entity @e[type=ender_dragon] run kill @s
-execute as @e[tag=StaringEyes] at @s unless entity @e[type=ender_dragon] run kill @s
+execute as @e[tag=StaringEyes] at @s unless entity @e[type=ender_dragon] unless entity @e[type=bat,distance=..3] run kill @s
 
 execute as @e[type=wither] at @s run function gameify:enhanced_wither/enhanced_wither with entity @s
 execute unless entity @e[type=wither] as @e[scores={witherCorrode=1..}] run scoreboard players set @s witherCorrode 0
