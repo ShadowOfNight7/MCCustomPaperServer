@@ -207,7 +207,7 @@ execute as @a[scores={occultistAbility2=4800..}] at @s run tag @s add Alive
 
 execute as @a[scores={occultistAbility2=6000..}] at @s run effect give @s mining_fatigue 1 9 true
 
-execute as @a[scores={occultistAbility2=7200..}] at @s facing entity @a[tag=Occultist,scores={occultistAbility1=1..},limit=1,sort=nearest] feet if block ^ ^ ^0.3 air run tp @s ^ ^ ^0.3
+execute as @a[scores={occultistAbility2=7200..}] at @s facing entity @a[tag=Occultist,scores={occultistAbility1=1..},limit=1,sort=nearest] feet unless entity @a[tag=Occultist,scores={occultistAbility1=1..},limit=1,sort=nearest,distance=..2.5] if block ^ ^ ^0.15 air run tp @s ^ ^ ^0.15
 
 execute as @a[scores={occultistAbility2=9600..9700}] at @s run scoreboard players set @s occultistAbility2 10000
 execute as @a[scores={occultistAbility2=10000..}] at @s run scoreboard players add @s occultistAbility2 2
