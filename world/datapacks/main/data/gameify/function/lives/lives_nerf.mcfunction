@@ -28,3 +28,8 @@ execute as @s[tag=LivesLung] at @s if block ~ ~1 ~ lava run damage @s 5 in_wall
 
 execute as @s[tag=LivesExplode] at @s run effect give @s resistance infinite 3 true
 execute as @s[tag=LivesExplode] at @s run summon creeper ~ ~ ~ {powered:true,Fuse:0,Invulnerable:true}
+
+execute as @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{soul:true}}}}] at @s if block ~ ~ ~ lava if block ~ ~1 ~ lava run effect give @s fire_resistance 60 0 true
+execute as @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{soul:true}}}}] at @s if block ~ ~ ~ lava if block ~ ~1 ~ lava run tag @s remove LivesDebuff
+execute as @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{soul:true}}}}] at @s if block ~ ~ ~ lava if block ~ ~1 ~ lava run particle soul ~ ~1 ~ 0.25 0.5 0.25 0.2 100 force
+execute as @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{soul:true}}}}] at @s if block ~ ~ ~ lava if block ~ ~1 ~ lava run clear @s command_block[custom_data={soul:true}] 1

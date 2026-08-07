@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "minecraft:stick",
+    "X": "#minecraft:iron_tool_materials"
+  },
+  "pattern": [
+    "XXX",
+    "XXX",
+    " # "
+  ],
+  "result": {
+    "id": "minecraft:command_block",
+    "components": {
+      "minecraft:item_model": "minecraft:iron_axe",
+      "minecraft:custom_data": "{Hammer:true}",
+      "minecraft:custom_name": {
+        "text": "Hammer",
+        "color": "white",
+        "italic": false
+      }
+    },
+    "count": 1
+  }
+}

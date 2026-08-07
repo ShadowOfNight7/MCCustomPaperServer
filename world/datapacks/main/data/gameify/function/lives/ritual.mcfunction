@@ -52,6 +52,6 @@ execute as @s[tag=LivesExplode,nbt={active_effects:[{id:"minecraft:luck",amplifi
 
 tag @s add LivesDebuff
 
-give @s[nbt={active_effects:[{id:"minecraft:luck",amplifier:76b}]}] debug_stick[custom_name=[{"text":"Life Essence","italic":false,"color":"blue"}],lore=[[{"text":"It feels as fragile as glass yet unable to be broken.","italic":false,"color":"gray"}]],rarity=rare,enchantment_glint_override=true,food={nutrition:0,saturation:0},consumable={},item_model="minecraft:dragon_breath",tooltip_display={hidden_components:[enchantments]}]
+give @s[nbt={active_effects:[{id:"minecraft:luck",amplifier:76b}]}] debug_stick[custom_name=[{"text":"Life Essence","italic":false,"color":"blue"}],lore=[[{"text":"It feels as fragile as glass yet unable to be broken.","italic":false,"color":"gray"}]],rarity=rare,enchantment_glint_override=true,item_model="minecraft:dragon_breath",tooltip_display={hidden_components:[enchantments]}]
 
 effect clear @s luck

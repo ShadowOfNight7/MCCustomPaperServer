@@ -1,0 +1,1 @@
+execute if items entity @e[tag=Smithing] weapon.offhand *[custom_data={type:"durability"}] as @s at @s run function gameify:plating/reinforce_durability with entity @s
