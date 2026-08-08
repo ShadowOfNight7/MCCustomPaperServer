@@ -1,1 +1,16 @@
-execute if items entity @e[tag=Smithing] weapon.offhand *[custom_data={type:"durability"}] as @s at @s run function gameify:plating/reinforce_durability with entity @s
+execute if items entity @a[tag=Smithing] weapon.offhand *[custom_data~{type:"durability"}] as @s at @s run function gameify:plating/reinforce_durability with entity @s
+
+
+
+
+#RemoveTHe Offhand Item
+summon armor_stand ~ ~ ~ {Invisible:false,Marker:false,Tags:["ReinforceConsume"]}
+execute as @e[type=armor_stand,tag=ReinforceConsume] at @s run data modify entity @s equipment.mainhand set from entity @a[tag=Smithing,limit=1] equipment.offhand
+execute as @e[type=armor_stand,tag=ReinforceConsume] at @s store result score @s itemStats run data get entity @s equipment.mainhand.count 1
+execute as @e[type=armor_stand,tag=ReinforceConsume] at @s if score @s itemStats matches 1 run item replace entity @s weapon.mainhand with air
+execute as @e[type=armor_stand,tag=ReinforceConsume] at @s if score @s itemStats matches 2.. store result entity @s equipment.mainhand.count byte 1 run scoreboard players remove @s itemStats 1
+execute as @e[type=armor_stand,tag=ReinforceConsume] at @s run item replace entity @a[tag=Smithing] weapon.offhand from entity @s weapon.mainhand
+execute as @e[type=armor_stand,tag=ReinforceConsume] at @s run kill @s
+
+#No Reuse
+execute as @s at @s on vehicle run data merge entity @s {Item:{components:{custom_data:{plate_applied:1}}}}

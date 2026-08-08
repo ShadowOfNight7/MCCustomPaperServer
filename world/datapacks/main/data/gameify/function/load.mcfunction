@@ -130,3 +130,10 @@ scoreboard players set @e brainLives 0
 
 scoreboard objectives add eyeLives dummy
 scoreboard players set @e eyeLives 0
+
+#items
+scoreboard objectives add itemStats dummy
+scoreboard players set @e itemStats 0
+
+scoreboard objectives add newItemStats dummy
+scoreboard players set @e newItemStats 0
