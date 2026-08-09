@@ -372,6 +372,7 @@ execute as @e[type=interaction,tag=TheArmorSmith] at @s unless entity @e[type=it
 execute as @e[type=interaction,tag=TheArmorSmith] at @s as @e[type=item,distance=..0.5] at @s unless block ~ ~-0.1 ~ #anvil unless block ~ ~-1 ~ #anvil on passengers run kill @s
 execute as @e[type=interaction,tag=TheArmorSmith] at @s run function gameify:plating/smack with entity @s
 
+execute as @a[predicate=gameify:armor_passive] at @s run function gameify:plating/armor_passive with entity @s
 
 
 

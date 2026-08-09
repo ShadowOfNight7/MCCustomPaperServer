@@ -1,8 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "A": "minecraft:netherite_scrap",
-    "X": "minecraft:shield"
+    "A": "netherite_scrap",
+    "X": "minecraft:ancient_debris"
   },
   "pattern": [
     " A ",
@@ -13,19 +13,20 @@
     "id": "command_block",
     "components": {
       "minecraft:custom_name": {
-        "text": "Netherite Plate (Durability)",
+        "text": "Netherite Plate (Resistance)",
         "color": "white",
         "italic": false
       },
       "minecraft:item_model": "minecraft:netherite_ingot",
       "minecraft:custom_data": {
         "plating": true,
-        "type": "durability",
-        "plate_lvl": 500
+        "type": "resistance",
+        "plate_lvl": 2.5,
+        "plate_lvl2": 2
       },
       "minecraft:lore": [
         {
-          "text": "Grants +500 durability to an armor piece.",
+          "text": "Gain +2.5 armor and +2 armor toughness.",
           "color": "gray",
           "italic": false
         }

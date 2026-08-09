@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "A": "minecraft:netherite_ingot",
-    "X": "minecraft:shield",
+    "X": "minecraft:cactus",
     "B": "minecraft:nether_star"
   },
   "pattern": [
@@ -14,20 +14,20 @@
     "id": "command_block",
     "components": {
       "minecraft:custom_name": {
-        "text": "Ultimate Plate (Durability)",
+        "text": "Ultimate Plate (Thorns)",
         "color": "blue",
         "italic": false
       },
       "minecraft:item_model": "minecraft:amethyst_shard",
       "minecraft:custom_data": {
         "plating": true,
-        "type": "durability",
-        "plate_lvl": 10000
+        "type": "thorns",
+        "plate_lvl": 6
       },
       "minecraft:enchantment_glint_override": true,
       "minecraft:lore": [
         {
-          "text": "Grants +10000 durability to an armor piece.",
+          "text": "70% chance to inflict 7 dmg to attacker.",
           "color": "gray",
           "italic": false
         }

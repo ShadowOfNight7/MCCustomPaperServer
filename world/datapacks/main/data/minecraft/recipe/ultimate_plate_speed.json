@@ -1,11 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "A": "minecraft:netherite_scrap",
-    "X": "minecraft:shield"
+    "A": "minecraft:netherite_ingot",
+    "X": "minecraft:sugar",
+    "B": "minecraft:nether_star"
   },
   "pattern": [
-    " A ",
+    " B ",
     "AXA",
     " A "
   ],
@@ -13,24 +14,25 @@
     "id": "command_block",
     "components": {
       "minecraft:custom_name": {
-        "text": "Netherite Plate (Durability)",
-        "color": "white",
+        "text": "Ultimate Plate (Speed)",
+        "color": "blue",
         "italic": false
       },
-      "minecraft:item_model": "minecraft:netherite_ingot",
+      "minecraft:item_model": "minecraft:amethyst_shard",
       "minecraft:custom_data": {
         "plating": true,
-        "type": "durability",
-        "plate_lvl": 500
+        "type": "speed",
+        "plate_lvl": 0.025
       },
+      "minecraft:enchantment_glint_override": true,
       "minecraft:lore": [
         {
-          "text": "Grants +500 durability to an armor piece.",
+          "text": "Gain +25% speed.",
           "color": "gray",
           "italic": false
         }
       ]
     },
-    "count": 1
+    "count": 4
   }
 }

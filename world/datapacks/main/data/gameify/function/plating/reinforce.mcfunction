@@ -1,4 +1,13 @@
 execute if items entity @a[tag=Smithing] weapon.offhand *[custom_data~{type:"durability"}] as @s at @s run function gameify:plating/reinforce_durability with entity @s
+execute if items entity @a[tag=Smithing] weapon.offhand *[custom_data~{type:"knockback_resist"}] as @s at @s run function gameify:plating/reinforce_knockback with entity @s
+execute if items entity @a[tag=Smithing] weapon.offhand *[custom_data~{type:"absorption"}] as @s at @s run function gameify:plating/reinforce_absorption with entity @s
+execute if items entity @a[tag=Smithing] weapon.offhand *[custom_data~{type:"health"}] as @s at @s run function gameify:plating/reinforce_health with entity @s
+execute if items entity @a[tag=Smithing] weapon.offhand *[custom_data~{type:"speed"}] as @s at @s run function gameify:plating/reinforce_speed with entity @s
+execute if items entity @a[tag=Smithing] weapon.offhand *[custom_data~{type:"experience"}] as @s at @s run function gameify:plating/reinforce_experience with entity @s
+execute if items entity @a[tag=Smithing] weapon.offhand *[custom_data~{type:"resistance"}] as @s at @s run function gameify:plating/reinforce_resistance with entity @s
+execute if items entity @a[tag=Smithing] weapon.offhand *[custom_data~{type:"barrier"}] as @s at @s run function gameify:plating/reinforce_barrier with entity @s
+execute if items entity @a[tag=Smithing] weapon.offhand *[custom_data~{type:"blindness"}] as @s at @s run function gameify:plating/reinforce_blindness with entity @s
+execute if items entity @a[tag=Smithing] weapon.offhand *[custom_data~{type:"thorns"}] as @s at @s run function gameify:plating/reinforce_thorns with entity @s
 
 
 

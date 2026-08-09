@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "A": "minecraft:netherite_scrap",
-    "X": "minecraft:shield"
+    "X": "minecraft:golden_apple"
   },
   "pattern": [
     " A ",
@@ -13,19 +13,19 @@
     "id": "command_block",
     "components": {
       "minecraft:custom_name": {
-        "text": "Netherite Plate (Durability)",
+        "text": "Netherite Plate (Absorption)",
         "color": "white",
         "italic": false
       },
       "minecraft:item_model": "minecraft:netherite_ingot",
       "minecraft:custom_data": {
         "plating": true,
-        "type": "durability",
-        "plate_lvl": 500
+        "type": "absorption",
+        "plate_lvl": 5
       },
       "minecraft:lore": [
         {
-          "text": "Grants +500 durability to an armor piece.",
+          "text": "Gives a 5% chance to give absorption III every hit (25sec cd)",
           "color": "gray",
           "italic": false
         }

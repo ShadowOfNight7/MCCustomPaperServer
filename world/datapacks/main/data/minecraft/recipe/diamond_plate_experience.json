@@ -1,8 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "A": "minecraft:netherite_scrap",
-    "X": "minecraft:shield"
+    "A": "diamond",
+    "X": "minecraft:experience_bottle"
   },
   "pattern": [
     " A ",
@@ -13,19 +13,19 @@
     "id": "command_block",
     "components": {
       "minecraft:custom_name": {
-        "text": "Netherite Plate (Durability)",
+        "text": "Diamond Plate (Experience)",
         "color": "white",
         "italic": false
       },
-      "minecraft:item_model": "minecraft:netherite_ingot",
+      "minecraft:item_model": "minecraft:diamond",
       "minecraft:custom_data": {
         "plating": true,
-        "type": "durability",
-        "plate_lvl": 500
+        "type": "experience",
+        "plate_lvl": 5
       },
       "minecraft:lore": [
         {
-          "text": "Grants +500 durability to an armor piece.",
+          "text": "Gain 5 experience point on hit.",
           "color": "gray",
           "italic": false
         }

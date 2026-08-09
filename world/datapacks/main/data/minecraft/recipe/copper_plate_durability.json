@@ -22,7 +22,14 @@
         "plating": true,
         "type": "durability",
         "plate_lvl": 80
-      }
+      },
+      "minecraft:lore": [
+        {
+          "text": "Grants +80 durability to an armor piece.",
+          "color": "gray",
+          "italic": false
+        }
+      ]
     },
     "count": 1
   }
