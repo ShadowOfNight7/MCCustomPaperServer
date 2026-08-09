@@ -10,7 +10,7 @@ execute as @s[nbt={HurtTime:9s}] at @s if data entity @s equipment.legs.componen
 execute as @s[nbt={HurtTime:9s}] at @s if data entity @s equipment.feet.components."minecraft:custom_data".absorption store result score @s armorPassive.absorption run data get entity @s equipment.feet.components."minecraft:custom_data".absorption
 execute as @s[nbt={HurtTime:9s}] at @s if data entity @s equipment.feet.components."minecraft:custom_data".absorption run function gameify:plating/armor_passive_absorption with entity @s
 
-execute as @s[scores={armorPassive.absorption.cooldown=1..}] at @s run scoreboard players remove @s armorPassive.absorption.cooldown 1
+execute as @s[scores={armorPassive.absorption.cooldown=..800}] at @s run scoreboard players add @s armorPassive.absorption.cooldown 1
 
 
 execute as @s at @s if data entity @s equipment.head.components."minecraft:custom_data".slowness run effect give @s slowness 2 0 true

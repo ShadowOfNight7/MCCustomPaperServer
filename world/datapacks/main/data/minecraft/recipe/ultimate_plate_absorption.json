@@ -27,7 +27,7 @@
       "minecraft:enchantment_glint_override": true,
       "minecraft:lore": [
         {
-          "text": "Gives a 12.5% chance to give absorption III every hit (20sec cd)",
+          "text": "Gives a 25% chance to give absorption III every hit (13.5sec cd)",
           "color": "gray",
           "italic": false
         }
