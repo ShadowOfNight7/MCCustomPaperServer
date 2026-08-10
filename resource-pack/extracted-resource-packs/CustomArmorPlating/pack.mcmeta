@@ -2,8 +2,7 @@
     "pack": {
     "min_format": 84,
     "max_format": 88,
-
-        "description": "Adds custom armor trims which look like armor plating."
+    "description": "Adds custom armor trims which look like armor plating."
     },
    
 }
