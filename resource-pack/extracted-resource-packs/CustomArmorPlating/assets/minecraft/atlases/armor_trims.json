@@ -22,8 +22,8 @@
                 "resin": "minecraft:trims/color_palettes/resin"
             },
             "textures": [
-                "minecraft:trims/models/armor/plating",
-                "minecraft:trims/models/armor/plating_leggings"
+                "trims/models/armor/plating",
+                "trims/models/armor/plating_leggings"
             ]
         }
     ]
