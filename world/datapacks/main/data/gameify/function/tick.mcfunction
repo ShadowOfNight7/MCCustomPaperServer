@@ -4,6 +4,11 @@ execute as @a at @s if score @s shifting matches 1.. run scoreboard players set 
 execute as @a at @s if score @s shifting matches 0 run scoreboard players set @s shiftingCheck 0
 execute as @a at @s if score @s shifting matches 1.. run scoreboard players set @s shifting 0
 
+execute as @a at @s if score @s jumping matches 1.. run scoreboard players set @s jumpingCheck 1
+execute as @a at @s if score @s jumping matches 0 run scoreboard players set @s jumpingCheck 0
+execute as @a at @s if score @s jumping matches 1.. run scoreboard players set @s jumping 0
+
+
 execute as @e[team=Golden] at @s run scoreboard players set @s flagNums 0
 execute as @e[team=Golden] at @s as @e[tag=GoldenFlag] at @s run scoreboard players add @s flagNums 1
 execute as @e[team=Royal] at @s run scoreboard players set @s flagNums 0
@@ -373,6 +378,10 @@ execute as @e[type=interaction,tag=TheArmorSmith] at @s as @e[type=item,distance
 execute as @e[type=interaction,tag=TheArmorSmith] at @s run function gameify:plating/smack with entity @s
 
 execute as @a[predicate=gameify:armor_passive] at @s run function gameify:plating/armor_passive with entity @s
+
+execute as @a[predicate=gameify:scoped_bow] at @s run function gameify:bows/scoped_bow with entity @s
+execute as @a[predicate=gameify:hunter_bow] at @s run function gameify:bows/hunter_bow with entity @s
+
 
 
 

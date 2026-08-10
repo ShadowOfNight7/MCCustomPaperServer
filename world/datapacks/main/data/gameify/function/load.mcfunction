@@ -4,6 +4,9 @@ scoreboard objectives add time dummy
 scoreboard objectives add right_click dummy
 scoreboard objectives add shifting custom:sneak_time
 scoreboard objectives add shiftingCheck dummy
+scoreboard objectives add jumping custom:jump
+scoreboard objectives add jumpingCheck dummy
+
 scoreboard objectives add posX dummy
 scoreboard objectives add posY dummy
 scoreboard objectives add posZ dummy

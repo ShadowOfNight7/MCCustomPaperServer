@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "minecraft:crossbow",
+    "minecraft:spyglass"
+  ],
+  "result": {
+    "id": "minecraft:crossbow",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Scoped Bow",
+        "italic": false
+      },
+      "minecraft:lore": [
+        {
+          "text": "Shift to toggle spyglass.",
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      "minecraft:custom_data": {
+        "scoped_bow": true,
+        "bowtype": "crossbow"
+      }
+    },
+    "count": 1
+  }
+}
