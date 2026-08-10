@@ -3,15 +3,24 @@
     "category": "equipment",
     "pattern": [
         "HHH",
-        "HNH",
+        "HDH",
         "HEH"
     ],
     "key": {
         "H": "minecraft:heavy_core",
-        "N": "minecraft:netherite_block",
+        "N": "minecraft:dragon_egg",
         "E": "minecraft:end_rod"
     },
     "result": {
-        "id": "minecraft:mace"
+        "id": "minecraft:mace",
+        "components": {
+            "minecraft:lore": [
+                "He who wields this shall rule them all."
+            ],
+            "minecraft:unbreakable": {},
+            "minecraft:attack_range": {
+                "max_reach": 5
+            }
+        }
     }
 }

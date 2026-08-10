@@ -1,6 +1,8 @@
 # MCCustomPaperServer
 ## Overview
-TBA
+_"The war to end all wars... for there shall be no one left to wage another..."_
+
+
 ### Banners
 The three banners form basis of your base, they provide you with stability and safety. The banners are placed by the emperor and can not be moved afterwards, so select their location wisely. Keep in mind that the banner creates particles in its AoE so it is very hard to hide. Banners have 250 health, each time an enemy hits the flag they will take 1 damage, breaking upon reaching 0 health. After being placed down all allied players will receive the following buffs when within 30 blocks:
 - Regeneration III
@@ -110,6 +112,18 @@ _"Long Live The Emperor! Long Live The Great Empire! Long Live The People"_
 - **Chaplain** - You do no believe in war or its supposed benefits, however, you still joined the war effort so that less souls may suffer. Primary ability, `<ability>` (CD: n seconds, duration: n seconds), is rooted in years you served in the mortician wing; you can, on command, create a home made brew of potions that grants regeneration, speed, and instant saturation. Your alternate ability, `<ability>` (CD: n seconds, duration: n seconds, radius: n blocks), allows you to spawn cobwebs around nearby enemies.
 - **Worker** - The winds of fate have swept you to many places and you have had to adapt, becoming a known jack-of-all-trades in the villages you have been to. You volunteered to join the war effort to try change your destiny, but you will have to survive the war first first. Your past grants you a variety of passive abilities such as double block breaking speed, immunity to soul sand, large lung capacity, better luck, and faster movement speed through water. You also did not come to the front lines unprepared, after some guidance from villager elders, you have gained the ability, `<ability>` (CD: n seconds, duration: n seconds), which grant yourself a burst of positive status effects
 
+## Armor Plating & Weapon Upgrades
+You can upgrade armor and weapons through various methods creating stronger version of them, but also they look really cool!
+
+### Armor Plating
+TBA
+
+### Melee Weapons
+TBA
+
+### Ranged Weapons
+TBA
+
 ## Custom Item IDs
 
 1. armor_of_the_damned
@@ -140,3 +154,4 @@ It includes the following:
 
 - Vanilla Tweaks' HD Shield Banner Patterns
 - Vanilla Tweaks' Golden Crown
+- In-house "Armor Plating" Trim Textures
