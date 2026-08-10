@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "minecraft:netherite_ingot",
+    "X": "minecraft:shield",
+    "B": "minecraft:nether_star"
+  },
+  "pattern": [
+    " B ",
+    "AXA",
+    " A "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Ultimate Plate (Durability)",
+        "color": "blue",
+        "italic": false
+      },
+      "minecraft:item_model": "minecraft:amethyst_shard",
+      "minecraft:custom_data": {
+        "plating": true,
+        "type": "durability",
+        "plate_lvl": 10000
+      },
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:lore": [
+        {
+          "text": "Grants +10000 durability to an armor piece.",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 4
+  }
+}

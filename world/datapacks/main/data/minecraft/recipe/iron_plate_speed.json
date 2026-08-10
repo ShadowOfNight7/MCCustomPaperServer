@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "iron_ingot",
+    "X": "minecraft:sugar"
+  },
+  "pattern": [
+    " A ",
+    "AXA",
+    " A "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Iron Plate (Speed)",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:item_model": "minecraft:iron_ingot",
+      "minecraft:custom_data": {
+        "plating": true,
+        "type": "speed",
+        "plate_lvl": 0.0075
+      },
+      "minecraft:lore": [
+        {
+          "text": "Gain +7.5% speed.",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 1
+  }
+}

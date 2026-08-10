@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "diamond",
+    "X": "minecraft:ghast_tear"
+  },
+  "pattern": [
+    " A ",
+    "AXA",
+    " A "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Diamond Plate (Health)",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:item_model": "minecraft:diamond",
+      "minecraft:custom_data": {
+        "plating": true,
+        "type": "health",
+        "plate_lvl": 2.5
+      },
+      "minecraft:lore": [
+        {
+          "text": "Gain +2.5 max health, but slowness 1.",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 1
+  }
+}

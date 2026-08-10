@@ -1,0 +1,20 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "minecraft:equipment": {
+          "mainhand": {
+            "predicates": {
+              "minecraft:custom_data": {
+                "scoped_bow": true
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

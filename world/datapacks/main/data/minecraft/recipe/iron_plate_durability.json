@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "minecraft:iron_ingot",
+    "X": "minecraft:shield"
+  },
+  "pattern": [
+    " A ",
+    "AXA",
+    " A "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Iron Plate (Durability)",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:item_model": "minecraft:iron_ingot",
+      "minecraft:custom_data": {
+        "plating": true,
+        "type": "durability",
+        "plate_lvl": 150
+      },
+      "minecraft:lore": [
+        {
+          "text": "Grants +150 durability to an armor piece.",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 1
+  }
+}

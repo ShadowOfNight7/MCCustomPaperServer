@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "minecraft:netherite_ingot",
+    "X": "minecraft:ghast_tear",
+    "B": "minecraft:nether_star"
+  },
+  "pattern": [
+    " B ",
+    "AXA",
+    " A "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Ultimate Plate (Health)",
+        "color": "blue",
+        "italic": false
+      },
+      "minecraft:item_model": "minecraft:amethyst_shard",
+      "minecraft:custom_data": {
+        "plating": true,
+        "type": "health",
+        "plate_lvl": 5
+      },
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:lore": [
+        {
+          "text": "Gain +5 max health, but slowness 1.",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 4
+  }
+}

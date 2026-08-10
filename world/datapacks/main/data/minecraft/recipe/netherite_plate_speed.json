@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "netherite_scrap",
+    "X": "minecraft:sugar"
+  },
+  "pattern": [
+    " A ",
+    "AXA",
+    " A "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Netherite Plate (Speed)",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:item_model": "minecraft:netherite_ingot",
+      "minecraft:custom_data": {
+        "plating": true,
+        "type": "speed",
+        "plate_lvl": 0.0175
+      },
+      "minecraft:lore": [
+        {
+          "text": "Gain +17.5% speed.",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 1
+  }
+}

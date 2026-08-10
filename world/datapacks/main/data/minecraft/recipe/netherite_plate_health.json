@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "netherite_scrap",
+    "X": "minecraft:ghast_tear"
+  },
+  "pattern": [
+    " A ",
+    "AXA",
+    " A "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Netherite Plate (Health)",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:item_model": "minecraft:netherite_ingot",
+      "minecraft:custom_data": {
+        "plating": true,
+        "type": "health",
+        "plate_lvl": 3
+      },
+      "minecraft:lore": [
+        {
+          "text": "Gain +3 max health, but slowness 1.",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 1
+  }
+}

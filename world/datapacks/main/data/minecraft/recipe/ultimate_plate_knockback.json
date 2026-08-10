@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "minecraft:netherite_ingot",
+    "X": "minecraft:obsidian",
+    "B": "minecraft:nether_star"
+  },
+  "pattern": [
+    " B ",
+    "AXA",
+    " A "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Ultimate Plate (Knockback Resistance)",
+        "color": "blue",
+        "italic": false
+      },
+      "minecraft:item_model": "minecraft:amethyst_shard",
+      "minecraft:custom_data": {
+        "plating": true,
+        "type": "knockback_resist",
+        "plate_lvl": 1
+      },
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:lore": [
+        {
+          "text": "Grants +100% knockback resistance.",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 4
+  }
+}

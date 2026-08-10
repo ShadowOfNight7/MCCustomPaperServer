@@ -8,7 +8,7 @@ execute as @s at @s if score @s time matches 200.. run effect give @s invisibili
 execute as @s at @s if score @s time matches 200.. run scoreboard players set @s time 100
 
 # execute as @s at @s run rotate @p[tag=EndermanTarget,distance=..3.5] facing entity @s
-execute as @p[tag=EndermanTarget,distance=..3.5] at @s run effect give @s blindness 2 0 false
+execute as @p[tag=EndermanTarget,distance=..3.5] at @s run effect give @s darkness 2 0 false
 execute as @s at @s run damage @p[tag=EndermanTarget,distance=..3.5] 0.4 magic by @s from @s
 tag @e[tag=EndermanTarget] remove EndermanTarget
 

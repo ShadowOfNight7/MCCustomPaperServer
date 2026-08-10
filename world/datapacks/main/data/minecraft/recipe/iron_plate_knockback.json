@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "minecraft:iron_ingot",
+    "X": "minecraft:obsidian"
+  },
+  "pattern": [
+    " A ",
+    "AXA",
+    " A "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Iron Plate (Knockback Resistance)",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:item_model": "minecraft:iron_ingot",
+      "minecraft:custom_data": {
+        "plating": true,
+        "type": "knockback_resist",
+        "plate_lvl": 0.2
+      },
+      "minecraft:lore": [
+        {
+          "text": "Grants +20% knockback resistance.",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 1
+  }
+}

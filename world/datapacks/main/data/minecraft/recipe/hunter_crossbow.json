@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "XXX",
+    "XBX",
+    "XXX"
+  ],
+  "key": {
+    "X": "minecraft:fermented_spider_eye",
+    "B": "minecraft:crossbow"
+  },
+  "result": {
+    "id": "minecraft:crossbow",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Hunter Bow",
+        "italic": false
+      },
+      "minecraft:lore": [
+        {
+          "text": "Jump to toggle invisibility.",
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      "minecraft:custom_data": {
+        "hunter_bow": true
+      }
+    },
+    "count": 1
+  }
+}

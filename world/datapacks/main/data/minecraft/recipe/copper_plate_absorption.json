@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "minecraft:copper_ingot",
+    "X": "minecraft:golden_apple"
+  },
+  "pattern": [
+    " A ",
+    "AXA",
+    " A "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Copper Plate (Absorption)",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:item_model": "minecraft:copper_ingot",
+      "minecraft:custom_data": {
+        "plating": true,
+        "type": "absorption",
+        "plate_lvl": 1
+      },
+      "minecraft:lore": [
+        {
+          "text": "Gives a 10% chance to give absorption every hit (40s cd)",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 1
+  }
+}

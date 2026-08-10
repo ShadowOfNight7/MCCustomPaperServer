@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "diamond",
+    "X": "minecraft:sugar"
+  },
+  "pattern": [
+    " A ",
+    "AXA",
+    " A "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Diamond Plate (Speed)",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:item_model": "minecraft:diamond",
+      "minecraft:custom_data": {
+        "plating": true,
+        "type": "speed",
+        "plate_lvl": 0.0125
+      },
+      "minecraft:lore": [
+        {
+          "text": "Gain +12.5% speed.",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 1
+  }
+}

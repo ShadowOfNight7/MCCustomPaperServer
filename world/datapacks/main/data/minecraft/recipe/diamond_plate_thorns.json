@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "diamond",
+    "X": "minecraft:cactus"
+  },
+  "pattern": [
+    " A ",
+    "AXA",
+    " A "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Diamond Plate (Thorns)",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:item_model": "minecraft:diamond",
+      "minecraft:custom_data": {
+        "plating": true,
+        "type": "thorns",
+        "plate_lvl": 4
+      },
+      "minecraft:lore": [
+        {
+          "text": "40% chance to inflict 4 dmg to attacker.",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 1
+  }
+}

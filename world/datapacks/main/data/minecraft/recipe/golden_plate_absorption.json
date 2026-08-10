@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "minecraft:gold_ingot",
+    "X": "minecraft:golden_apple"
+  },
+  "pattern": [
+    " A ",
+    "AXA",
+    " A "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Gold Plate (Absorption)",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:item_model": "minecraft:gold_ingot",
+      "minecraft:custom_data": {
+        "plating": true,
+        "type": "absorption",
+        "plate_lvl": 3
+      },
+      "minecraft:lore": [
+        {
+          "text": "Gives a 15% chance to give absorption II every hit (30sec cd)",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 1
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "minecraft:iron_ingot",
+    "X": "minecraft:golden_apple"
+  },
+  "pattern": [
+    " A ",
+    "AXA",
+    " A "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Iron Plate (Absorption)",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:item_model": "minecraft:iron_ingot",
+      "minecraft:custom_data": {
+        "plating": true,
+        "type": "absorption",
+        "plate_lvl": 2
+      },
+      "minecraft:lore": [
+        {
+          "text": "Gives a 10% chance to give absorption every hit (30sec cd)",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 1
+  }
+}

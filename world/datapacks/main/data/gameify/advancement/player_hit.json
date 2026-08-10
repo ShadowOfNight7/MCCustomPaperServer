@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "player_hit": {
+      "trigger": "minecraft:player_hurt_entity"
+    }
+  },
+  "rewards": {
+    "function": "gameify:player_hit"
+  }
+}

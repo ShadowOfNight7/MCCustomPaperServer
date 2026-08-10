@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "minecraft:diamond",
+    "X": "minecraft:shield"
+  },
+  "pattern": [
+    " A ",
+    "AXA",
+    " A "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Diamond Plate (Durability)",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:item_model": "minecraft:diamond",
+      "minecraft:custom_data": {
+        "plating": true,
+        "type": "durability",
+        "plate_lvl": 350
+      },
+      "minecraft:lore": [
+        {
+          "text": "Grants +350 durability to an armor piece.",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 1
+  }
+}

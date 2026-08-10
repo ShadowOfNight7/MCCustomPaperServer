@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "minecraft:netherite_ingot",
+    "X": "minecraft:armadillo_scute",
+    "B": "minecraft:nether_star"
+  },
+  "pattern": [
+    " B ",
+    "AXA",
+    " A "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Ultimate Plate (Barrier)",
+        "color": "blue",
+        "italic": false
+      },
+      "minecraft:item_model": "minecraft:amethyst_shard",
+      "minecraft:custom_data": {
+        "plating": true,
+        "type": "barrier",
+        "plate_lvl": 6
+      },
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:lore": [
+        {
+          "text": "Become immune for 1 hit (20s cd).",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 4
+  }
+}

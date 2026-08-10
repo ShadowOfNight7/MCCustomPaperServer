@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "gold_ingot",
+    "X": "minecraft:ink_sac"
+  },
+  "pattern": [
+    " A ",
+    "AXA",
+    " A "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Gold Plate (Blindness)",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:item_model": "minecraft:gold_ingot",
+      "minecraft:custom_data": {
+        "plating": true,
+        "type": "blindness",
+        "plate_lvl": 3
+      },
+      "minecraft:lore": [
+        {
+          "text": "8% chance to give blindness on hit (2s).",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 1
+  }
+}

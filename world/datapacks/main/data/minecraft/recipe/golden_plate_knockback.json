@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "minecraft:gold_ingot",
+    "X": "minecraft:obsidian"
+  },
+  "pattern": [
+    " A ",
+    "AXA",
+    " A "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Gold Plate (Knockback Resistance)",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:item_model": "minecraft:gold_ingot",
+      "minecraft:custom_data": {
+        "plating": true,
+        "type": "knockback_resist",
+        "plate_lvl": 0.3
+      },
+      "minecraft:lore": [
+        {
+          "text": "Grants +30% knockback resistance.",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 1
+  }
+}

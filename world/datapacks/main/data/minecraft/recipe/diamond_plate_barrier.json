@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "diamond",
+    "X": "minecraft:armadillo_scute"
+  },
+  "pattern": [
+    " A ",
+    "AXA",
+    " A "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Diamond Plate (Barrier)",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:item_model": "minecraft:diamond",
+      "minecraft:custom_data": {
+        "plating": true,
+        "type": "barrier",
+        "plate_lvl": 4
+      },
+      "minecraft:lore": [
+        {
+          "text": "Become immune for 1 hit (45s cd).",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 1
+  }
+}

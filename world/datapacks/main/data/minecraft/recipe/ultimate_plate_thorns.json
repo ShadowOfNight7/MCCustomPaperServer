@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "minecraft:netherite_ingot",
+    "X": "minecraft:cactus",
+    "B": "minecraft:nether_star"
+  },
+  "pattern": [
+    " B ",
+    "AXA",
+    " A "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Ultimate Plate (Thorns)",
+        "color": "blue",
+        "italic": false
+      },
+      "minecraft:item_model": "minecraft:amethyst_shard",
+      "minecraft:custom_data": {
+        "plating": true,
+        "type": "thorns",
+        "plate_lvl": 6
+      },
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:lore": [
+        {
+          "text": "70% chance to inflict 7 dmg to attacker.",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 4
+  }
+}
