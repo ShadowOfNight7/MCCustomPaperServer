@@ -25,7 +25,7 @@
       },
       "minecraft:lore": [
         {
-          "text": "Gives a 15% chance to give absorption II every hit (25sec cd)",
+          "text": "Gives a 15% chance to give absorption II every hit (30sec cd)",
           "color": "gray",
           "italic": false
         }
