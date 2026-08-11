@@ -2,7 +2,7 @@ execute as @s at @s store success score @s crossbowCart run clear @s *[custom_da
 execute as @s at @s run summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Invulnerable:1b,Tags:["CrossbowReloader"]}
 execute as @s at @s run data modify entity @e[type=armor_stand,tag=CrossbowReloader,limit=1] equipment.mainhand set from entity @s SelectedItem
 execute as @s at @s if score @s crossbowCart matches 1 run data modify entity @e[type=armor_stand,tag=CrossbowReloader,limit=1] equipment.mainhand.components."minecraft:custom_data".reloads set value 8
-execute as @s at @s if score @s crossbowCart matches 0 run data remove entity @e[type=armor_stand,tag=CrossbowReloader,limit=1] equipment.mainhand.components."minecraft:charged_projectiles"
+execute as @s at @s if score @s crossbowCart matches ..0 run data remove entity @e[type=armor_stand,tag=CrossbowReloader,limit=1] equipment.mainhand.components."minecraft:charged_projectiles"
 execute as @s at @s run summon item ~ ~ ~ {Tags:["TheItemCrossbow"],Item:{id:"stone_button"}}
 execute as @s at @s if entity @s[nbt={SelectedItem:{components:{"minecraft:charged_projectiles":[{id:"minecraft:arrow"}]}}}] run data modify entity @e[type=item,tag=TheItemCrossbow,limit=1] Item.id set value "minecraft:arrow"
 execute as @s at @s if entity @s[nbt={SelectedItem:{components:{"minecraft:charged_projectiles":[{id:"minecraft:spectral_arrow"}]}}}] run data modify entity @e[type=item,tag=TheItemCrossbow,limit=1] Item.id set value "minecraft:spectral_arrow"

@@ -9,7 +9,7 @@
           "mainhand": {
             "predicates": {
               "minecraft:custom_data": {
-                "scoped_bow": true
+                "minigun": true
               }
             }
           }
@@ -24,7 +24,7 @@
           "offhand": {
             "predicates": {
               "minecraft:custom_data": {
-                "scoped_bow": true
+                "minigun": true
               }
             }
           }
