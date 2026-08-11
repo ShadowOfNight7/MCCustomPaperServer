@@ -381,8 +381,9 @@ execute as @a[predicate=gameify:armor_passive] at @s run function gameify:platin
 
 execute as @a[predicate=gameify:scoped_bow] at @s run function gameify:bows/scoped_bow with entity @s
 execute as @a[predicate=gameify:hunter_bow] at @s run function gameify:bows/hunter_bow with entity @s
-
-
+execute as @a[predicate=gameify:reload_bow] at @s run function gameify:bows/reload_bow with entity @s
+execute as @e[type=item,nbt={Item:{id:"minecraft:spyglass",components:{"minecraft:custom_data":{scoped_bow:true,bowtype:"bow"}}}}] run data modify entity @s Item.id set value "minecraft:bow"
+execute as @e[type=item,nbt={Item:{id:"minecraft:spyglass",components:{"minecraft:custom_data":{scoped_bow:true,bowtype:"crossbow"}}}}] run data modify entity @s Item.id set value "minecraft:crossbow"
 
 
 #End
