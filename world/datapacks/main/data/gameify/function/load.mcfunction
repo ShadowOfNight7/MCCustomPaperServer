@@ -157,3 +157,7 @@ scoreboard players set @e armorPassive.barrier.cooldown.legs 0
 scoreboard objectives add armorPassive.barrier.cooldown.feet dummy
 scoreboard players set @e armorPassive.barrier.cooldown.feet 0
 
+scoreboard objectives add crossbowCart dummy
+scoreboard players set @e crossbowCart 0
+scoreboard objectives add crossbowReloads dummy
+scoreboard players set @e crossbowReloads 0
