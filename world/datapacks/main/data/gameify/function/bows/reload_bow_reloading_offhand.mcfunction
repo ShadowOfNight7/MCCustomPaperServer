@@ -9,6 +9,7 @@ execute as @s at @s if entity @s[nbt={equipment:{offhand:{components:{"minecraft
 execute as @s at @s if entity @s[nbt={equipment:{offhand:{components:{"minecraft:charged_projectiles":[{id:"minecraft:spectral_arrow"}]}}}}] run data modify entity @e[type=item,tag=TheItemCrossbow,limit=1] Item.id set value "minecraft:spectral_arrow"
 execute as @s at @s if entity @s[nbt={equipment:{offhand:{components:{"minecraft:charged_projectiles":[{id:"minecraft:tipped_arrow"}]}}}}] run data modify entity @e[type=item,tag=TheItemCrossbow,limit=1] Item.id set value "minecraft:tipped_arrow"
 execute as @s at @s run data modify entity @e[type=item,tag=TheItemCrossbow,limit=1] Item.components set from entity @s equipment.offhand.components."minecraft:charged_projectiles"[0].components
+execute as @s at @s run data remove entity @e[type=item,tag=TheItemCrossbow,limit=1] Item.components."minecraft:charged_projectiles"[0].components."minecraft:intangible_projectile"
 execute as @s at @s run tag @e[type=item,tag=TheItemCrossbow] remove TheItemCrossbow
 execute as @s at @s run item replace entity @s weapon.offhand from entity @e[type=armor_stand,tag=CrossbowReloader,limit=1] weapon.mainhand
 execute as @s at @s run kill @e[type=armor_stand,tag=CrossbowReloader]
