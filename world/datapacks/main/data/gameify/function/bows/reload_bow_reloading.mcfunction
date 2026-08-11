@@ -4,4 +4,3 @@ execute as @s at @s if score @s crossbowCart matches 1 run data modify entity @e
 execute as @s at @s if score @s crossbowCart matches 1 run data modify entity @e[type=armor_stand,tag=CrossbowReloader,limit=1] equipment.mainhand.components."minecraft:custom_data".reloads set value 8
 execute as @s at @s if score @s crossbowCart matches 1 run item replace entity @s weapon.mainhand from entity @e[type=armor_stand,tag=CrossbowReloader,limit=1] weapon.mainhand
 execute as @s at @s if score @s crossbowCart matches 1 run kill @e[type=armor_stand,tag=CrossbowReloader]
-say a
