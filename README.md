@@ -116,13 +116,40 @@ _"Long Live The Emperor! Long Live The Great Empire! Long Live The People"_
 You can upgrade armor and weapons through various methods creating stronger version of them, but also they look really cool!
 
 ### Armor Plating
-TBA
+Different armor plates can be applied to armor to grant them unique buffs. Each armor piece can only have one armor plate, so choose wisely. 
+
+#### Durability
+
+#### Knockback Resist
+
+#### Speed
+
+#### Health
+
+#### Absorption
+
+#### Blindness
+
+#### Barrier
+
+#### Resistance
+
+#### Experience
 
 ### Melee Weapons
 TBA
 
 ### Ranged Weapons
-TBA
+
+#### Repeating Crossbow
+
+#### Hunting Crossbow
+
+#### Scoped Crossbow
+
+#### Elven Bow
+
+#### Short Bow
 
 ## Custom Item IDs
 

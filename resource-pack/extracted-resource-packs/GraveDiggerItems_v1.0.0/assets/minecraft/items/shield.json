@@ -1,0 +1,456 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "on_false": {
+      "type": "minecraft:select",
+      "property": "minecraft:component",
+      "component": "minecraft:custom_name",
+      "cases": [
+        {
+          "when": [
+            "Nation Bulwark Shield",
+            "Nation Vanguard Shield"
+          ],
+          "model": {
+            "type": "minecraft:range_dispatch",
+            "model": "grave_digger:item/nation/shield/vanguardshield",
+            "property": "minecraft:damage",
+            "scale": 4,
+            "entries": [
+              {
+                "threshold": 0,
+                "model": {
+                  "type": "minecraft:select",
+                  "property": "minecraft:display_context",
+                  "cases": [
+                    {
+                      "when": "gui",
+                      "model": {
+                        "type": "minecraft:model",
+                        "model": "grave_digger:item/nation/shield/vanguardshield_gui"
+                      }
+                    }
+                  ],
+                  "fallback": {
+                    "type": "minecraft:model",
+                    "model": "grave_digger:item/nation/shield/vanguardshield"
+                  }
+                }
+              },
+              {
+                "threshold": 1,
+                "model": {
+                  "type": "minecraft:select",
+                  "property": "minecraft:display_context",
+                  "cases": [
+                    {
+                      "when": "gui",
+                      "model": {
+                        "type": "minecraft:model",
+                        "model": "grave_digger:item/nation/shield/vanguardshield_gui_1"
+                      }
+                    }
+                  ],
+                  "fallback": {
+                    "type": "minecraft:model",
+                    "model": "grave_digger:item/nation/shield/vanguardshield_1"
+                  }
+                }
+              },
+              {
+                "threshold": 2,
+                "model": {
+                  "type": "minecraft:select",
+                  "property": "minecraft:display_context",
+                  "cases": [
+                    {
+                      "when": "gui",
+                      "model": {
+                        "type": "minecraft:model",
+                        "model": "grave_digger:item/nation/shield/vanguardshield_gui_2"
+                      }
+                    }
+                  ],
+                  "fallback": {
+                    "type": "minecraft:model",
+                    "model": "grave_digger:item/nation/shield/vanguardshield_2"
+                  }
+                }
+              },
+              {
+                "threshold": 3,
+                "model": {
+                  "type": "minecraft:select",
+                  "property": "minecraft:display_context",
+                  "cases": [
+                    {
+                      "when": "gui",
+                      "model": {
+                        "type": "minecraft:model",
+                        "model": "grave_digger:item/nation/shield/vanguardshield_gui_3"
+                      }
+                    }
+                  ],
+                  "fallback": {
+                    "type": "minecraft:model",
+                    "model": "grave_digger:item/nation/shield/vanguardshield_3"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "when": [
+            "Empire Bulwark Shield",
+            "Empire Vanguard Shield"
+          ],
+          "model": {
+            "type": "minecraft:range_dispatch",
+            "model": "grave_digger:item/empire/shield/vanguardshield",
+            "property": "minecraft:damage",
+            "scale": 4,
+            "entries": [
+              {
+                "threshold": 0,
+                "model": {
+                  "type": "minecraft:select",
+                  "property": "minecraft:display_context",
+                  "cases": [
+                    {
+                      "when": "gui",
+                      "model": {
+                        "type": "minecraft:model",
+                        "model": "grave_digger:item/empire/shield/vanguardshield_gui"
+                      }
+                    }
+                  ],
+                  "fallback": {
+                    "type": "minecraft:model",
+                    "model": "grave_digger:item/empire/shield/vanguardshield"
+                  }
+                }
+              },
+              {
+                "threshold": 1,
+                "model": {
+                  "type": "minecraft:select",
+                  "property": "minecraft:display_context",
+                  "cases": [
+                    {
+                      "when": "gui",
+                      "model": {
+                        "type": "minecraft:model",
+                        "model": "grave_digger:item/empire/shield/vanguardshield_gui_1"
+                      }
+                    }
+                  ],
+                  "fallback": {
+                    "type": "minecraft:model",
+                    "model": "grave_digger:item/empire/shield/vanguardshield_1"
+                  }
+                }
+              },
+              {
+                "threshold": 2,
+                "model": {
+                  "type": "minecraft:select",
+                  "property": "minecraft:display_context",
+                  "cases": [
+                    {
+                      "when": "gui",
+                      "model": {
+                        "type": "minecraft:model",
+                        "model": "grave_digger:item/empire/shield/vanguardshield_gui_2"
+                      }
+                    }
+                  ],
+                  "fallback": {
+                    "type": "minecraft:model",
+                    "model": "grave_digger:item/empire/shield/vanguardshield_2"
+                  }
+                }
+              },
+              {
+                "threshold": 3,
+                "model": {
+                  "type": "minecraft:select",
+                  "property": "minecraft:display_context",
+                  "cases": [
+                    {
+                      "when": "gui",
+                      "model": {
+                        "type": "minecraft:model",
+                        "model": "grave_digger:item/empire/shield/vanguardshield_gui_3"
+                      }
+                    }
+                  ],
+                  "fallback": {
+                    "type": "minecraft:model",
+                    "model": "grave_digger:item/empire/shield/vanguardshield_3"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "fallback": {
+        "type": "minecraft:special",
+        "model": {
+          "type": "minecraft:shield"
+        },
+        "base": "minecraft:item/shield",
+        "transformation": {
+          "translation": [
+            0,
+            0,
+            0
+          ],
+          "left_rotation": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "right_rotation": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            -1,
+            -1
+          ]
+        }
+      }
+    },
+    "on_true": {
+      "type": "minecraft:select",
+      "property": "minecraft:component",
+      "component": "minecraft:custom_name",
+      "cases": [
+        {
+          "when": [
+            "Nation Bulwark Shield",
+            "Nation Vanguard Shield"
+          ],
+          "model": {
+            "type": "minecraft:range_dispatch",
+            "property": "minecraft:damage",
+            "scale": 4,
+            "entries": [
+              {
+                "threshold": 0,
+                "model": {
+                  "type": "minecraft:select",
+                  "property": "minecraft:display_context",
+                  "cases": [
+                    {
+                      "when": "gui",
+                      "model": {
+                        "type": "minecraft:model",
+                        "model": "grave_digger:item/nation/shield/vanguardshield_gui"
+                      }
+                    }
+                  ],
+                  "fallback": {
+                    "type": "minecraft:model",
+                    "model": "grave_digger:item/nation/shield/vanguardshield_blocking"
+                  }
+                }
+              },
+              {
+                "threshold": 1,
+                "model": {
+                  "type": "minecraft:select",
+                  "property": "minecraft:display_context",
+                  "cases": [
+                    {
+                      "when": "gui",
+                      "model": {
+                        "type": "minecraft:model",
+                        "model": "grave_digger:item/nation/shield/vanguardshield_gui_1"
+                      }
+                    }
+                  ],
+                  "fallback": {
+                    "type": "minecraft:model",
+                    "model": "grave_digger:item/nation/shield/vanguardshield_blocking_1"
+                  }
+                }
+              },
+              {
+                "threshold": 2,
+                "model": {
+                  "type": "minecraft:select",
+                  "property": "minecraft:display_context",
+                  "cases": [
+                    {
+                      "when": "gui",
+                      "model": {
+                        "type": "minecraft:model",
+                        "model": "grave_digger:item/nation/shield/vanguardshield_gui_2"
+                      }
+                    }
+                  ],
+                  "fallback": {
+                    "type": "minecraft:model",
+                    "model": "grave_digger:item/nation/shield/vanguardshield_blocking_2"
+                  }
+                }
+              },
+              {
+                "threshold": 3,
+                "model": {
+                  "type": "minecraft:select",
+                  "property": "minecraft:display_context",
+                  "cases": [
+                    {
+                      "when": "gui",
+                      "model": {
+                        "type": "minecraft:model",
+                        "model": "grave_digger:item/nation/shield/vanguardshield_gui_3"
+                      }
+                    }
+                  ],
+                  "fallback": {
+                    "type": "minecraft:model",
+                    "model": "grave_digger:item/nation/shield/vanguardshield_blocking_3"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "when": [
+            "Empire Bulwark Shield",
+            "Empire Vanguard Shield"
+          ],
+          "model": {
+            "type": "minecraft:range_dispatch",
+            "property": "minecraft:damage",
+            "scale": 4,
+            "entries": [
+              {
+                "threshold": 0,
+                "model": {
+                  "type": "minecraft:select",
+                  "property": "minecraft:display_context",
+                  "cases": [
+                    {
+                      "when": "gui",
+                      "model": {
+                        "type": "minecraft:model",
+                        "model": "grave_digger:item/empire/shield/vanguardshield_gui"
+                      }
+                    }
+                  ],
+                  "fallback": {
+                    "type": "minecraft:model",
+                    "model": "grave_digger:item/empire/shield/vanguardshield_blocking"
+                  }
+                }
+              },
+              {
+                "threshold": 1,
+                "model": {
+                  "type": "minecraft:select",
+                  "property": "minecraft:display_context",
+                  "cases": [
+                    {
+                      "when": "gui",
+                      "model": {
+                        "type": "minecraft:model",
+                        "model": "grave_digger:item/empire/shield/vanguardshield_gui_1"
+                      }
+                    }
+                  ],
+                  "fallback": {
+                    "type": "minecraft:model",
+                    "model": "grave_digger:item/empire/shield/vanguardshield_blocking_1"
+                  }
+                }
+              },
+              {
+                "threshold": 2,
+                "model": {
+                  "type": "minecraft:select",
+                  "property": "minecraft:display_context",
+                  "cases": [
+                    {
+                      "when": "gui",
+                      "model": {
+                        "type": "minecraft:model",
+                        "model": "grave_digger:item/empire/shield/vanguardshield_gui_2"
+                      }
+                    }
+                  ],
+                  "fallback": {
+                    "type": "minecraft:model",
+                    "model": "grave_digger:item/empire/shield/vanguardshield_blocking_2"
+                  }
+                }
+              },
+              {
+                "threshold": 3,
+                "model": {
+                  "type": "minecraft:select",
+                  "property": "minecraft:display_context",
+                  "cases": [
+                    {
+                      "when": "gui",
+                      "model": {
+                        "type": "minecraft:model",
+                        "model": "grave_digger:item/empire/shield/vanguardshield_gui_3"
+                      }
+                    }
+                  ],
+                  "fallback": {
+                    "type": "minecraft:model",
+                    "model": "grave_digger:item/empire/shield/vanguardshield_blocking_3"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "fallback": {
+        "type": "minecraft:special",
+        "model": {
+          "type": "minecraft:shield"
+        },
+        "base": "minecraft:item/shield_blocking",
+        "transformation": {
+          "translation": [
+            0,
+            0,
+            0
+          ],
+          "left_rotation": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "right_rotation": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            -1,
+            -1
+          ]
+        }
+      }
+    },
+    "property": "minecraft:using_item"
+  }
+}
