@@ -1,0 +1,22 @@
+{
+    "parent": "grave_digger:item/nation/shield/vanguardshield_2",
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [40.95, -27.35, -1.91],
+			"translation": [-0.25, -4, -2.5]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [40.95, -27.35, -1.91],
+			"translation": [-0.25, -4, -2.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, -14, 0],
+			"translation": [0, -7.5, 2]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -14, 0],
+			"translation": [-0.5, -7.5, 2]
+		}
+	}
+	
+}

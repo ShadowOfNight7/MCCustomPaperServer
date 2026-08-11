@@ -182,3 +182,4 @@ It includes the following:
 - Vanilla Tweaks' HD Shield Banner Patterns
 - Vanilla Tweaks' Golden Crown
 - In-house "Armor Plating" Trim Textures
+- Grave/Digger Items v1.0.0
