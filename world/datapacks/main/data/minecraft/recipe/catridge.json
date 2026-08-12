@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "boat",
   "key": {
     "#": "minecraft:arrow",
     "C": [
