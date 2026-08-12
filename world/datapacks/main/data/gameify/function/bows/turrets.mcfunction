@@ -8,8 +8,8 @@ execute as @s[tag=!DespawnTurretor] at @s align xyz run summon armor_stand ~ ~ ~
 execute as @s[tag=!DespawnTurretor] at @s store result score @e[type=armor_stand,tag=TheTurretInitial] turret_id run scoreboard players get @s id
 execute as @s[tag=!DespawnTurretor] at @s run tag @e[type=armor_stand,tag=TheTurretInitial] remove TheTurretInitial
 
-execute as @s[tag=DespawnTurretor] at @s run scoreboard players set @s turret.cooldown 1200
-execute as @s[tag=!DespawnTurretor] at @s run scoreboard players set @s turret.cooldown 300
+execute as @s[tag=DespawnTurretor] at @s run scoreboard players set @s turret.cooldown 300
+execute as @s[tag=!DespawnTurretor] at @s run scoreboard players set @s turret.cooldown 1200
 
 
 tag @s remove DespawnTurretor
