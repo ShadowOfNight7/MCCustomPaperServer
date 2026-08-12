@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "boat",
+  "key": {
+    "#": "minecraft:arrow",
+    "A": "minecraft:calibrated_sculk_sensor",
+    "B": "minecraft:comparator",
+    "C": "minecraft:crossbow"
+  },
+  "pattern": [
+    "#A#",
+    "#C#",
+    "#B#"
+  ],
+  "result": {
+    "id": "minecraft:crossbow",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Repeating Crossbow",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:lore": [
+        {
+          "text": "Uses a cartridge to fire - equal to 8 arrows.",
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      "minecraft:custom_data": {
+        "reload_bow": true,
+        "reloads": 0,
+        "is_active": true
+      },
+      "minecraft:item_model": "minecraft:crossbow"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "boat",
+  "key": {
+    "#": "minecraft:arrow",
+    "C": [
+      "minecraft:acacia_shelf",
+      "minecraft:bamboo_shelf",
+      "minecraft:birch_shelf",
+      "minecraft:cherry_shelf",
+      "minecraft:crimson_shelf",
+      "minecraft:dark_oak_shelf",
+      "minecraft:jungle_shelf",
+      "minecraft:mangrove_shelf",
+      "minecraft:oak_shelf",
+      "minecraft:pale_oak_shelf",
+      "minecraft:spruce_shelf",
+      "minecraft:warped_shelf"
+    ]
+  },
+  "pattern": [
+    "###",
+    "#C#",
+    "###"
+  ],
+  "result": {
+    "id": "minecraft:tipped_arrow",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Cartridge",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:lore": [
+        {
+          "text": "Load into a repeating bow - equal to 8 arrows.",
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      "minecraft:item_model": "minecraft:iron_ingot",
+      "minecraft:custom_data": {
+        "catridge": true
+      }
+    }
+  }
+}
