@@ -9,14 +9,9 @@ execute as @s at @s if score @s turret.cooldown matches ..0 if entity @e[type=!i
 scoreboard players remove @s turret.cooldown 1
 scoreboard players remove @s[scores={turret_power=1..}] turret_power 1
 
-execute as @e[type=item,nbt={Item:{id:"minecraft:redstone"}},distance=..2] at @s store result score @e[type=armor_stand,tag=TargetTurret,limit=1] turret_power run data get entity @s Item.count 20
-execute as @e[type=item,nbt={Item:{id:"minecraft:redstone"}},distance=..2] at @s run particle item{item:"minecraft:redstone"} ~ ~ ~ 0 0 0 0.02 3 normal
-execute as @e[type=item,nbt={Item:{id:"minecraft:redstone"}},distance=..2] at @s run kill @s
+execute as @e[type=item,nbt={Item:{id:"minecraft:redstone"}},distance=..2] at @s run function gameify:bows/turret_power with entity @s
 
-execute as @e[type=item,nbt={Item:{id:"minecraft:redstone_block"}},distance=..2] at @s store result score @e[type=armor_stand,tag=TargetTurret,limit=1] turret_power run data get entity @s Item.count 180
-execute as @e[type=item,nbt={Item:{id:"minecraft:redstone_block"}},distance=..2] at @s run particle item{item:"minecraft:redstone"} ~ ~ ~ 0 0 0 0.04 18 normal
-execute as @e[type=item,nbt={Item:{id:"minecraft:redstone_block"}},distance=..2] at @s run kill @s
-
+execute as @e[type=item,nbt={Item:{id:"minecraft:redstone_block"}},distance=..2] at @s run function gameify:bows/turret_more_power with entity @s
 
 
 tag @s remove TargetTurret
