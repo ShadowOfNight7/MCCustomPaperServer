@@ -13,6 +13,10 @@ execute as @e[type=item,nbt={Item:{id:"minecraft:redstone"}},distance=..2] at @s
 execute as @e[type=item,nbt={Item:{id:"minecraft:redstone"}},distance=..2] at @s run particle item{item:"minecraft:redstone"} ~ ~ ~ 0 0 0 0.02 3 normal
 execute as @e[type=item,nbt={Item:{id:"minecraft:redstone"}},distance=..2] at @s run kill @s
 
+execute as @e[type=item,nbt={Item:{id:"minecraft:redstone_block"}},distance=..2] at @s store result score @e[type=armor_stand,tag=TargetTurret,limit=1] turret_power run data get entity @s Item.count 180
+execute as @e[type=item,nbt={Item:{id:"minecraft:redstone_block"}},distance=..2] at @s run particle item{item:"minecraft:redstone"} ~ ~ ~ 0 0 0 0.04 18 normal
+execute as @e[type=item,nbt={Item:{id:"minecraft:redstone_block"}},distance=..2] at @s run kill @s
+
 
 
 tag @s remove TargetTurret
