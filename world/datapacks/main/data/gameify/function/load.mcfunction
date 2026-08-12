@@ -64,6 +64,15 @@ team modify Golden deathMessageVisibility hideForOtherTeams
 scoreboard objectives add cooldown dummy
 scoreboard players set @e cooldown 0
 
+scoreboard objectives add seconds dummy
+scoreboard players set @e seconds 0
+scoreboard objectives add seconds2 dummy
+scoreboard players set @e seconds2 0
+
+scoreboard objectives add twenty dummy
+scoreboard players set @e twenty 20
+
+
 scoreboard objectives add cooldown2 dummy
 scoreboard players set @e cooldown2 0
 
@@ -169,3 +178,11 @@ scoreboard players set @e resistanceCooldown 0
 
 scoreboard objectives add max_snipe_distance dummy
 scoreboard players set @e max_snipe_distance 0
+
+
+#Turrets Lol
+scoreboard objectives add turret.cooldown dummy
+scoreboard players set @e turret.cooldown 0
+
+scoreboard objectives add turret_id dummy
+scoreboard players set @e turret_id 0

@@ -393,6 +393,13 @@ execute as @e[type=arrow,nbt={weapon:{components:{"minecraft:custom_data":{snipe
 execute as @e[type=arrow,nbt={weapon:{components:{"minecraft:custom_data":{sniper:true}}}},scores={time=1}] at @s run kill @s
 
 execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{life_essence:true}}}}] at @s run function gameify:lives/life with entity @s
+
+#TheTurret
+execute as @a[scores={turret.cooldown=1..}] at @s run scoreboard players remove @s turret.cooldown 1
+
+
+
+
 #End
 
 scoreboard players set @a playerhit 0

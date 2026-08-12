@@ -1,0 +1,12 @@
+tag @s add TheTurretor
+
+execute as @e[type=armor_stand,tag=TheTurret] at @s if score @s turret_id = @a[tag=TheTurretor,limit=1] id run tag @e[tag=TheTurretor] add DespawnTurretor
+execute as @e[type=armor_stand,tag=TheTurret] at @s if score @s turret_id = @a[tag=TheTurretor,limit=1] id run kill @s
+
+execute as @s[tag=!DespawnTurretor] at @s align xyz run summon armor_stand ~ ~ ~ {Tags:["TheTurret"]}
+
+execute as @s[tag=DespawnTurretor] at @s run scoreboard players set @s turret.cooldown 1200
+execute as @s[tag=!DespawnTurretor] at @s run scoreboard players set @s turret.cooldown 300
+
+tag @s remove DespawnTurretor
+tag @s remove TheTurretor
