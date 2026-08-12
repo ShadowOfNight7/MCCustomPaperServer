@@ -1,2 +1,2 @@
 execute as @s at @s as @e[type=#gameify:hostile_mobs,distance=..1] at @s run damage @s 100 arrow by @s from @s
-execute as @s at @s positioned ^ ^ ^1 unless entity @p[distance=..200] run function gameify:bows/sniper with entity @s
+execute as @s at @s positioned ^ ^ ^1 if entity @p[distance=..200] run function gameify:bows/sniper with entity @s
