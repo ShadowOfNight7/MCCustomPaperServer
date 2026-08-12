@@ -392,6 +392,7 @@ execute as @e[type=arrow,nbt={weapon:{components:{"minecraft:custom_data":{snipe
 execute as @e[type=arrow,nbt={weapon:{components:{"minecraft:custom_data":{sniper:true}}}},scores={time=1}] at @s on origin rotated as @s run function gameify:bows/sniper with entity @s
 execute as @e[type=arrow,nbt={weapon:{components:{"minecraft:custom_data":{sniper:true}}}},scores={time=1}] at @s run kill @s
 
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{life_essence:true}}}}] at @s run function gameify:lives/life with entity @s
 #End
 
 scoreboard players set @a playerhit 0
