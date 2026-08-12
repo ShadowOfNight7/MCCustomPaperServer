@@ -4,7 +4,12 @@ execute as @s at @s rotated ~ ~ positioned 0.0001 0.0001 0.0001 run summon marke
 execute as @e[type=marker,tag=TheTurretArrowGuide] at @s run data modify entity @e[type=arrow,tag=TheTurretArrow,limit=1] Motion[0] set from entity @s Pos[0]
 execute as @e[type=marker,tag=TheTurretArrowGuide] at @s run data modify entity @e[type=arrow,tag=TheTurretArrow,limit=1] Motion[1] set from entity @s Pos[1]
 execute as @e[type=marker,tag=TheTurretArrowGuide] at @s run data modify entity @e[type=arrow,tag=TheTurretArrow,limit=1] Motion[2] set from entity @s Pos[2]
-kill @e[type=interaction,tag=TheTurretArrowGuide]
+kill @e[type=marker,tag=TheTurretArrowGuide]
 tag @e[type=arrow,tag=TheTurretArrow] remove TheTurretArrow
+
+# execute as @e[type=marker,tag=TheTurretArrowGuide] at @s store result score @s posX run data get entity @s Motion[0] 10000
+# execute as @e[type=marker,tag=TheTurretArrowGuide] at @s store result score @s posY run data get entity @s Motion[1] 10000
+# execute as @e[type=marker,tag=TheTurretArrowGuide] at @s store result score @s posZ run data get entity @s Motion[2] 10000
+
 
 scoreboard players set @s turret.cooldown 60
