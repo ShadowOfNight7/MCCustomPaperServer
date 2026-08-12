@@ -25,7 +25,7 @@
       },
       "minecraft:lore": [
         {
-          "text": "Become immune for 1 hit (80s cd).",
+          "text": "Become immune for 1 hit (80s cd) - active on shift.",
           "color": "gray",
           "italic": false
         }

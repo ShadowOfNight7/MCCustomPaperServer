@@ -33,13 +33,25 @@ execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.legs.compo
 execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.feet.components."minecraft:custom_data".experience run tag @e[type=experience_orb,tag=ExperienceArmor] remove ExperienceArmor
 
 execute as @s at @s if data entity @s equipment.head.components."minecraft:custom_data".resistance store result score @s itemStats run data get entity @s equipment.head.components."minecraft:custom_data".resistance 10
-execute as @s at @s if data entity @s equipment.head.components."minecraft:custom_data".resistance if score @s itemStats matches 35 run effect give @s resistance 2 0 false
+execute as @s at @s if data entity @s equipment.head.components."minecraft:custom_data".resistance if score @s itemStats matches 35 if score @s resistanceCooldown matches ..0 run effect give @s resistance 5 0 false
+execute as @s at @s if data entity @s equipment.head.components."minecraft:custom_data".resistance if score @s itemStats matches 35 if score @s resistanceCooldown matches ..0 run scoreboard players set @s resistanceCooldown 400
+execute as @s at @s if data entity @s equipment.head.components."minecraft:custom_data".resistance if score @s itemStats matches 35 if score @s resistanceCooldown matches 1.. run scoreboard players remove @s resistanceCooldown 1
+
 execute as @s at @s if data entity @s equipment.chest.components."minecraft:custom_data".resistance store result score @s itemStats run data get entity @s equipment.chest.components."minecraft:custom_data".resistance 10
-execute as @s at @s if data entity @s equipment.chest.components."minecraft:custom_data".resistance if score @s itemStats matches 35 run effect give @s resistance 2 0 false
+execute as @s at @s if data entity @s equipment.chest.components."minecraft:custom_data".resistance if score @s itemStats matches 35 if score @s resistanceCooldown matches ..0 run effect give @s resistance 5 0 false
+execute as @s at @s if data entity @s equipment.chest.components."minecraft:custom_data".resistance if score @s itemStats matches 35 if score @s resistanceCooldown matches ..0 run scoreboard players set @s resistanceCooldown 400
+execute as @s at @s if data entity @s equipment.chest.components."minecraft:custom_data".resistance if score @s itemStats matches 35 if score @s resistanceCooldown matches 1.. run scoreboard players remove @s resistanceCooldown 1
+
 execute as @s at @s if data entity @s equipment.legs.components."minecraft:custom_data".resistance store result score @s itemStats run data get entity @s equipment.legs.components."minecraft:custom_data".resistance 10
-execute as @s at @s if data entity @s equipment.legs.components."minecraft:custom_data".resistance if score @s itemStats matches 35 run effect give @s resistance 2 0 false
+execute as @s at @s if data entity @s equipment.legs.components."minecraft:custom_data".resistance if score @s itemStats matches 35 if score @s resistanceCooldown matches ..0 run effect give @s resistance 5 0 false
+execute as @s at @s if data entity @s equipment.legs.components."minecraft:custom_data".resistance if score @s itemStats matches 35 if score @s resistanceCooldown matches ..0 run scoreboard players set @s resistanceCooldown 400
+execute as @s at @s if data entity @s equipment.legs.components."minecraft:custom_data".resistance if score @s itemStats matches 35 if score @s resistanceCooldown matches 1.. run scoreboard players remove @s resistanceCooldown 1
+
 execute as @s at @s if data entity @s equipment.feet.components."minecraft:custom_data".resistance store result score @s itemStats run data get entity @s equipment.feet.components."minecraft:custom_data".resistance 10
-execute as @s at @s if data entity @s equipment.feet.components."minecraft:custom_data".resistance if score @s itemStats matches 35 run effect give @s resistance 2 0 false
+execute as @s at @s if data entity @s equipment.feet.components."minecraft:custom_data".resistance if score @s itemStats matches 35 if score @s resistanceCooldown matches ..0 run effect give @s resistance 5 0 false
+execute as @s at @s if data entity @s equipment.feet.components."minecraft:custom_data".resistance if score @s itemStats matches 35 if score @s resistanceCooldown matches ..0 run scoreboard players set @s resistanceCooldown 400
+execute as @s at @s if data entity @s equipment.feet.components."minecraft:custom_data".resistance if score @s itemStats matches 35 if score @s resistanceCooldown matches 1.. run scoreboard players remove @s resistanceCooldown 1
+
 
 
 execute as @s at @s if data entity @s equipment.head.components."minecraft:custom_data".barrier run function gameify:plating/armor_passive_barrier_head with entity @s

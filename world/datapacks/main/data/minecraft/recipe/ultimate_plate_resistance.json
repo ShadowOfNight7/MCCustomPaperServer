@@ -28,7 +28,7 @@
       "minecraft:enchantment_glint_override": true,
       "minecraft:lore": [
         {
-          "text": "Gain +3.5 armor and +3 armor toughness, with permanent lvl 1 resistance.",
+          "text": "Gain +3.5 armor and +3 armor toughness, with 25% lvl 1 resistance.",
           "color": "gray",
           "italic": false
         }

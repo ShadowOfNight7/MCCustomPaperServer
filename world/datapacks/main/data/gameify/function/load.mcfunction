@@ -14,6 +14,8 @@ scoreboard objectives add random dummy
 scoreboard objectives add blank dummy
 
 scoreboard objectives add playerhit dummy
+scoreboard objectives add playerhitplayer dummy
+
 
 scoreboard objectives add globalScore dummy
 scoreboard players set @a globalScore -2147483648
@@ -161,3 +163,6 @@ scoreboard objectives add crossbowCart dummy
 scoreboard players set @e crossbowCart 0
 scoreboard objectives add crossbowReloads dummy
 scoreboard players set @e crossbowReloads 0
+
+scoreboard objectives add resistanceCooldown dummy
+scoreboard players set @e resistanceCooldown 0

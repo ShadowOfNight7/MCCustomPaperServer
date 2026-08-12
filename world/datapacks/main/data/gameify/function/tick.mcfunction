@@ -388,6 +388,11 @@ execute as @a[predicate=gameify:reload_bow] at @s run function gameify:bows/relo
 
 execute as @a[predicate=gameify:minigun] at @s run function gameify:bows/minigun with entity @s
 
+execute as @e[type=arrow,nbt={weapon:{components:{"minecraft:custom_data":{sniper:true}}}},scores={time=1}] at @s store result entity @s Motion[0] double 0.0005 run data get entity @s Motion[0] 10000
+execute as @e[type=arrow,nbt={weapon:{components:{"minecraft:custom_data":{sniper:true}}}},scores={time=1}] at @s store result entity @s Motion[1] double 0.0005 run data get entity @s Motion[1] 10000
+execute as @e[type=arrow,nbt={weapon:{components:{"minecraft:custom_data":{sniper:true}}}},scores={time=1}] at @s store result entity @s Motion[2] double 0.0005 run data get entity @s Motion[2] 10000
+
 #End
 
 scoreboard players set @a playerhit 0
+scoreboard players set @a playerhitplayer 0

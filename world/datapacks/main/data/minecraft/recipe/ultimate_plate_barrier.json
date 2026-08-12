@@ -27,7 +27,7 @@
       "minecraft:enchantment_glint_override": true,
       "minecraft:lore": [
         {
-          "text": "Become immune for 1 hit (20s cd).",
+          "text": "Become immune for 1 hit (20s cd) - active on shift.",
           "color": "gray",
           "italic": false
         }
