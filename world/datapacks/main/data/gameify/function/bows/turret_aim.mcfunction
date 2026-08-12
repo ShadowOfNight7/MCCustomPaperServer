@@ -12,4 +12,10 @@ tag @e[type=arrow,tag=TheTurretArrow] remove TheTurretArrow
 # execute as @e[type=marker,tag=TheTurretArrowGuide] at @s store result score @s posZ run data get entity @s Motion[2] 10000
 
 
-scoreboard players set @s turret.cooldown 60
+execute store result score @s turret.cooldown run scoreboard players get @s turret_power
+scoreboard players set @s basenumber 128
+execute as @s at @s run scoreboard players operation @s turret.cooldown /= @s basenumber
+execute as @s at @s run scoreboard players add @s turret.cooldown 10
+scoreboard players set @s basenumber 600
+execute as @s at @s store result score @s turret.cooldown run scoreboard players operation @s basenumber /= @s turret.cooldown
+

@@ -69,8 +69,12 @@ scoreboard players set @e seconds 0
 scoreboard objectives add seconds2 dummy
 scoreboard players set @e seconds2 0
 
+#Numberslol
 scoreboard objectives add twenty dummy
 scoreboard players set @e twenty 20
+
+scoreboard objectives add basenumber dummy
+scoreboard players set @e basenumber 0
 
 
 scoreboard objectives add cooldown2 dummy
@@ -186,3 +190,6 @@ scoreboard players set @e turret.cooldown 0
 
 scoreboard objectives add turret_id dummy
 scoreboard players set @e turret_id 0
+
+scoreboard objectives add turret_power dummy
+scoreboard players set @e turret_power 0
