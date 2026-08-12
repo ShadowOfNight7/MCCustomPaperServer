@@ -166,3 +166,6 @@ scoreboard players set @e crossbowReloads 0
 
 scoreboard objectives add resistanceCooldown dummy
 scoreboard players set @e resistanceCooldown 0
+
+scoreboard objectives add max_snipe_distance dummy
+scoreboard players set @e max_snipe_distance 0
