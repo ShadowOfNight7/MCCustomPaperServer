@@ -389,7 +389,7 @@ execute as @a[predicate=gameify:reload_bow] at @s run function gameify:bows/relo
 execute as @a[predicate=gameify:minigun] at @s run function gameify:bows/minigun with entity @s
 
 execute as @e[type=arrow,nbt={weapon:{components:{"minecraft:custom_data":{sniper:true}}}},scores={time=1}] at @s on origin rotated as @s run function gameify:bows/sniper with entity @s
-
+execute as @e[type=arrow,nbt={weapon:{components:{"minecraft:custom_data":{sniper:true}}}},scores={time=1}] at @s run kill @s
 
 #End
 
