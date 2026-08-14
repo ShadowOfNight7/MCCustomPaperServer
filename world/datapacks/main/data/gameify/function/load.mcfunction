@@ -189,7 +189,7 @@ scoreboard objectives add turret.cooldown dummy
 scoreboard players set @e turret.cooldown 0
 
 scoreboard objectives add turret_id dummy
-scoreboard players set @e turret_id 0
+# scoreboard players set @e turret_id 0
 
 scoreboard objectives add turret_power dummy
 scoreboard players set @e turret_power 0
