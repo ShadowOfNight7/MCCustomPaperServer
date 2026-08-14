@@ -398,7 +398,7 @@ execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{life_ess
 execute as @a[scores={turret.cooldown=1..}] at @s run scoreboard players remove @s turret.cooldown 1
 execute as @e[type=armor_stand,tag=TheTurret] at @s run function gameify:bows/turret with entity @s
 
-kill @e[type=arrow,tag=TurretArrow,scores={time=80..}]
+kill @e[type=arrow,tag=TurretArrow,scores={time=50..}]
 
 #End
 
