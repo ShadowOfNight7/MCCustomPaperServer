@@ -1,5 +1,5 @@
 
-execute as @s at @s positioned ~ ~1 ~ run summon arrow ^ ^ ^ {Tags:["TheTurretArrow","TurretArrow"]}
+execute as @s at @s positioned ~ ~ ~ run summon arrow ^ ^ ^ {Tags:["TheTurretArrow","TurretArrow"]}
 execute as @s at @s rotated ~ ~ positioned 0.0001 0.0001 0.0001 run summon marker ^ ^ ^4 {Tags:["TheTurretArrowGuide"]}
 execute as @e[type=marker,tag=TheTurretArrowGuide] at @s run data modify entity @e[type=arrow,tag=TheTurretArrow,limit=1] Motion[0] set from entity @s Pos[0]
 execute as @e[type=marker,tag=TheTurretArrowGuide] at @s run data modify entity @e[type=arrow,tag=TheTurretArrow,limit=1] Motion[1] set from entity @s Pos[1]
