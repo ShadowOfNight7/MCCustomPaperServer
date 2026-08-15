@@ -13,6 +13,10 @@
   "result": {
     "id": "minecraft:shield",
     "components": {
+      "custom_name": {
+        "text": "Reinforced Netherite Plated Shield",
+        "color": "light_purple"
+      },
       "max_damage": 24192
     }
   }
