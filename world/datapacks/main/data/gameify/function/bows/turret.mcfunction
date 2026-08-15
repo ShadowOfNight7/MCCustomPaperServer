@@ -10,6 +10,7 @@ scoreboard players remove @s turret.cooldown 1
 scoreboard players remove @s[scores={turret_power=1..}] turret_power 1
 execute as @s at @s on vehicle on passengers if entity @s[type=interaction] on attacker run tag @s add TurretAttacked
 execute if entity @a[tag=TurretAttacked] run scoreboard players remove @s turret_health 1
+execute if entity @a[tag=TurretAttacked] as @s at @s run particle item{item:"armor_stand"} ~ ~1 ~ 0.5 1 0.5 0.1 10 normal
 execute if entity @a[tag=TurretAttacked] as @s at @s on vehicle on passengers if entity @s[type=interaction] run data remove entity @s attack
 execute if entity @a[tag=TurretAttacked] run tag @a[tag=TurretAttacked] remove TurretAttacked
 
