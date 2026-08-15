@@ -34,8 +34,8 @@ execute unless score @s turret_health matches 150.. as @e[type=item,nbt={Item:{i
 execute unless score @s turret_health matches 150.. as @e[type=item,nbt={Item:{id:"minecraft:iron_block"}},distance=..2] at @s run function gameify:bows/iron_power2 with entity @s
 execute as @s at @s if score @s turret_health matches 151.. run scoreboard players set @s turret_health 150
 
-execute as @e[type=item,nbt={Item:{id:"minecraft:gold_ingot"}},distance=..2] at @s run function gameify:bows/iron_power with entity @s
-execute as @e[type=item,nbt={Item:{id:"minecraft:gold_block"}},distance=..2] at @s run function gameify:bows/iron_power2 with entity @s
+execute as @e[type=item,nbt={Item:{id:"minecraft:gold_ingot"}},distance=..2] at @s run function gameify:bows/gold_power with entity @s
+execute as @e[type=item,nbt={Item:{id:"minecraft:gold_block"}},distance=..2] at @s run function gameify:bows/gold_power2 with entity @s
 
 
 

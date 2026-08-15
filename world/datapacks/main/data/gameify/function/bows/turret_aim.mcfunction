@@ -5,6 +5,11 @@ execute as @e[type=marker,tag=TheTurretArrowGuide] at @s run data modify entity 
 execute as @e[type=marker,tag=TheTurretArrowGuide] at @s run data modify entity @e[type=arrow,tag=TheTurretArrow,limit=1] Motion[1] set from entity @s Pos[1]
 execute as @e[type=marker,tag=TheTurretArrowGuide] at @s run data modify entity @e[type=arrow,tag=TheTurretArrow,limit=1] Motion[2] set from entity @s Pos[2]
 kill @e[type=marker,tag=TheTurretArrowGuide]
+
+scoreboard players set @e[type=arrow,tag=TheTurretArrow] basenumber 100
+scoreboard players operation @e[type=arrow,tag=TheTurretArrow] basenumber += @s turret_attack
+execute as @e[type=arrow,tag=TheTurretArrow] at @s store result entity @s damage double 0.01 run scoreboard players get @s basenumber
+
 tag @e[type=arrow,tag=TheTurretArrow] remove TheTurretArrow
 
 scoreboard players remove @s turret_power 3
