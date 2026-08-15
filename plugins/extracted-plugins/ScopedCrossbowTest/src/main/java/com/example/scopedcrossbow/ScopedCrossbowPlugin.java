@@ -1,6 +1,8 @@
 package com.example.scopedcrossbow;
 
 import io.papermc.paper.event.player.PlayerArmSwingEvent;
+import io.papermc.paper.event.player.PlayerStopUsingItemEvent;
+
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.Sound;
@@ -351,6 +353,7 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
             Player player,
             EquipmentSlot hand,
             ItemStack crossbow) {
+
         if (!isLoaded(crossbow)) {
             player.playSound(
                     player.getLocation(),
@@ -372,7 +375,11 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
 
         ItemStack projectileItem = projectiles.get(0);
 
-        fireArrow(player, crossbow, projectileItem);
+        /*
+         * Directly spawn the arrow rather than trying to make the
+         * vanilla crossbow fire.
+         */
+        spawnArrowProjectile(player, crossbow, projectileItem);
 
         /*
          * Consume the loaded projectile.
@@ -395,8 +402,9 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
     /*
      * Fire while the player is scoped.
      *
-     * The real crossbow is temporarily stored in ScopeState while
-     * the player is holding the spyglass.
+     * The player is holding a SPYGLASS, but the actual crossbow is stored
+     * in ScopeState. We directly summon/spawn the projectile instead of
+     * relying on vanilla crossbow behavior.
      */
     private void fire(Player player, ScopeState scope) {
         ItemStack crossbow = scope.crossbow;
@@ -422,10 +430,16 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
 
         ItemStack projectileItem = projectiles.get(0);
 
-        fireArrow(player, crossbow, projectileItem);
+        /*
+         * Directly spawn the projectile.
+         *
+         * This does NOT care what item the player is currently holding.
+         * Therefore it works while the player is holding the SPYGLASS.
+         */
+        spawnArrowProjectile(player, crossbow, projectileItem);
 
         /*
-         * Unload the crossbow stored in ScopeState.
+         * Remove the projectile from the stored crossbow.
          */
         meta.setChargedProjectiles(null);
         crossbow.setItemMeta(meta);
@@ -438,11 +452,12 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
     }
 
     /*
-     * Actually create the projectile.
+     * Directly summons/spawns the projectile into the world.
      *
-     * The speed is intentionally crossbow-like rather than bow-like.
+     * This works regardless of whether the player is holding a
+     * CROSSBOW, SPYGLASS, or anything else.
      */
-    private void fireArrow(
+    private void spawnArrowProjectile(
             Player player,
             ItemStack weapon,
             ItemStack projectileItem) {
@@ -524,7 +539,7 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
         }
 
         /*
-         * Fallback.
+         * Fallback to a normal arrow.
          */
         Arrow arrow = player.getWorld().spawnArrow(
                 shot.location,
@@ -722,6 +737,15 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
              */
             this.location.add(
                     this.direction.clone().multiply(0.35));
+        }
+    }
+
+    @EventHandler
+    public void onStopUsingItem(PlayerStopUsingItemEvent event) {
+        Player player = event.getPlayer();
+
+        if (scopedPlayers.containsKey(player.getUniqueId())) {
+            stopScoping(player);
         }
     }
 }
