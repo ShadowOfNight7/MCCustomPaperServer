@@ -1,0 +1,18 @@
+main: ScopedCrossbow.com.ScopedCrossbow
+version: 1.0.0-SNAPSHOT
+name: ScopedCrossbow
+author: ShadowOfNight7
+description: A Minecraft development project.
+api-version: 1.21
+
+
+commands:
+  scopedcrossbow:
+    description: Gives you a scoped crossbow.
+    usage: /scopedcrossbow
+    permission: scopedcrossbow.give
+
+permissions:
+  scopedcrossbow.give:
+    description: Allows the player to obtain a scoped crossbow.
+    default: op
