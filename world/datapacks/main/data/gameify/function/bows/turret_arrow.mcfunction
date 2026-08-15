@@ -1,3 +1,5 @@
+execute as @s[tag=BreakerArrow,nbt={inGround:true}] at @s run fill ~-0.1 ~-0.1 ~-0.1 ~0.1 ~0.1 ~0.1 air
+
 execute store result score @s posX run data get entity @s Motion[0] 10000
 execute store result score @s posY run data get entity @s Motion[1] 10000
 execute store result score @s posZ run data get entity @s Motion[2] 10000

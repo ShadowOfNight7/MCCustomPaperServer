@@ -18,8 +18,10 @@ execute as @s[tag=!DespawnTurretor] at @s if score @s turret_health matches ..10
 execute as @s[tag=!DespawnTurretor] at @s if score @s turret_health matches 11.. store result score @e[type=armor_stand,tag=TheTurretInitial] turret_health run scoreboard players get @s turret_health
 execute as @s[tag=!DespawnTurretor] at @s store result score @e[type=armor_stand,tag=TheTurretInitial] turret_attack run scoreboard players get @s turret_attack
 execute as @s[tag=!DespawnTurretor] at @s store result score @e[type=armor_stand,tag=TheTurretInitial] turret_power run scoreboard players get @s turret_power
+execute as @s[tag=!DespawnTurretor] at @s store result score @e[type=armor_stand,tag=TheTurretInitial] turret_utility run scoreboard players get @s turret_utility
 execute as @s[tag=!DespawnTurretor] at @s as @e[type=armor_stand,tag=TheTurretInitial] at @s run scoreboard players operation @s turret_power /= @s basenumber
 execute as @s[tag=!DespawnTurretor] at @s as @e[type=armor_stand,tag=TheTurretInitial] at @s run scoreboard players operation @s turret_attack /= @s basenumber
+execute as @s[tag=!DespawnTurretor] at @s as @e[type=armor_stand,tag=TheTurretInitial] at @s run scoreboard players operation @s turret_utility /= @s basenumber
 execute as @s[tag=!DespawnTurretor] at @s run scoreboard players set @s turret_health 0
 execute as @s[tag=!DespawnTurretor] at @s run scoreboard players set @s turret_power 0
 execute as @s[tag=!DespawnTurretor] at @s run scoreboard players set @s turret_utility 0
