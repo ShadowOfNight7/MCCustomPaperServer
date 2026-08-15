@@ -7,6 +7,8 @@ import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Arrow;
+import org.bukkit.entity.SpectralArrow;
+import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -188,12 +190,35 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
             return;
         }
 
+        Player player = event.getPlayer();
+
+        /*
+         * LEFT CLICK WHILE SCOPED
+         *
+         * The player is holding a real SPYGLASS at this point, so the
+         * normal crossbow item check below would fail.
+         *
+         * Intercept the left click and fire the saved crossbow instead.
+         */
+        if (event.getAction() == Action.LEFT_CLICK_AIR
+                || event.getAction() == Action.LEFT_CLICK_BLOCK) {
+
+            ScopeState scope = scopedPlayers.get(player.getUniqueId());
+
+            if (scope != null) {
+                event.setCancelled(true);
+                fire(player, scope);
+                return;
+            }
+        }
+
+        /*
+         * Everything below handles the crossbow while not scoped.
+         */
         if (event.getAction() != Action.RIGHT_CLICK_AIR
                 && event.getAction() != Action.RIGHT_CLICK_BLOCK) {
             return;
         }
-
-        Player player = event.getPlayer();
 
         ItemStack item = event.getItem();
 
@@ -201,28 +226,10 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
             return;
         }
 
-        /*
-         * Shift + right click is the reload action.
-         *
-         * We deliberately allow vanilla crossbow behavior.
-         * This gives us the real Minecraft crossbow draw animation
-         * and normal crossbow loading mechanics.
-         */
         if (player.isSneaking()) {
-
-            /*
-             * If it is already loaded, clear the old projectile first.
-             * This makes shift-right-click a genuine "reload" action
-             * instead of accidentally firing the existing bolt.
-             */
-            clearLoadedProjectile(item);
-
             return;
         }
 
-        /*
-         * Normal right-click becomes scope.
-         */
         event.setUseItemInHand(org.bukkit.event.Event.Result.DENY);
 
         startScoping(player, event.getHand(), item);
@@ -231,6 +238,7 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
     /*
      * Remove the charged projectile from the crossbow.
      */
+    @SuppressWarnings("unused")
     private void clearLoadedProjectile(ItemStack crossbow) {
         if (!(crossbow.getItemMeta() instanceof CrossbowMeta meta)) {
             return;
@@ -303,23 +311,14 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
     public void onArmSwing(PlayerArmSwingEvent event) {
         Player player = event.getPlayer();
 
-        ScopeState scope = scopedPlayers.get(player.getUniqueId());
-
         /*
-         * If the player is scoped, fire using the saved crossbow.
+         * Scoped shooting is handled by PlayerInteractEvent.
          */
-        if (scope != null) {
+        if (scopedPlayers.containsKey(player.getUniqueId())) {
             event.setCancelled(true);
-
-            fire(player, scope);
-
             return;
         }
 
-        /*
-         * Otherwise check whether the player is holding the scoped
-         * crossbow normally.
-         */
         EquipmentSlot hand = event.getHand();
 
         ItemStack item = getHandItem(player, hand);
@@ -328,9 +327,6 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
             return;
         }
 
-        /*
-         * We only shoot if the crossbow has been loaded.
-         */
         if (!isLoaded(item)) {
             return;
         }
@@ -434,8 +430,86 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
             Player player,
             ItemStack weapon,
             ItemStack projectileItem) {
+
         LocationWithDirection shot = new LocationWithDirection(player);
 
+        /*
+         * Normal arrow
+         */
+        if (projectileItem.getType() == Material.ARROW) {
+            Arrow arrow = player.getWorld().spawnArrow(
+                    shot.location,
+                    shot.direction,
+                    3.15f,
+                    0.0f);
+
+            arrow.setShooter(player);
+            arrow.setWeapon(weapon);
+            arrow.setPickupStatus(
+                    org.bukkit.entity.AbstractArrow.PickupStatus.ALLOWED);
+
+            return;
+        }
+
+        /*
+         * Spectral arrow
+         */
+        if (projectileItem.getType() == Material.SPECTRAL_ARROW) {
+            SpectralArrow arrow = player.getWorld().spawnArrow(
+                    shot.location,
+                    shot.direction,
+                    3.15f,
+                    0.0f,
+                    SpectralArrow.class);
+
+            arrow.setShooter(player);
+            arrow.setWeapon(weapon);
+            arrow.setPickupStatus(
+                    org.bukkit.entity.AbstractArrow.PickupStatus.ALLOWED);
+
+            return;
+        }
+
+        /*
+         * Tipped arrow
+         */
+        if (projectileItem.getType() == Material.TIPPED_ARROW) {
+            Arrow arrow = player.getWorld().spawnArrow(
+                    shot.location,
+                    shot.direction,
+                    3.15f,
+                    0.0f);
+
+            arrow.setShooter(player);
+            arrow.setWeapon(weapon);
+            arrow.setPickupStatus(
+                    org.bukkit.entity.AbstractArrow.PickupStatus.ALLOWED);
+
+            if (projectileItem.getItemMeta() instanceof PotionMeta potionMeta) {
+
+                /*
+                 * Copy custom potion effects.
+                 */
+                for (org.bukkit.potion.PotionEffect effect : potionMeta.getCustomEffects()) {
+
+                    arrow.addCustomEffect(effect, true);
+                }
+
+                /*
+                 * Copy the base potion type.
+                 */
+                if (potionMeta.getBasePotionType() != null) {
+                    arrow.setBasePotionType(
+                            potionMeta.getBasePotionType());
+                }
+            }
+
+            return;
+        }
+
+        /*
+         * Fallback.
+         */
         Arrow arrow = player.getWorld().spawnArrow(
                 shot.location,
                 shot.direction,
@@ -446,21 +520,6 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
         arrow.setWeapon(weapon);
         arrow.setPickupStatus(
                 org.bukkit.entity.AbstractArrow.PickupStatus.ALLOWED);
-
-        /*
-         * Make the projectile behave like the loaded arrow.
-         *
-         * For a normal arrow this is already correct.
-         */
-        if (projectileItem.getType() == Material.SPECTRAL_ARROW) {
-            arrow.remove();
-            player.getWorld().spawnArrow(
-                    shot.location,
-                    shot.direction,
-                    3.15f,
-                    0.0f,
-                    org.bukkit.entity.SpectralArrow.class);
-        }
     }
 
     /*
