@@ -1,6 +1,8 @@
 package com.example.scopedcrossbow;
 
 import io.papermc.paper.event.player.PlayerArmSwingEvent;
+import io.papermc.paper.event.player.PlayerStopUsingItemEvent;
+
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.Sound;
@@ -194,11 +196,6 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
 
         /*
          * LEFT CLICK WHILE SCOPED
-         *
-         * The player is holding a real SPYGLASS at this point, so the
-         * normal crossbow item check below would fail.
-         *
-         * Intercept the left click and fire the saved crossbow instead.
          */
         if (event.getAction() == Action.LEFT_CLICK_AIR
                 || event.getAction() == Action.LEFT_CLICK_BLOCK) {
@@ -226,30 +223,33 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
             return;
         }
 
+        /*
+         * SHIFT + RIGHT CLICK
+         *
+         * If unloaded, allow vanilla to load the crossbow.
+         *
+         * If already loaded, completely block the interaction.
+         */
         if (player.isSneaking()) {
+
+            if (isLoaded(item)) {
+                event.setCancelled(true);
+                event.setUseItemInHand(
+                        org.bukkit.event.Event.Result.DENY);
+            }
+
             return;
         }
 
-        event.setUseItemInHand(org.bukkit.event.Event.Result.DENY);
+        /*
+         * NORMAL RIGHT CLICK
+         *
+         * Prevent vanilla crossbow behavior and enter scope mode.
+         */
+        event.setUseItemInHand(
+                org.bukkit.event.Event.Result.DENY);
 
         startScoping(player, event.getHand(), item);
-    }
-
-    /*
-     * Remove the charged projectile from the crossbow.
-     */
-    @SuppressWarnings("unused")
-    private void clearLoadedProjectile(ItemStack crossbow) {
-        if (!(crossbow.getItemMeta() instanceof CrossbowMeta meta)) {
-            return;
-        }
-
-        if (!meta.hasChargedProjectiles()) {
-            return;
-        }
-
-        meta.setChargedProjectiles(null);
-        crossbow.setItemMeta(meta);
     }
 
     /*
@@ -312,13 +312,23 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
         Player player = event.getPlayer();
 
         /*
-         * Scoped shooting is handled by PlayerInteractEvent.
+         * LEFT CLICK WHILE SCOPED
+         *
+         * The player is holding the real spyglass, so the normal
+         * crossbow is stored in ScopeState. Fire that crossbow when
+         * the player swings/left-clicks.
          */
-        if (scopedPlayers.containsKey(player.getUniqueId())) {
+        ScopeState scope = scopedPlayers.get(player.getUniqueId());
+
+        if (scope != null) {
             event.setCancelled(true);
+            fire(player, scope);
             return;
         }
 
+        /*
+         * Normal left click with the crossbow in hand.
+         */
         EquipmentSlot hand = event.getHand();
 
         ItemStack item = getHandItem(player, hand);
@@ -343,6 +353,7 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
             Player player,
             EquipmentSlot hand,
             ItemStack crossbow) {
+
         if (!isLoaded(crossbow)) {
             player.playSound(
                     player.getLocation(),
@@ -364,7 +375,11 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
 
         ItemStack projectileItem = projectiles.get(0);
 
-        fireArrow(player, crossbow, projectileItem);
+        /*
+         * Directly spawn the arrow rather than trying to make the
+         * vanilla crossbow fire.
+         */
+        spawnArrowProjectile(player, crossbow, projectileItem);
 
         /*
          * Consume the loaded projectile.
@@ -387,13 +402,19 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
     /*
      * Fire while the player is scoped.
      *
-     * The real crossbow is temporarily stored in ScopeState while
-     * the player is holding the spyglass.
+     * The player is holding a SPYGLASS, but the actual crossbow is stored
+     * in ScopeState. We directly summon/spawn the projectile instead of
+     * relying on vanilla crossbow behavior.
      */
     private void fire(Player player, ScopeState scope) {
         ItemStack crossbow = scope.crossbow;
 
         if (!isLoaded(crossbow)) {
+            player.playSound(
+                    player.getLocation(),
+                    Sound.BLOCK_NOTE_BLOCK_BASS,
+                    0.5f,
+                    0.5f);
             return;
         }
 
@@ -409,8 +430,17 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
 
         ItemStack projectileItem = projectiles.get(0);
 
-        fireArrow(player, crossbow, projectileItem);
+        /*
+         * Directly spawn the projectile.
+         *
+         * This does NOT care what item the player is currently holding.
+         * Therefore it works while the player is holding the SPYGLASS.
+         */
+        spawnArrowProjectile(player, crossbow, projectileItem);
 
+        /*
+         * Remove the projectile from the stored crossbow.
+         */
         meta.setChargedProjectiles(null);
         crossbow.setItemMeta(meta);
 
@@ -422,11 +452,12 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
     }
 
     /*
-     * Actually create the projectile.
+     * Directly summons/spawns the projectile into the world.
      *
-     * The speed is intentionally crossbow-like rather than bow-like.
+     * This works regardless of whether the player is holding a
+     * CROSSBOW, SPYGLASS, or anything else.
      */
-    private void fireArrow(
+    private void spawnArrowProjectile(
             Player player,
             ItemStack weapon,
             ItemStack projectileItem) {
@@ -508,7 +539,7 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
         }
 
         /*
-         * Fallback.
+         * Fallback to a normal arrow.
          */
         Arrow arrow = player.getWorld().spawnArrow(
                 shot.location,
@@ -707,5 +738,21 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
             this.location.add(
                     this.direction.clone().multiply(0.35));
         }
+    }
+
+    @EventHandler(priority = EventPriority.HIGHEST)
+    public void onStopUsingItem(PlayerStopUsingItemEvent event) {
+        Player player = event.getPlayer();
+
+        if (!scopedPlayers.containsKey(player.getUniqueId())) {
+            return;
+        }
+
+        // Give other input events from this interaction a chance to run first.
+        getServer().getScheduler().runTask(this, () -> {
+            if (scopedPlayers.containsKey(player.getUniqueId())) {
+                stopScoping(player);
+            }
+        });
     }
 }
