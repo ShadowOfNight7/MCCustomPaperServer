@@ -193,3 +193,12 @@ scoreboard objectives add turret_id dummy
 
 scoreboard objectives add turret_power dummy
 scoreboard players set @e turret_power 0
+
+scoreboard objectives add turret_health dummy
+scoreboard players set @e turret_health 0
+
+scoreboard objectives add turret_attack dummy
+scoreboard players set @e turret_attack 0
+
+scoreboard objectives add turret_utility dummy
+scoreboard players set @e turret_utility 0
