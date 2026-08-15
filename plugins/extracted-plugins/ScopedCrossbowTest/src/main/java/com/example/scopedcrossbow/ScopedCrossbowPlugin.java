@@ -194,11 +194,6 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
 
         /*
          * LEFT CLICK WHILE SCOPED
-         *
-         * The player is holding a real SPYGLASS at this point, so the
-         * normal crossbow item check below would fail.
-         *
-         * Intercept the left click and fire the saved crossbow instead.
          */
         if (event.getAction() == Action.LEFT_CLICK_AIR
                 || event.getAction() == Action.LEFT_CLICK_BLOCK) {
@@ -226,30 +221,33 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
             return;
         }
 
+        /*
+         * SHIFT + RIGHT CLICK
+         *
+         * If unloaded, allow vanilla to load the crossbow.
+         *
+         * If already loaded, completely block the interaction.
+         */
         if (player.isSneaking()) {
+
+            if (isLoaded(item)) {
+                event.setCancelled(true);
+                event.setUseItemInHand(
+                        org.bukkit.event.Event.Result.DENY);
+            }
+
             return;
         }
 
-        event.setUseItemInHand(org.bukkit.event.Event.Result.DENY);
+        /*
+         * NORMAL RIGHT CLICK
+         *
+         * Prevent vanilla crossbow behavior and enter scope mode.
+         */
+        event.setUseItemInHand(
+                org.bukkit.event.Event.Result.DENY);
 
         startScoping(player, event.getHand(), item);
-    }
-
-    /*
-     * Remove the charged projectile from the crossbow.
-     */
-    @SuppressWarnings("unused")
-    private void clearLoadedProjectile(ItemStack crossbow) {
-        if (!(crossbow.getItemMeta() instanceof CrossbowMeta meta)) {
-            return;
-        }
-
-        if (!meta.hasChargedProjectiles()) {
-            return;
-        }
-
-        meta.setChargedProjectiles(null);
-        crossbow.setItemMeta(meta);
     }
 
     /*
@@ -312,13 +310,23 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
         Player player = event.getPlayer();
 
         /*
-         * Scoped shooting is handled by PlayerInteractEvent.
+         * LEFT CLICK WHILE SCOPED
+         *
+         * The player is holding the real spyglass, so the normal
+         * crossbow is stored in ScopeState. Fire that crossbow when
+         * the player swings/left-clicks.
          */
-        if (scopedPlayers.containsKey(player.getUniqueId())) {
+        ScopeState scope = scopedPlayers.get(player.getUniqueId());
+
+        if (scope != null) {
             event.setCancelled(true);
+            fire(player, scope);
             return;
         }
 
+        /*
+         * Normal left click with the crossbow in hand.
+         */
         EquipmentSlot hand = event.getHand();
 
         ItemStack item = getHandItem(player, hand);
@@ -394,6 +402,11 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
         ItemStack crossbow = scope.crossbow;
 
         if (!isLoaded(crossbow)) {
+            player.playSound(
+                    player.getLocation(),
+                    Sound.BLOCK_NOTE_BLOCK_BASS,
+                    0.5f,
+                    0.5f);
             return;
         }
 
@@ -411,6 +424,9 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
 
         fireArrow(player, crossbow, projectileItem);
 
+        /*
+         * Unload the crossbow stored in ScopeState.
+         */
         meta.setChargedProjectiles(null);
         crossbow.setItemMeta(meta);
 
