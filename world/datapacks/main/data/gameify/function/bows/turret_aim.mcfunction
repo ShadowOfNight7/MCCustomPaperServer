@@ -6,9 +6,11 @@ execute as @e[type=marker,tag=TheTurretArrowGuide] at @s run data modify entity 
 execute as @e[type=marker,tag=TheTurretArrowGuide] at @s run data modify entity @e[type=arrow,tag=TheTurretArrow,limit=1] Motion[2] set from entity @s Pos[2]
 kill @e[type=marker,tag=TheTurretArrowGuide]
 
-scoreboard players set @e[type=arrow,tag=TheTurretArrow] basenumber 100
-scoreboard players operation @e[type=arrow,tag=TheTurretArrow] basenumber += @s turret_attack
-execute as @e[type=arrow,tag=TheTurretArrow] at @s store result entity @s damage double 0.01 run scoreboard players get @s basenumber
+scoreboard players set @e[type=arrow,tag=TheTurretArrow] blank 0
+execute as @s at @s store result score @s basenumber run scoreboard players get @s turret_attack
+execute as @s at @s run function gameify:bows/turret_recursion with entity @s
+scoreboard players add @e[type=arrow,tag=TheTurretArrow] blank 50
+execute as @e[type=arrow,tag=TheTurretArrow] at @s store result entity @s damage double 0.02 run scoreboard players get @s blank
 
 tag @e[type=arrow,tag=TheTurretArrow] remove TheTurretArrow
 
