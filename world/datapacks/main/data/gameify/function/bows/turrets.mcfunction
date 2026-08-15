@@ -12,6 +12,7 @@ execute as @s[tag=!DespawnTurretor] at @s run scoreboard players set @e[type=arm
 execute as @s[tag=!DespawnTurretor] at @s run scoreboard players set @e[type=armor_stand,tag=TheTurretInitial] basenumber 2
 execute as @s[tag=!DespawnTurretor] at @s as @e[type=armor_stand,tag=TheTurretInitial] at @s run scoreboard players operation @s turret_power /= @s basenumber
 execute as @s[tag=!DespawnTurretor] at @s as @e[type=armor_stand,tag=TheTurretInitial] at @s if score @s turret_health matches ..0 run scoreboard players set @s turret_health 10
+execute as @s[tag=!DespawnTurretor] at @s as @e[type=armor_stand,tag=TheTurretInitial] at @s unless score @s turret_health = @s turret_health run scoreboard players set @s turret_health 10
 execute as @s[tag=!DespawnTurretor] at @s run tag @e[type=armor_stand,tag=TheTurretInitial] remove TheTurretInitial
 
 execute as @s[tag=DespawnTurretor] at @s run scoreboard players set @s turret.cooldown 300
