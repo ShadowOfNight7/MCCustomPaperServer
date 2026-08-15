@@ -1,0 +1,17 @@
+name: ScopedCrossbow
+version: 1.0.0
+main: com.example.scopedcrossbow.ScopedCrossbowPlugin
+description: A scoped crossbow that reloads with shift-right-click and fires with left-click.
+author: Example
+api-version: '26.2'
+
+commands:
+  scopedcrossbow:
+    description: Gives you a scoped crossbow
+    usage: /scopedcrossbow
+    permission: scopedcrossbow.give
+
+permissions:
+  scopedcrossbow.give:
+    description: Allows the player to receive a scoped crossbow
+    default: op
