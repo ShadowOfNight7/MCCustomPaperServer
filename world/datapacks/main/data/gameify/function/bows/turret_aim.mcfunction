@@ -9,8 +9,8 @@ kill @e[type=marker,tag=TheTurretArrowGuide]
 scoreboard players set @e[type=arrow,tag=TheTurretArrow] blank 0
 execute as @s at @s store result score @s basenumber run scoreboard players get @s turret_attack
 execute as @s at @s run function gameify:bows/turret_recursion with entity @s
-scoreboard players add @e[type=arrow,tag=TheTurretArrow] blank 100
-execute as @e[type=arrow,tag=TheTurretArrow] at @s store result entity @s damage double 0.01 run scoreboard players get @s blank
+scoreboard players add @e[type=arrow,tag=TheTurretArrow] blank 66
+execute as @e[type=arrow,tag=TheTurretArrow] at @s store result entity @s damage double 0.015 run scoreboard players get @s blank
 
 tag @e[type=arrow,tag=TheTurretArrow] remove TheTurretArrow
 
