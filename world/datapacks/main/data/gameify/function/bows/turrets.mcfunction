@@ -6,7 +6,7 @@ execute as @e[type=armor_stand,tag=TheTurret] at @s if score @s turret_id = @a[t
 execute as @e[type=armor_stand,tag=TheTurret] at @s if score @s turret_id = @a[tag=TheTurretor,limit=1] id on vehicle run kill @s
 execute as @e[type=armor_stand,tag=TheTurret] at @s if score @s turret_id = @a[tag=TheTurretor,limit=1] id run kill @s
 
-execute as @s[tag=!DespawnTurretor] at @s align xyz run summon interaction ~ ~ ~ {Passengers:[{id:"minecraft:armor_stand",Tags:["TheTurret","TheTurretInitial"],Invulnerable:true,Marker:true},{id:"minecraft:interaction",height:2}]}
+execute as @s[tag=!DespawnTurretor] at @s align xyz run summon interaction ~ ~ ~ {Passengers:[{id:"minecraft:armor_stand",Tags:["TheTurret","TheTurretInitial"],Invulnerable:true,Marker:true},{id:"minecraft:interaction",height:2}],height:0}
 execute as @s[tag=!DespawnTurretor] at @s store result score @e[type=armor_stand,tag=TheTurretInitial] turret_id run scoreboard players get @s id
 execute as @s[tag=!DespawnTurretor] at @s run scoreboard players set @e[type=armor_stand,tag=TheTurretInitial] turret.cooldown 20
 execute as @s[tag=!DespawnTurretor] at @s run scoreboard players set @e[type=armor_stand,tag=TheTurretInitial] turret_power 0
