@@ -740,12 +740,19 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
         }
     }
 
-    @EventHandler
+    @EventHandler(priority = EventPriority.HIGHEST)
     public void onStopUsingItem(PlayerStopUsingItemEvent event) {
         Player player = event.getPlayer();
 
-        if (scopedPlayers.containsKey(player.getUniqueId())) {
-            stopScoping(player);
+        if (!scopedPlayers.containsKey(player.getUniqueId())) {
+            return;
         }
+
+        // Give other input events from this interaction a chance to run first.
+        getServer().getScheduler().runTask(this, () -> {
+            if (scopedPlayers.containsKey(player.getUniqueId())) {
+                stopScoping(player);
+            }
+        });
     }
 }
