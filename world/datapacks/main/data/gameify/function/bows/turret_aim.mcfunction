@@ -15,6 +15,7 @@ execute as @e[type=arrow,tag=TheTurretArrow] at @s store result entity @s damage
 tag @e[type=arrow,tag=TheTurretArrow] remove TheTurretArrow
 
 scoreboard players remove @s turret_power 3
+scoreboard players remove @s[scores={turret_attack=1..}] turret_attack 1
 # execute as @e[type=marker,tag=TheTurretArrowGuide] at @s store result score @s posX run data get entity @s Motion[0] 10000
 # execute as @e[type=marker,tag=TheTurretArrowGuide] at @s store result score @s posY run data get entity @s Motion[1] 10000
 # execute as @e[type=marker,tag=TheTurretArrowGuide] at @s store result score @s posZ run data get entity @s Motion[2] 10000
