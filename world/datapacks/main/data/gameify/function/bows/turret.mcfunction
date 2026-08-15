@@ -10,8 +10,17 @@ scoreboard players remove @s turret.cooldown 1
 scoreboard players remove @s[scores={turret_power=1..}] turret_power 1
 
 execute as @e[type=item,nbt={Item:{id:"minecraft:redstone"}},distance=..2] at @s run function gameify:bows/turret_power with entity @s
-
 execute as @e[type=item,nbt={Item:{id:"minecraft:redstone_block"}},distance=..2] at @s run function gameify:bows/turret_more_power with entity @s
+
+execute as @e[type=item,nbt={Item:{id:"minecraft:iron_ingot"}},distance=..2] at @s run function gameify:bows/iron_power with entity @s
+execute as @e[type=item,nbt={Item:{id:"minecraft:iron_block"}},distance=..2] at @s run function gameify:bows/iron_power2 with entity @s
+
+# execute as @e[type=item,nbt={Item:{id:"minecraft:gold_ingot"}},distance=..2] at @s run function gameify:bows/turret_power with entity @s
+# execute as @e[type=item,nbt={Item:{id:"minecraft:gold_block"}},distance=..2] at @s run function gameify:bows/turret_more_power with entity @s
+
+# execute as @e[type=item,nbt={Item:{id:"minecraft:lapis_lazuli"}},distance=..2] at @s run function gameify:bows/turret_power with entity @s
+# execute as @e[type=item,nbt={Item:{id:"minecraft:lapis_block"}},distance=..2] at @s run function gameify:bows/turret_more_power with entity @s
+
 
 
 tag @s remove TargetTurret
