@@ -1,0 +1,48 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "minecraft:armor_stand",
+    "A": "minecraft:observer",
+    "B": "minecraft:arrow",
+    "C": "minecraft:redstone_block",
+    "D": "minecraft:bow",
+    "E": "minecraft:stone_pressure_plate"
+  },
+  "pattern": [
+    "BAB",
+    "C#D",
+    "BEB"
+  ],
+  "result": {
+    "id": "minecraft:command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Turret Spawner",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:lore": [
+        {
+          "text": "Spawns a turret which shoots arrows at nearby enemies every few seconds. Upgrades with certain ores.",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "Use redstone to power it, iron to increase the health, gold to increase damage and lapis to increase utility.",
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      "minecraft:consumable": {
+        "consume_seconds": 999999999,
+        "animation": "none",
+        "has_consume_particles": false
+      },
+      "minecraft:item_model": "minecraft:stick",
+      "minecraft:custom_data": {
+        "right_click": true,
+        "turret": true
+      }
+    }
+  }
+}

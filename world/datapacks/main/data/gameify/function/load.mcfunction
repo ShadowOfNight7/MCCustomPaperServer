@@ -192,13 +192,29 @@ scoreboard objectives add turret_id dummy
 # scoreboard players set @e turret_id 0
 
 scoreboard objectives add turret_power dummy
-scoreboard players set @e turret_power 0
 
 scoreboard objectives add turret_health dummy
-scoreboard players set @e turret_health 0
 
 scoreboard objectives add turret_attack dummy
-scoreboard players set @e turret_attack 0
 
 scoreboard objectives add turret_utility dummy
-scoreboard players set @e turret_utility 0
+
+
+#SwordEnchants
+scoreboard objectives add enchant.potion dummy
+scoreboard players set @e enchant.potion 0
+
+scoreboard objectives add enchant.strengthen dummy
+scoreboard players set @e enchant.strengthen 0
+
+scoreboard objectives add enchant.aquatic dummy
+scoreboard players set @e enchant.aquatic 0
+
+scoreboard objectives add enchant.target dummy
+scoreboard players set @e enchant.target -1
+scoreboard objectives add enchant.target2 dummy
+scoreboard players set @e enchant.target2 0
+
+
+scoreboard objectives add itemCount dummy
+scoreboard players set @e itemCount 0

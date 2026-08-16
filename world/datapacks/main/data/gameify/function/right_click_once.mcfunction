@@ -38,5 +38,5 @@ execute as @s[tag=Worker] at @s if items entity @s weapon.mainhand *[custom_data
 execute as @s at @s store result score @s seconds run scoreboard players get @s turret.cooldown
 execute as @s at @s run scoreboard players operation @s seconds /= @s twenty
 
-execute as @s at @s if items entity @s weapon.mainhand *[custom_data~{turret:1b}] if score @s turret.cooldown matches 1.. run tellraw @s ["You are on cooldown. Please wait ",{"score":{"name":"@s","objective":"seconds"}}, " seconds."]
-execute as @s at @s if items entity @s weapon.mainhand *[custom_data~{turret:1b}] if score @s turret.cooldown matches ..0 run function gameify:bows/turrets with entity @s
+execute as @s at @s if items entity @s weapon.mainhand *[custom_data~{turret:true}] if score @s turret.cooldown matches 1.. run tellraw @s ["You are on cooldown. Please wait ",{"score":{"name":"@s","objective":"seconds"}}, " seconds."]
+execute as @s at @s if items entity @s weapon.mainhand *[custom_data~{turret:true}] if score @s turret.cooldown matches ..0 run function gameify:bows/turrets with entity @s

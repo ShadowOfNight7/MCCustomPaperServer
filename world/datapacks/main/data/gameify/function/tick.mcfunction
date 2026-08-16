@@ -392,6 +392,10 @@ execute as @e[type=arrow,nbt={weapon:{components:{"minecraft:custom_data":{snipe
 execute as @e[type=arrow,nbt={weapon:{components:{"minecraft:custom_data":{sniper:true}}}},scores={time=1}] at @s on origin rotated as @s run function gameify:bows/sniper with entity @s
 execute as @e[type=arrow,nbt={weapon:{components:{"minecraft:custom_data":{sniper:true}}}},scores={time=1}] at @s run kill @s
 
+execute as @e[type=arrow,nbt={weapon:{components:{"minecraft:custom_data":{anti_gravity:true}}}},scores={time=1}] at @s run data merge entity @s {NoGravity:true}
+execute as @e[type=arrow,nbt={weapon:{components:{"minecraft:custom_data":{anti_gravity:true}}}},scores={time=200..}] at @s run kill @s
+
+
 execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{life_essence:true}}}}] at @s run function gameify:lives/life with entity @s
 
 #TheTurret
@@ -399,6 +403,37 @@ execute as @a[scores={turret.cooldown=1..}] at @s run scoreboard players remove 
 execute as @e[type=armor_stand,tag=TheTurret] at @s run function gameify:bows/turret with entity @s
 
 execute as @e[type=arrow,tag=TurretArrow] at @s run function gameify:bows/turret_arrow with entity @s
+
+
+
+#Swords
+
+execute as @a at @s if data entity @s SelectedItem.components."minecraft:enchantments"."gameify:strengthen" unless entity @s[nbt=!{active_effects:[{id:"minecraft:strength"}]}] run function gameify:swords/strengthen with entity @s
+execute as @a at @s if data entity @s SelectedItem.components."minecraft:enchantments"."gameify:strengthen" if entity @s[nbt=!{active_effects:[{id:"minecraft:strength"}]}] run attribute @s attack_damage modifier remove minecraft:1785368749352
+execute as @a at @s unless data entity @s SelectedItem.components."minecraft:enchantments"."gameify:strengthen" run attribute @s attack_damage modifier remove minecraft:1785368749352
+
+execute as @a at @s if data entity @s SelectedItem.components."minecraft:enchantments"."gameify:aquatic" if block ~ ~ ~ water run function gameify:swords/aquatic with entity @s
+execute as @a at @s if data entity @s SelectedItem.components."minecraft:enchantments"."gameify:aquatic" unless block ~ ~ ~ water if predicate gameify:rain run function gameify:swords/aquatic with entity @s
+execute as @a at @s if data entity @s SelectedItem.components."minecraft:enchantments"."gameify:aquatic" unless block ~ ~ ~ water unless predicate gameify:rain run attribute @s attack_damage modifier remove minecraft:1785368749353
+execute as @a at @s unless data entity @s SelectedItem.components."minecraft:enchantments"."gameify:aquatic" run attribute @s attack_damage modifier remove minecraft:1785368749353
+
+execute as @e[type=#gameify:mobs,nbt=!{active_effects:[{id:"minecraft:invisibility"}]}] unless score @s enchant.target matches -1 if score @s enchant.target = @s enchant.target at @s run function gameify:swords/targetter with entity @s
+
+execute as @a[scores={health=..45000}] at @s if data entity @s SelectedItem.components."minecraft:enchantments"."gameify:final_stand" run function gameify:swords/final_stand with entity @s
+execute as @a[scores={health=45001..}] at @s run attribute @s attack_damage modifier remove minecraft:1785368749354
+execute as @a at @s unless data entity @s SelectedItem.components."minecraft:enchantments"."gameify:final_stand" run attribute @s attack_damage modifier remove minecraft:1785368749354
+
+
+#SwordForge
+execute as @e[type=item,predicate=gameify:sword] at @s if block ~ ~ ~ water_cauldron unless data entity @s Item.components."minecraft:enchantments"."gameify:potion1" unless data entity @s Item.components."minecraft:enchantments"."gameify:potion2" unless data entity @s Item.components."minecraft:enchantments"."gameify:potion3" run function gameify:swords/craft_potion1 with entity @s
+execute as @e[type=item,predicate=gameify:sword] at @s if block ~ ~ ~ water_cauldron if entity @s[nbt={Item:{components:{"minecraft:enchantments":{"gameify:potion1":1}}}}] run function gameify:swords/craft_potion2 with entity @s
+execute as @e[type=item,predicate=gameify:sword] at @s if block ~ ~ ~ water_cauldron if entity @s[nbt={Item:{components:{"minecraft:enchantments":{"gameify:potion2":1}}}}] run function gameify:swords/craft_potion3 with entity @s
+
+execute as @e[type=item,nbt={Item:{id:"minecraft:book"}}] at @s if entity @e[type=area_effect_cloud,nbt={potion_contents:{potion:"minecraft:strength"}},distance=..3] run function gameify:swords/craft_strengthen with entity @s
+execute as @e[type=item,nbt={Item:{id:"minecraft:book"}}] at @s if entity @e[type=area_effect_cloud,nbt={potion_contents:{potion:"minecraft:long_strength"}},distance=..3] run function gameify:swords/craft_strengthen with entity @s
+execute as @e[type=item,nbt={Item:{id:"minecraft:book"}}] at @s if entity @e[type=area_effect_cloud,nbt={potion_contents:{potion:"minecraft:strong_strength"}},distance=..3] run function gameify:swords/craft_strengthen with entity @s
+
+execute as @e[type=item,nbt={Item:{id:"minecraft:book"}}] at @s if entity @e[type=trident,distance=..2] if block ~ ~ ~ water run function gameify:swords/craft_aquatic with entity @s
 
 
 #End

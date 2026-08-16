@@ -1,0 +1,42 @@
+{
+  "description": {
+    "translate": "enchantment.gameify.custom",
+    "fallback": "Target"
+  },
+  "exclusive_set": [
+    "gameify:potion1",
+    "gameify:potion2",
+    "gameify:potion3",
+    "gameify:strengthen",
+    "gameify:aquatic",
+    "gameify:final_stand"
+  ],
+  "supported_items": "#minecraft:enchantable/sharp_weapon",
+  "primary_items": "#minecraft:enchantable/sharp_weapon",
+  "weight": 1,
+  "max_level": 3,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 1
+  },
+  "max_cost": {
+    "base": 1,
+    "per_level_above_first": 1
+  },
+  "anvil_cost": 1,
+  "slots": [
+    "mainhand"
+  ],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "gameify:swords/target"
+        },
+        "enchanted": "attacker",
+        "affected": "victim"
+      }
+    ]
+  }
+}
