@@ -18,13 +18,13 @@ execute as @s at @s if data entity @s equipment.chest.components."minecraft:cust
 execute as @s at @s if data entity @s equipment.legs.components."minecraft:custom_data".slowness run effect give @s slowness 2 0 true
 execute as @s at @s if data entity @s equipment.feet.components."minecraft:custom_data".slowness run effect give @s slowness 2 0 true
 
-execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.head.components."minecraft:custom_data".experience run summon experience_orb ~ ~3 ~ {Value:1,Tags:["ExperienceArmor"]}
+execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.head.components."minecraft:custom_data".experience run summon experience_orb ~ ~5 ~ {Value:1,Tags:["ExperienceArmor"]}
 execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.head.components."minecraft:custom_data".experience store result entity @e[type=experience_orb,tag=ExperienceArmor,limit=1,sort=nearest] Value short 1 run data get entity @s equipment.head.components."minecraft:custom_data".experience 1
-execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.chest.components."minecraft:custom_data".experience run summon experience_orb ~ ~3 ~ {Value:1,Tags:["ExperienceArmor"]}
+execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.chest.components."minecraft:custom_data".experience run summon experience_orb ~ ~5 ~ {Value:1,Tags:["ExperienceArmor"]}
 execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.chest.components."minecraft:custom_data".experience store result entity @e[type=experience_orb,tag=ExperienceArmor,limit=1,sort=nearest] Value short 1 run data get entity @s equipment.chest.components."minecraft:custom_data".experience 1
-execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.legs.components."minecraft:custom_data".experience run summon experience_orb ~ ~3 ~ {Value:1,Tags:["ExperienceArmor"]}
+execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.legs.components."minecraft:custom_data".experience run summon experience_orb ~ ~5 ~ {Value:1,Tags:["ExperienceArmor"]}
 execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.legs.components."minecraft:custom_data".experience store result entity @e[type=experience_orb,tag=ExperienceArmor,limit=1,sort=nearest] Value short 1 run data get entity @s equipment.legs.components."minecraft:custom_data".experience 1
-execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.feet.components."minecraft:custom_data".experience run summon experience_orb ~ ~3 ~ {Value:1,Tags:["ExperienceArmor"]}
+execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.feet.components."minecraft:custom_data".experience run summon experience_orb ~ ~5 ~ {Value:1,Tags:["ExperienceArmor"]}
 execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.feet.components."minecraft:custom_data".experience store result entity @e[type=experience_orb,tag=ExperienceArmor,limit=1,sort=nearest] Value short 1 run data get entity @s equipment.feet.components."minecraft:custom_data".experience 1
 
 execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.head.components."minecraft:custom_data".experience run tp @e[type=experience_orb,tag=ExperienceArmor] ~ ~ ~
