@@ -15,6 +15,7 @@ scoreboard objectives add blank dummy
 
 scoreboard objectives add playerhit dummy
 scoreboard objectives add playerhitplayer dummy
+scoreboard objectives add crit dummy
 
 
 scoreboard objectives add globalScore dummy
@@ -214,6 +215,9 @@ scoreboard objectives add enchant.target dummy
 scoreboard players set @e enchant.target -1
 scoreboard objectives add enchant.target2 dummy
 scoreboard players set @e enchant.target2 0
+
+scoreboard objectives add enchant.knockout dummy
+scoreboard players set @e enchant.knockout 0
 
 
 scoreboard objectives add itemCount dummy

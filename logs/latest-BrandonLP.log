@@ -1,0 +1,70 @@
+[14:20:14] [ServerMain/INFO]: [bootstrap] Running Java 26 (Java HotSpot(TM) 64-Bit Server VM 26.0.2+10-55; Oracle Corporation null) on Windows 11 10.0 (amd64)
+[14:20:14] [ServerMain/INFO]: [bootstrap] Loading Paper 26.2-65-main@fc9375a (2026-07-22T08:55:19Z) for Minecraft 26.2
+[14:20:14] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[14:20:15] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
+[14:20:15] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
+ - firstplugin (1.0-SNAPSHOT)
+[14:20:19] [DataConverter MCTypeRegistry init thread/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Initialising converters for DataConverter...
+[14:20:19] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[14:20:19] [DataConverter MCTypeRegistry init thread/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Finished initialising converters for DataConverter in 435.9ms
+[14:20:19] [ServerMain/WARN]: Failed to load world data from .\world\level.dat
+java.io.IOException: The cloud file provider is not running
+	at java.base/sun.nio.ch.FileDispatcherImpl.read0(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.FileDispatcherImpl.read(FileDispatcherImpl.java:60) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:341) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:307) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:284) ~[?:?]
+	at java.base/sun.nio.ch.FileChannelImpl.implRead(FileChannelImpl.java:255) ~[?:?]
+	at java.base/sun.nio.ch.FileChannelImpl.read(FileChannelImpl.java:235) ~[?:?]
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:90) ~[?:?]
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:119) ~[?:?]
+	at net.minecraft.util.FastBufferedInputStream.fill(FastBufferedInputStream.java:94) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at net.minecraft.util.FastBufferedInputStream.read(FastBufferedInputStream.java:25) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at java.base/java.util.zip.CheckedInputStream.read(CheckedInputStream.java:59) ~[?:?]
+	at java.base/java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:300) ~[?:?]
+	at java.base/java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:292) ~[?:?]
+	at java.base/java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:198) ~[?:?]
+	at java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:82) ~[?:?]
+	at java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:114) ~[?:?]
+	at net.minecraft.nbt.NbtIo.createDecompressorStream(NbtIo.java:41) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at net.minecraft.nbt.NbtIo.readCompressed(NbtIo.java:49) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at net.minecraft.nbt.NbtIo.readCompressed(NbtIo.java:36) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at net.minecraft.world.level.storage.LevelStorageSource.readLevelDataTagRaw(LevelStorageSource.java:279) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at net.minecraft.world.level.storage.LevelStorageSource$LevelStorageAccess.getUnfixedDataTag(LevelStorageSource.java:573) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at net.minecraft.world.level.storage.LevelStorageSource$LevelStorageAccess.getUnfixedDataTagWithFallback(LevelStorageSource.java:559) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at net.minecraft.server.Main.main(Main.java:203) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at io.papermc.paper.PaperBootstrap.boot(PaperBootstrap.java:25) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at org.bukkit.craftbukkit.Main.main(Main.java:204) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at io.papermc.paperclip.Paperclip.lambda$main$0(Paperclip.java:42) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[?:?]
+[14:20:19] [ServerMain/INFO]: Attempting to use fallback .\world\level.dat_old
+[14:20:19] [ServerMain/ERROR]: Failed to load world data. World files may be corrupted. Shutting down.
+java.io.IOException: The cloud file provider is not running
+	at java.base/sun.nio.ch.FileDispatcherImpl.read0(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.FileDispatcherImpl.read(FileDispatcherImpl.java:60) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:341) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:307) ~[?:?]
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:284) ~[?:?]
+	at java.base/sun.nio.ch.FileChannelImpl.implRead(FileChannelImpl.java:255) ~[?:?]
+	at java.base/sun.nio.ch.FileChannelImpl.read(FileChannelImpl.java:235) ~[?:?]
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:90) ~[?:?]
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:119) ~[?:?]
+	at net.minecraft.util.FastBufferedInputStream.fill(FastBufferedInputStream.java:94) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at net.minecraft.util.FastBufferedInputStream.read(FastBufferedInputStream.java:25) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at java.base/java.util.zip.CheckedInputStream.read(CheckedInputStream.java:59) ~[?:?]
+	at java.base/java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:300) ~[?:?]
+	at java.base/java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:292) ~[?:?]
+	at java.base/java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:198) ~[?:?]
+	at java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:82) ~[?:?]
+	at java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:114) ~[?:?]
+	at net.minecraft.nbt.NbtIo.createDecompressorStream(NbtIo.java:41) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at net.minecraft.nbt.NbtIo.readCompressed(NbtIo.java:49) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at net.minecraft.nbt.NbtIo.readCompressed(NbtIo.java:36) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at net.minecraft.world.level.storage.LevelStorageSource.readLevelDataTagRaw(LevelStorageSource.java:279) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at net.minecraft.world.level.storage.LevelStorageSource$LevelStorageAccess.getUnfixedDataTag(LevelStorageSource.java:573) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at net.minecraft.world.level.storage.LevelStorageSource$LevelStorageAccess.getUnfixedDataTagWithFallback(LevelStorageSource.java:563) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at net.minecraft.server.Main.main(Main.java:203) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at io.papermc.paper.PaperBootstrap.boot(PaperBootstrap.java:25) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at org.bukkit.craftbukkit.Main.main(Main.java:204) ~[paper-26.2.jar:26.2-65-fc9375a]
+	at io.papermc.paperclip.Paperclip.lambda$main$0(Paperclip.java:42) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[?:?]

@@ -423,6 +423,11 @@ execute as @a[scores={health=..45000}] at @s if data entity @s SelectedItem.comp
 execute as @a[scores={health=45001..}] at @s run attribute @s attack_damage modifier remove minecraft:1785368749354
 execute as @a at @s unless data entity @s SelectedItem.components."minecraft:enchantments"."gameify:final_stand" run attribute @s attack_damage modifier remove minecraft:1785368749354
 
+execute as @e[type=#gameify:mobs,scores={enchant.knockout=1..}] at @s run attribute @s gravity modifier add minecraft:1785368749355 100 add_value
+execute as @e[type=#gameify:mobs,scores={enchant.knockout=1}] at @s run attribute @s gravity modifier remove minecraft:1785368749355
+execute as @e[type=#gameify:mobs,scores={enchant.knockout=1..}] at @s run scoreboard players remove @s enchant.knockout 1
+
+
 
 #SwordForge
 execute as @e[type=item,predicate=gameify:sword] at @s if block ~ ~ ~ water_cauldron unless data entity @s Item.components."minecraft:enchantments"."gameify:potion1" unless data entity @s Item.components."minecraft:enchantments"."gameify:potion2" unless data entity @s Item.components."minecraft:enchantments"."gameify:potion3" run function gameify:swords/craft_potion1 with entity @s
@@ -440,3 +445,4 @@ execute as @e[type=item,nbt={Item:{id:"minecraft:book"}}] at @s if entity @e[typ
 
 scoreboard players set @a playerhit 0
 scoreboard players set @a playerhitplayer 0
+scoreboard players set @a crit 0
