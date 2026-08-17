@@ -51,7 +51,7 @@
       "entity": "this",
       "predicate": {
         "minecraft:equipment": {
-          "legs": {
+          "feet": {
             "predicates": {
               "minecraft:custom_data": {
                 "passive_ability": true
