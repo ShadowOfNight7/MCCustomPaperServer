@@ -20,12 +20,13 @@ execute as @s at @s if data entity @s equipment.feet.components."minecraft:custo
 
 execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.head.components."minecraft:custom_data".experience run summon experience_orb ~ ~5 ~ {Value:1,Tags:["ExperienceArmor"]}
 execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.head.components."minecraft:custom_data".experience store result entity @e[type=experience_orb,tag=ExperienceArmor,limit=1,sort=nearest] Value short 1 run data get entity @s equipment.head.components."minecraft:custom_data".experience 1
-execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.chest.components."minecraft:custom_data".experience run summon experience_orb ~ ~5 ~ {Value:1,Tags:["ExperienceArmor"]}
-execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.chest.components."minecraft:custom_data".experience store result entity @e[type=experience_orb,tag=ExperienceArmor,limit=1,sort=nearest] Value short 1 run data get entity @s equipment.chest.components."minecraft:custom_data".experience 1
-execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.legs.components."minecraft:custom_data".experience run summon experience_orb ~ ~5 ~ {Value:1,Tags:["ExperienceArmor"]}
-execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.legs.components."minecraft:custom_data".experience store result entity @e[type=experience_orb,tag=ExperienceArmor,limit=1,sort=nearest] Value short 1 run data get entity @s equipment.legs.components."minecraft:custom_data".experience 1
-execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.feet.components."minecraft:custom_data".experience run summon experience_orb ~ ~5 ~ {Value:1,Tags:["ExperienceArmor"]}
-execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.feet.components."minecraft:custom_data".experience store result entity @e[type=experience_orb,tag=ExperienceArmor,limit=1,sort=nearest] Value short 1 run data get entity @s equipment.feet.components."minecraft:custom_data".experience 1
+execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.chest.components."minecraft:custom_data".experience run summon experience_orb ~ ~5 ~ {Value:1,Tags:["ExperienceArmor1"]}
+execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.chest.components."minecraft:custom_data".experience store result entity @e[type=experience_orb,tag=ExperienceArmor1,limit=1,sort=nearest] Value short 1 run data get entity @s equipment.chest.components."minecraft:custom_data".experience 1
+execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.legs.components."minecraft:custom_data".experience run summon experience_orb ~ ~5 ~ {Value:1,Tags:["ExperienceArmor2"]}
+execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.legs.components."minecraft:custom_data".experience store result entity @e[type=experience_orb,tag=ExperienceArmor2,limit=1,sort=nearest] Value short 1 run data get entity @s equipment.legs.components."minecraft:custom_data".experience 1
+execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.feet.components."minecraft:custom_data".experience run summon experience_orb ~ ~5 ~ {Value:1,Tags:["ExperienceArmor3"]}
+execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.feet.components."minecraft:custom_data".experience run summon creeper
+execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.feet.components."minecraft:custom_data".experience store result entity @e[type=experience_orb,tag=ExperienceArmor3,limit=1,sort=nearest] Value short 1 run data get entity @s equipment.feet.components."minecraft:custom_data".experience 1
 
 # execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.head.components."minecraft:custom_data".experience run tp @e[type=experience_orb,tag=ExperienceArmor] ~ ~ ~
 # execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.chest.components."minecraft:custom_data".experience run tp @e[type=experience_orb,tag=ExperienceArmor] ~ ~ ~
@@ -33,9 +34,9 @@ execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.feet.compo
 # execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.feet.components."minecraft:custom_data".experience run tp @e[type=experience_orb,tag=ExperienceArmor] ~ ~ ~
 
 execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.head.components."minecraft:custom_data".experience run tag @e[type=experience_orb,tag=ExperienceArmor] remove ExperienceArmor
-execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.chest.components."minecraft:custom_data".experience run tag @e[type=experience_orb,tag=ExperienceArmor] remove ExperienceArmor
-execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.legs.components."minecraft:custom_data".experience run tag @e[type=experience_orb,tag=ExperienceArmor] remove ExperienceArmor
-execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.feet.components."minecraft:custom_data".experience run tag @e[type=experience_orb,tag=ExperienceArmor] remove ExperienceArmor
+execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.chest.components."minecraft:custom_data".experience run tag @e[type=experience_orb,tag=ExperienceArmor] remove ExperienceArmor1
+execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.legs.components."minecraft:custom_data".experience run tag @e[type=experience_orb,tag=ExperienceArmor] remove ExperienceArmor2
+execute as @s[scores={playerhit=1}] at @s if data entity @s equipment.feet.components."minecraft:custom_data".experience run tag @e[type=experience_orb,tag=ExperienceArmor] remove ExperienceArmor3
 
 execute as @s at @s if data entity @s equipment.head.components."minecraft:custom_data".resistance store result score @s itemStats run data get entity @s equipment.head.components."minecraft:custom_data".resistance 10
 execute as @s at @s if data entity @s equipment.head.components."minecraft:custom_data".resistance if score @s itemStats matches 35 if score @s resistanceCooldown matches ..0 run effect give @s resistance 5 0 false
