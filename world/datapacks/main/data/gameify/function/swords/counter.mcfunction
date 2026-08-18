@@ -9,3 +9,4 @@ execute as @s[tag=TheCountereded] at @s run effect give @s mining_fatigue 2 9 tr
 
 tag @s remove TheCountereded
 tag @s remove TheCountered
+say a
