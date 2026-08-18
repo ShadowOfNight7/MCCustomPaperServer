@@ -1,12 +1,12 @@
 {
   "description": {
     "translate": "enchantment.gameify.custom",
-    "fallback": "Counter"
+    "fallback": "Snap"
   },
   "exclusive_set": [
     "gameify:potion2",
+    "gameify:potion1",
     "gameify:potion3",
-    "gameify:strengthen",
     "gameify:aquatic",
     "gameify:target",
     "gameify:final_stand"
@@ -14,7 +14,7 @@
   "supported_items": "#minecraft:axes",
   "primary_items": "#minecraft:axes",
   "weight": 1,
-  "max_level": 2,
+  "max_level": 1,
   "min_cost": {
     "base": 1,
     "per_level_above_first": 1
@@ -32,18 +32,10 @@
       {
         "effect": {
           "type": "minecraft:run_function",
-          "function": "gameify:swords/counter"
+          "function": "gameify:swords/snap"
         },
         "enchanted": "attacker",
         "affected": "victim"
-      },
-      {
-        "effect": {
-          "type": "minecraft:run_function",
-          "function": "gameify:swords/countered"
-        },
-        "enchanted": "victim",
-        "affected": "attacker"
       }
     ]
   }
