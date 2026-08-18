@@ -224,6 +224,12 @@ scoreboard players set @e enchant.counter 0
 scoreboard objectives add enchant.counter2 dummy
 scoreboard players set @e enchant.counter2 0
 
+scoreboard objectives add enchant.disorientate dummy
+scoreboard players set @e enchant.disorientate 0
+
+scoreboard objectives add enchant.endurance dummy
+scoreboard players set @e enchant.endurance 0
+
 
 scoreboard objectives add itemCount dummy
 scoreboard players set @e itemCount 0

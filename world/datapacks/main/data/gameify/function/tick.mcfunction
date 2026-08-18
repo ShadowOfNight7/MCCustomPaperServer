@@ -432,6 +432,8 @@ execute as @a[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{time
 execute as @e[type=#gameify:mobs,scores={enchant.counter=1..}] at @s run scoreboard players remove @s enchant.counter 1
 execute as @e[type=#gameify:mobs,scores={enchant.counter=1..5}] at @s run function gameify:swords/counter_indication with entity @s
 
+execute as @a at @s if data entity @s equipment.offhand.components."minecraft:enchantments"."gameify:endurance" run function gameify:swords/endurance with entity @s
+
 #SwordForge
 execute as @e[type=item,predicate=gameify:sword] at @s if block ~ ~ ~ water_cauldron unless data entity @s Item.components."minecraft:enchantments"."gameify:potion1" unless data entity @s Item.components."minecraft:enchantments"."gameify:potion2" unless data entity @s Item.components."minecraft:enchantments"."gameify:potion3" run function gameify:swords/craft_potion1 with entity @s
 execute as @e[type=item,predicate=gameify:sword] at @s if block ~ ~ ~ water_cauldron if entity @s[nbt={Item:{components:{"minecraft:enchantments":{"gameify:potion1":1}}}}] run function gameify:swords/craft_potion2 with entity @s
