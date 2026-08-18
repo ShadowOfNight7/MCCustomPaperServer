@@ -5,7 +5,7 @@ execute as @s at @s on attacker if entity @s[nbt={SelectedItem:{components:{"min
 execute as @s[tag=TheCountereded] at @s run effect give @s weakness 2 9 true
 execute as @s[tag=TheCountereded] at @s run effect give @s slowness 2 9 true
 execute as @s[tag=TheCountereded] at @s run effect give @s mining_fatigue 2 9 true
-execute as @s[tag=TheCountereded] at @s run particle crit ~ ~1 ~ 0 0 0 0.8 30 normal
+execute as @s[tag=TheCountereded] at @s run particle smoke ~ ~1 ~ 0 0 0 1.5 50 normal
 
 
 tag @s remove TheCountereded
