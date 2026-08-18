@@ -17,9 +17,18 @@
             "minecraft:lore": [
                 "He who wields this shall rule them all."
             ],
+            "damage_type": "minecraft:lightning_bolt",
             "minecraft:unbreakable": {},
             "minecraft:attack_range": {
                 "max_reach": 5
+            },
+            "damage_resistant": {
+                "types": "#minecraft:is_fire"
+            },
+            "piercing_weapon": {},
+            "weapon": {
+                "disable_blocking_for_seconds": 7.5,
+                "item_damage_per_attack": 0
             }
         }
     }
