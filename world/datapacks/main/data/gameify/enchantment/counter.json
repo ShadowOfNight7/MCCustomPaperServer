@@ -36,6 +36,14 @@
         },
         "enchanted": "attacker",
         "affected": "victim"
+      },
+      {
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "gameify:swords/countered"
+        },
+        "enchanted": "victim",
+        "affected": "attacker"
       }
     ]
   }
