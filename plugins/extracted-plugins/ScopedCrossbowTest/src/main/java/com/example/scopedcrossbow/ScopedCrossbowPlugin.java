@@ -48,6 +48,10 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
      */
     private final Map<UUID, ScopeState> scopedPlayers = new HashMap<>();
 
+    // Players who have released right click, but whose scope has not
+    // been restored yet. This gives left-click a chance to fire first.
+    private final Map<UUID, Integer> pendingScopeStops = new HashMap<>();
+
     @Override
     public void onEnable() {
         scopedKey = new NamespacedKey(this, "scoped_crossbow");
@@ -311,18 +315,21 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
     public void onArmSwing(PlayerArmSwingEvent event) {
         Player player = event.getPlayer();
 
-        /*
-         * LEFT CLICK WHILE SCOPED
-         *
-         * The player is holding the real spyglass, so the normal
-         * crossbow is stored in ScopeState. Fire that crossbow when
-         * the player swings/left-clicks.
-         */
         ScopeState scope = scopedPlayers.get(player.getUniqueId());
 
         if (scope != null) {
+            /*
+             * Left click while scoped.
+             *
+             * Cancel the arm swing and fire the stored crossbow.
+             */
             event.setCancelled(true);
+
+            // The player is actively firing, so don't stop the scope.
+            cancelPendingScopeStop(player);
+
             fire(player, scope);
+
             return;
         }
 
@@ -344,6 +351,34 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
         event.setCancelled(true);
 
         fire(player, hand, item);
+    }
+
+    private void cancelPendingScopeStop(Player player) {
+        Integer taskId = pendingScopeStops.remove(player.getUniqueId());
+
+        if (taskId != null) {
+            getServer().getScheduler().cancelTask(taskId);
+        }
+    }
+
+    private void scheduleScopeStop(Player player) {
+        UUID uuid = player.getUniqueId();
+
+        // Don't create multiple pending stop tasks.
+        cancelPendingScopeStop(player);
+
+        int taskId = getServer().getScheduler().runTaskLater(
+                this,
+                () -> {
+                    pendingScopeStops.remove(uuid);
+
+                    if (scopedPlayers.containsKey(uuid)) {
+                        stopScoping(player);
+                    }
+                },
+                2L).getTaskId();
+
+        pendingScopeStops.put(uuid, taskId);
     }
 
     /*
@@ -598,6 +633,8 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
      * Stop scope and restore the original crossbow.
      */
     private void stopScoping(Player player) {
+        cancelPendingScopeStop(player);
+
         ScopeState state = scopedPlayers.remove(player.getUniqueId());
 
         if (state == null) {
@@ -606,12 +643,6 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
 
         player.clearActiveItem();
 
-        /*
-         * We don't blindly overwrite an inventory slot.
-         *
-         * If the player changed their inventory while scoped, put
-         * the crossbow back safely.
-         */
         ItemStack current = getStoredHandItem(player, state);
 
         if (current != null && current.getType() == Material.SPYGLASS) {
@@ -748,11 +779,13 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
             return;
         }
 
-        // Give other input events from this interaction a chance to run first.
-        getServer().getScheduler().runTask(this, () -> {
-            if (scopedPlayers.containsKey(player.getUniqueId())) {
-                stopScoping(player);
-            }
-        });
+        /*
+         * Don't immediately restore the crossbow.
+         *
+         * When the player left-clicks while holding right click,
+         * Minecraft can stop the spyglass use first. We wait 2 ticks
+         * so PlayerArmSwingEvent gets a chance to process the shot.
+         */
+        scheduleScopeStop(player);
     }
 }
