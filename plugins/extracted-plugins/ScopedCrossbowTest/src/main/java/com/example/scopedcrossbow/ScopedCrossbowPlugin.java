@@ -376,7 +376,7 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
                         stopScoping(player);
                     }
                 },
-                1L).getTaskId();
+                2L).getTaskId();
 
         pendingScopeStops.put(uuid, taskId);
     }
@@ -613,21 +613,18 @@ public final class ScopedCrossbowPlugin extends JavaPlugin
 
             if (player == null || !player.isOnline()) {
                 scopedPlayers.remove(uuid);
-                pendingScopeStops.remove(uuid);
                 continue;
             }
+
+            // ScopeState state = scopedPlayers.get(uuid);
 
             /*
              * Vanilla has stopped using the spyglass.
              *
-             * DO NOT immediately stop the scope here.
-             *
-             * A left click while holding right click can cause the
-             * spyglass active-item state to temporarily stop. We need
-             * to give PlayerArmSwingEvent time to detect the shot.
+             * This normally happens when the player releases right click.
              */
             if (!player.hasActiveItem()) {
-                scheduleScopeStop(player);
+                stopScoping(player);
             }
         }
     }
