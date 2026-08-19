@@ -11,5 +11,5 @@ execute as @e[type=firework_rocket] at @s run function gameify:swords/snapper wi
 
 scoreboard players remove @s enchant.snap 1
 
-execute as @s at @s run particle mycelium ~ ~1 ~ 1 1 1 0.05 3 normal
+execute as @s at @s run particle mycelium ~ ~1 ~ 0.5 0.5 0.5 0.2 3 normal
 tag @s remove TheSnapped
