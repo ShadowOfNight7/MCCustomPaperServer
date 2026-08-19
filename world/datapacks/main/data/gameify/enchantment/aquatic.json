@@ -9,7 +9,12 @@
     "gameify:potion3",
     "gameify:strengthen",
     "gameify:target",
-    "gameify:final_stand"
+    "gameify:final_stand",
+    "gameify:counter",
+    "gameify:disorientate",
+    "gameify:knockout",
+    "gameify:snap",
+    "gameify:agility"
   ],
   "supported_items": [
     "minecraft:wooden_sword",

@@ -1,5 +1,7 @@
 execute as @s at @s store result score @s enchant.strengthen run data get entity @s SelectedItem.components."minecraft:enchantments"."gameify:strengthen"
 
+execute as @s at @s run particle small_flame ~ ~ ~ 1.2 0.1 1.2 0.06 3 normal
+
 attribute @s attack_damage modifier remove minecraft:1785368749352
 execute as @s at @s if score @s enchant.strengthen matches 1 run attribute @s attack_damage modifier add minecraft:1785368749352 3 add_value
 execute as @s at @s if score @s enchant.strengthen matches 2 run attribute @s attack_damage modifier add minecraft:1785368749352 6 add_value

@@ -9,8 +9,9 @@ execute as @s[tag=CraftedPotion1] at @s as @e[type=item,nbt={Item:{id:"minecraft
 execute as @s[tag=CraftedPotion1] at @s as @e[type=item,nbt={Item:{id:"minecraft:end_crystal"}},distance=..3,limit=1] at @s run function gameify:consume_item with entity @s
 
 execute as @s[tag=CraftedPotion1] at @s run summon item ~ ~ ~ {Item:{id:"minecraft:enchanted_book",count:1,components:{"minecraft:stored_enchantments":{"gameify:strengthen":1}}}}
-execute as @s[tag=CraftedPotion1] at @s run function gameify:consume_item with entity @s
  
 execute as @s[tag=CraftedPotion1] at @s run particle small_flame ~ ~ ~ 0 0 0 0.2 25 normal
+
+execute as @s[tag=CraftedPotion1] at @s run function gameify:consume_item with entity @s
 
 tag @s remove CraftedPotion1

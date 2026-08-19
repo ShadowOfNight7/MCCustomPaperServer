@@ -4,12 +4,16 @@
     "fallback": "Knockout"
   },
   "exclusive_set": [
+    "gameify:potion1",
     "gameify:potion2",
     "gameify:potion3",
     "gameify:strengthen",
     "gameify:aquatic",
     "gameify:target",
-    "gameify:final_stand"
+    "gameify:final_stand",
+    "gameify:counter",
+    "gameify:disorientate",
+    "gameify:snap"
   ],
   "supported_items": "#minecraft:axes",
   "primary_items": "#minecraft:axes",

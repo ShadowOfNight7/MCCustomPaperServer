@@ -1,5 +1,6 @@
 execute as @s at @s store result score @s enchant.potion run random value 1..100
 
+execute as @s at @s if score @s enchant.potion matches 1..30 run particle effect{"color":0,power:1.5} ~ ~1 ~ 0.7 0.7 0.7 0.3 25 normal
 execute as @s at @s if score @s enchant.potion matches 1..30 store result score @s enchant.potion run random value -5..-1
 
 execute as @s at @s if score @s enchant.potion matches -1 run effect give @s darkness 5 0 false

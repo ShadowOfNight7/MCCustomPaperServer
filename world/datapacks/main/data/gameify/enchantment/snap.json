@@ -7,9 +7,13 @@
     "gameify:potion2",
     "gameify:potion1",
     "gameify:potion3",
+    "gameify:strengthen",
     "gameify:aquatic",
     "gameify:target",
-    "gameify:final_stand"
+    "gameify:final_stand",
+    "gameify:counter",
+    "gameify:knockout",
+    "gameify:disorientate"
   ],
   "supported_items": "#minecraft:axes",
   "primary_items": "#minecraft:axes",

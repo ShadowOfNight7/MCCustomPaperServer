@@ -1,7 +1,7 @@
 execute as @s at @s run bossbar add ender_shield "Shield"
 bossbar set ender_shield color blue
 bossbar set ender_shield max 12000
-execute as @a at @s in the_end run bossbar set ender_shield players @a
+execute as @a at @s in the_end if entity @s[x=0] run bossbar set ender_shield players @a
 bossbar set ender_shield style progress
 execute as @s at @s store result bossbar ender_shield value run scoreboard players get @s posX
 

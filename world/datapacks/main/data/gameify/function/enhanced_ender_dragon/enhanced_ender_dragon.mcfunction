@@ -17,7 +17,7 @@ execute as @s[tag=!Phase3,scores={health=..500000}] at @s run tag @s add Phase3
 execute as @s[tag=!Phase2,scores={health=..1000000}] at @s run scoreboard players set @s posX 12000
 execute as @s[tag=!Phase2,scores={health=..1000000}] at @s run tag @s add Phase2
 
-execute as @s[scores={posX=1..},nbt={Invulnerable:false}] at @s in the_end run tellraw @a ["A shield has been formed! Kill endermen to weaken it!"]
+execute as @s[scores={posX=1..},nbt={Invulnerable:false}] at @s as @a at @s in the_end if entity @s[x=0] run tellraw @s ["A shield has been formed! Kill endermen to weaken it!"]
 execute as @s[scores={posX=1..},nbt={Invulnerable:false}] at @s in the_end run scoreboard players set @s posY 550
 execute as @s[scores={posX=1..},nbt={Invulnerable:false}] at @s in the_end run scoreboard players set @s posZ 0
 

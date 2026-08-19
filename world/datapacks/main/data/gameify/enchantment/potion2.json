@@ -9,7 +9,12 @@
     "gameify:strengthen",
     "gameify:aquatic",
     "gameify:target",
-    "gameify:final_stand"
+    "gameify:final_stand",
+    "gameify:counter",
+    "gameify:disorientate",
+    "gameify:knockout",
+    "gameify:snap",
+    "gameify:agility"
   ],
   "supported_items": "#minecraft:enchantable/sharp_weapon",
   "primary_items": "#minecraft:enchantable/sharp_weapon",

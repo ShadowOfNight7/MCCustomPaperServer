@@ -4,12 +4,7 @@
     "fallback": "Entrapment"
   },
   "exclusive_set": [
-    "gameify:potion2",
-    "gameify:potion1",
-    "gameify:potion3",
-    "gameify:aquatic",
-    "gameify:target",
-    "gameify:final_stand"
+    "gameify:endurance"
   ],
   "supported_items": "minecraft:shield",
   "primary_items": "minecraft:shield",

@@ -7,9 +7,14 @@
     "gameify:potion2",
     "gameify:potion1",
     "gameify:potion3",
-    "gameify:aquatic",
+    "gameify:final_stand",
     "gameify:target",
-    "gameify:final_stand"
+    "gameify:aquatic",
+    "gameify:counter",
+    "gameify:disorientate",
+    "gameify:knockout",
+    "gameify:snap",
+    "gameify:agility"
   ],
   "supported_items": "#minecraft:enchantable/sharp_weapon",
   "primary_items": "#minecraft:enchantable/sharp_weapon",
