@@ -430,6 +430,7 @@ execute as @e[type=#gameify:mobs,scores={enchant.knockout=1..}] at @s run scoreb
 execute as @a[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{time_freeze:true}}}}}] at @s run function gameify:swords/time with entity @s
 
 execute as @e[type=#gameify:mobs,scores={enchant.counter=1}] at @s run title @s actionbar [{"text":"     ","color":"red"}]
+execute as @e[type=#gameify:mobs,scores={enchant.counter=1}] at @s run say a
 execute as @e[type=#gameify:mobs,scores={enchant.counter=1..}] at @s run scoreboard players remove @s enchant.counter 1
 execute as @e[type=#gameify:mobs,scores={enchant.counter=1..5}] at @s run function gameify:swords/counter_indication with entity @s
 
