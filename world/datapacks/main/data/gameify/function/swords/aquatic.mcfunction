@@ -16,3 +16,5 @@ execute as @s at @s if score @s enchant.aquatic matches 255.. run attribute @s a
 execute as @s at @s if score @s enchant.aquatic matches 510.. run attribute @s attack_damage modifier add minecraft:1785368749353 1020 add_value
 
 execute as @s at @s if score @s enchant.aquatic matches 3.. run effect give @s water_breathing 1 0 true
+
+particle nautilus ~ ~1 ~ 0.55 0.55 0.55 0.05 1 normal
