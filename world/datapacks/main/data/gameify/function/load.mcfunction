@@ -16,6 +16,7 @@ scoreboard objectives add blank dummy
 scoreboard objectives add playerhit dummy
 scoreboard objectives add playerhitplayer dummy
 scoreboard objectives add crit dummy
+scoreboard objectives add block dummy
 
 
 scoreboard objectives add globalScore dummy

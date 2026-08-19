@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "deflect": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "blocked": true
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gameify:block"
+  },
+  "sends_telemetry_event": false
+}
