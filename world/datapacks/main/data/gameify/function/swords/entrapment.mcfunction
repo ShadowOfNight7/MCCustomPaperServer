@@ -1,2 +1,2 @@
 execute store result score @s enchant.entrapment run random value 1..100
-execute as @s at @s if score @s enchant.entrapment matches 1..7 run summon silverfish ~ ~ ~ {active_effects:[{id:"minecraft:invisibility",duration:-1,show_particles:false},{id:"minecraft:weaving",duration:-1,show_particles:false},{id:"minecraft:instant_damage",duration:-1,show_particles:false,amplifier:9b}]}
+execute as @s at @s if score @s enchant.entrapment matches 1..14 run summon silverfish ~ ~ ~ {active_effects:[{id:"minecraft:invisibility",duration:-1,show_particles:false},{id:"minecraft:weaving",duration:-1,show_particles:false},{id:"minecraft:instant_damage",duration:-1,show_particles:false,amplifier:9b}]}
