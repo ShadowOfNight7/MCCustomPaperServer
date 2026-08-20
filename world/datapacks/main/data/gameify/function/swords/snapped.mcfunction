@@ -8,6 +8,7 @@ execute as @e[type=snowball] at @s run function gameify:swords/snapper with enti
 execute as @e[type=shulker_bullet] at @s run function gameify:swords/snapper with entity @s
 execute as @e[type=llama_spit] at @s run function gameify:swords/snapper with entity @s
 execute as @e[type=firework_rocket] at @s run function gameify:swords/snapper with entity @s
+execute as @e[type=splash_potion] at @s run function gameify:swords/snapper with entity @s
 
 scoreboard players remove @s enchant.snap 1
 
