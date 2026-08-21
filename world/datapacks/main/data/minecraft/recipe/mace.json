@@ -20,7 +20,7 @@
             "damage_type": "minecraft:lightning_bolt",
             "minecraft:unbreakable": {},
             "minecraft:attack_range": {
-                "max_reach": 5
+                "max_reach": 7
             },
             "damage_resistant": {
                 "types": "#minecraft:is_fire"
@@ -29,7 +29,35 @@
             "weapon": {
                 "disable_blocking_for_seconds": 7.5,
                 "item_damage_per_attack": 0
-            }
+            },
+            "enchantments": {
+                "minecraft:sharpness": 5,
+                "minecraft:density": 5,
+                "minecraft:breach": 5,
+                "minecraft:smite": 5,
+                "minecraft:bane_of_arthropods": 5
+            },
+            "enchantment_glint_override": true,
+            "minecraft:attribute_modifiers": [
+                {
+                    "type": "minecraft:attack_damage",
+                    "id": "mace_attack_damage_modifier",
+                    "amount": 4,
+                    "operation": "add_value"
+                },
+                {
+                    "type": "minecraft:attack_speed",
+                    "id": "mace_attack_speed_modifier",
+                    "amount": 3,
+                    "operation": "add_value"
+                },
+                {
+                    "type": "minecraft:fall_damage_multiplier",
+                    "id": "mace_fall_damage_multiplier_modifier",
+                    "amount": 0,
+                    "operation": "add_multiplied_total"
+                }
+            ]
         }
     }
 }

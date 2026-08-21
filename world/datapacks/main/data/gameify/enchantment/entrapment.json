@@ -6,7 +6,10 @@
   "exclusive_set": [
     "gameify:endurance"
   ],
-  "supported_items": "minecraft:shield",
+  "supported_items": [
+    "minecraft:shield",
+    "minecraft:totem_of_undying"
+  ],
   "primary_items": "minecraft:shield",
   "weight": 1,
   "max_level": 1,
