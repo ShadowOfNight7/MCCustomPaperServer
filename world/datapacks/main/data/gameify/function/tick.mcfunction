@@ -458,7 +458,7 @@ execute as @e[type=item,nbt={Item:{id:"minecraft:book"}}] at @s if block ~ ~ ~ c
 
 execute as @e[type=item,nbt={Item:{id:"minecraft:book"}}] at @s in the_end if entity @s[x=0] run function gameify:swords/craft_final_stand with entity @s
 
-execute as @e[type=item,nbt={Item:{id:"minecraft:book"}}] at @s if entity @e[type=spectral_arrow,distance=..1] unless entity @p[distance=..20] run function gameify:swords/craft_final_stand with entity @s
+execute as @e[type=item,nbt={Item:{id:"minecraft:book"}}] at @s if entity @e[type=spectral_arrow,distance=..1] unless entity @p[distance=..20] run function gameify:swords/target with entity @s
 
 execute as @e[type=item,nbt={Item:{id:"minecraft:book"}}] at @s if block ~ ~-1 ~ bedrock if block ~ ~-0.1 ~ bedrock run function gameify:swords/craft_snap with entity @s
 
