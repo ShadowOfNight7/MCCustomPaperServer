@@ -448,7 +448,7 @@ execute as @e[type=item,nbt={Item:{id:"minecraft:book"}}] at @s if entity @e[typ
 execute as @e[type=item,nbt={Item:{id:"minecraft:book"}}] at @s if entity @e[type=area_effect_cloud,nbt={potion_contents:{potion:"minecraft:long_strength"}},distance=..3] run function gameify:swords/craft_strengthen with entity @s
 execute as @e[type=item,nbt={Item:{id:"minecraft:book"}}] at @s if entity @e[type=area_effect_cloud,nbt={potion_contents:{potion:"minecraft:strong_strength"}},distance=..3] run function gameify:swords/craft_strengthen with entity @s
 
-execute as @e[type=item,nbt={Item:{id:"minecraft:book"}}] at @s if entity @e[type=trident,distance=..2] if block ~ ~ ~ water run function gameify:swords/craft_aquatic with entity @s
+execute as @e[type=item,nbt={Item:{id:"minecraft:book"}}] at @s if entity @e[type=trident,distance=..2] run function gameify:swords/craft_aquatic with entity @s
 
 execute as @e[type=item,nbt={Item:{id:"minecraft:book"}}] at @s if entity @e[type=firework_rocket,distance=..3] run function gameify:swords/craft_agility with entity @s
 
