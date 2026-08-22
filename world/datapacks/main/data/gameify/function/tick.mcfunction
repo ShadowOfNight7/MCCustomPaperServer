@@ -52,9 +52,9 @@ execute as @e[tag=TeleportationSkeleton] at @s run function gameify:teleportskel
 execute as @e[type=#zombies] at @s run function gameify:enhanced_zombie/enhanced_zombie with entity @s
 
 execute as @e[type=creeper] at @s run function gameify:enhanced_creeper/enhanced_creeper with entity @s
-execute as @e[tag=Clone] at @s unless entity @e[type=area_effect_cloud,nbt={potion_contents:{custom_effects:[{id:"minecraft:unluck",amplifier:10b}]}}] unless predicate gameify:creeper_dead as @e[distance=..7.5] at @s run damage @s 5 explosion
-execute as @e[tag=Clone] at @s unless entity @e[type=area_effect_cloud,nbt={potion_contents:{custom_effects:[{id:"minecraft:unluck",amplifier:10b}]}}] unless predicate gameify:creeper_dead as @e[distance=..5] at @s run damage @s 10 explosion
-execute as @e[tag=Clone] at @s unless entity @e[type=area_effect_cloud,nbt={potion_contents:{custom_effects:[{id:"minecraft:unluck",amplifier:10b}]}}] unless predicate gameify:creeper_dead as @e[distance=..2.5] at @s run damage @s 15 explosion
+execute as @e[tag=Clone] at @s unless entity @e[type=area_effect_cloud,nbt={potion_contents:{custom_effects:[{id:"minecraft:unluck",amplifier:10b}]}}] unless predicate gameify:creeper_dead as @e[distance=..7.5] at @s run damage @s[type=!item] 5 explosion
+execute as @e[tag=Clone] at @s unless entity @e[type=area_effect_cloud,nbt={potion_contents:{custom_effects:[{id:"minecraft:unluck",amplifier:10b}]}}] unless predicate gameify:creeper_dead as @e[distance=..5] at @s run damage @s[type=!item] 10 explosion
+execute as @e[tag=Clone] at @s unless entity @e[type=area_effect_cloud,nbt={potion_contents:{custom_effects:[{id:"minecraft:unluck",amplifier:10b}]}}] unless predicate gameify:creeper_dead as @e[distance=..2.5] at @s run damage @s[type=!item] 15 explosion
 execute as @e[tag=Clone] at @s unless entity @e[type=area_effect_cloud,nbt={potion_contents:{custom_effects:[{id:"minecraft:unluck",amplifier:10b}]}}] unless predicate gameify:creeper_dead run particle explosion_emitter ~ ~ ~ 0 0 0 0 1 normal
 execute as @e[tag=Clone] at @s unless predicate gameify:creeper_dead run kill @s
 execute as @e[type=area_effect_cloud,nbt={potion_contents:{custom_effects:[{id:"minecraft:unluck",amplifier:10b}]}}] at @s run summon creeper ~ ~ ~ {Tags:["Cloned"]}
