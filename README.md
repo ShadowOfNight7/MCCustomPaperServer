@@ -119,22 +119,31 @@ You can upgrade armor and weapons through various methods creating stronger vers
 Different armor plates can be applied to armor to grant them unique buffs. Each armor piece can only have one armor plate, so choose wisely. 
 
 #### Durability
+This piece of armor has been through too much. Now, all that remains is the journey home. Its surface is marred with scratches, carvings, and hastily scrawled writings. Every tally mark scattered across it carries a painful memory; too grueling to remember; too deeply etched to forget. A lucky ace, now tatter and worn down by the elements, is tied to the helmet, a necklace, holding a faded photo the wearer can only try to remember, strung together on the wearer's back, skulls of the undead. Like its wearer it protects, it will keep enduring, through the worst of storms and the harshest of wars. Even when the battlefield is an eerie silence and the rivers have been dyed with anguish, it will not yield or break until it is home. 
 
 #### Knockback Resist
+The chains that once held the spirit down have weakened over eons, no longer is to bound by the Styx. It wanders the face of this earth, forever hunting the one who betrayed it. No mortal weapon shall make it retreat again, for it shall take no step back; no living soul will stand in its way. It has already crossed the river once, and it will not be forced back across it.
 
 #### Speed
+The piece of armor is clean, smooth, new... too new. Oh, Too green, too oblivious, and too innocent. Not long ago had this piece of armor been worn for the first time, its wearer cheering with his peers at patriotic speeches of the mustached men. The other corps stacked plates and chain mail upon their thick armor, but this piece felt light, almost hollow, perhaps it was. The young boy proudly wore the telescope on his back, binoculars on his waist, and his single flare, unbeknownst to the connotations. God speed young one, may you out run fate, as only the flare is expected to carry the message back.
 
 #### Health
+A heart still beats beneath the armor, though no living flesh remains to carry it. Veins crawl across the plating like roots through dead soil, pulsing with a crimson light that refuses to fade. Each vessel is thick and swollen, carrying whatever blood, ichor, or lifeblood remains within its wearer. The heart does not beat because it must; it beats because it remembers how. It has endured wounds that should have stopped it, blades that should have pierced it, and years that should have silenced it. As long as that heart continues to beat, so too does its wearer.
 
 #### Absorption
+Thick metallic plates strapped directly onto the wearer's armor, protecting the areas that are most vial. They’re just sturdy enough to absorb a few hits; giving the wearer a precious moment to duck their head back into the trenches. The design is crude and heavy, but when the metal rings instead of bone, their burden feels insignificant.
 
 #### Blindness
+Carved right onto the chestplate is forgotten symbol found on the silence armor trim. Worn by the most elite followers of the silent abyss cult, those directly under the warden. The wearer's eyes are blindfolded and soles padded, as in the darkness their eyes are no longer needed and the pure silence will not disturbed by footsteps. Its wear channels the trapped souls to steal the vision of hostile surface-born.
 
 #### Barrier
+Its wearer is said to be of elysian origins; adorned this armor to aid in the completion of their divine mandate. The armor are embellished with a halo of purity and the eyes of true angels, judging the actions of the wrathful, weighing the hearts of the sinful. It intervenes in the wearer's fate when it deems fit, stopping the sharpest of blades and the strongest of axes before it can reach the evangelist.
 
 #### Resistance
+There is no elegance to this armor, nor was there ever meant to be. Layer upon layer of scarred plating has been bolted over the original shell, each piece salvaged from another battle, another corpse, another war. The metal is blackened by fire and stained by things better left unnamed, yet beneath it all the armor remains whole. Blows that should shatter bone merely dent its surface; flames that should consume it leave only another mark among countless others. It can not stop the violence, it can only prevent it from reaching what lies beneath. Every scar is proof that something tried, and failed.
 
 #### Experience
+Runes of the Standard Galactic Alphabet are etched across every inch of the armor, arranged in deliberate columns. When the moon dims and there seems more stars than usual something glows faintly beneath the surface. The words are not meant to be read, and yet it holds records meant to be remembered. Every rune marks a battle, a lesson, a victory, or a mistake that was never made twice. The armor has no voice, yet it carries the knowledge of civilizations long since forgotten. To wear it is to inherit their memories, their instincts, and the lessons bought with blood. The longer it fights, the more it remembers. When the these battle fields have become insignificant and the sun sets one final time, it will be here waiting for a new civilization to rise from the nothingness.
 
 ### Melee Weapons
 TBA
