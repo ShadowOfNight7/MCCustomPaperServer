@@ -14,7 +14,8 @@
     "id": "minecraft:shield",
     "components": {
       "custom_name": {
-        "text": "Gold Plated Shield"
+        "text": "Gold Plated Shield",
+        "italic": false
       },
       "max_damage": 672
     }

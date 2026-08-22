@@ -15,6 +15,7 @@
     "components": {
       "custom_name": {
         "text": "Netherite Plated Shield",
+        "italic": false,
         "color": "blue"
       },
       "max_damage": 2688

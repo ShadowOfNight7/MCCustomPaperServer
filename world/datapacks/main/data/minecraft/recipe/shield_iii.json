@@ -15,6 +15,7 @@
     "components": {
       "custom_name": {
         "text": "Diamond Plated Shield",
+        "italic": false,
         "color": "blue"
       },
       "max_damage": 1344
