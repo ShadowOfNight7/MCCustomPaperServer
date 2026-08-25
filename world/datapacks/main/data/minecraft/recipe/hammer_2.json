@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": "minecraft:stick",
-    "X": "#minecraft:iron_tool_materials"
+    "X": "#minecraft:copper_tool_materials"
   },
   "pattern": [
     "XXX",
@@ -13,14 +13,14 @@
   "result": {
     "id": "minecraft:command_block",
     "components": {
-      "minecraft:item_model": "minecraft:iron_axe",
-      "minecraft:custom_data": "{Hammer:true}",
+      "minecraft:item_model": "minecraft:copper_axe",
+      "minecraft:custom_data": "{Copper_Hammer:true}",
       "minecraft:custom_name": {
-        "text": "Iron Hammer",
+        "text": "Copper Hammer",
         "color": "white",
         "italic": false
       },
-      "max_damage": 20
+      "max_damage": 5
     },
     "count": 1
   }

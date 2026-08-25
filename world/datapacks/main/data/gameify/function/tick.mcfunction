@@ -373,9 +373,13 @@ execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{invisibi
 #Items
 
 execute as @e[type=item,predicate=gameify:armor] at @s if block ~ ~-1 ~ #anvil if block ~ ~-0.1 ~ #anvil run function gameify:plating/armor with entity @s
+execute as @e[type=item,predicate=gameify:armor] at @s if block ~ ~-1 ~ smithing_table if block ~ ~-0.1 ~ smithing_table run function gameify:plating/armor_weaker with entity @s
+
 execute as @e[type=interaction,tag=TheArmorSmith] at @s unless entity @e[type=item,distance=..0.5] run kill @s
-execute as @e[type=interaction,tag=TheArmorSmith] at @s as @e[type=item,distance=..0.5] at @s unless block ~ ~-0.1 ~ #anvil unless block ~ ~-1 ~ #anvil on passengers run kill @s
-execute as @e[type=interaction,tag=TheArmorSmith] at @s run function gameify:plating/smack with entity @s
+execute as @e[type=interaction,tag=TheArmorSmith,tag=!TheArmorSmithWeaker] at @s as @e[type=item,distance=..0.5] at @s unless block ~ ~-0.1 ~ #anvil unless block ~ ~-1 ~ #anvil on passengers run kill @s
+execute as @e[type=interaction,tag=TheArmorSmith,tag=TheArmorSmithWeaker] at @s as @e[type=item,distance=..0.5] at @s unless block ~ ~-0.1 ~ smithing_table unless block ~ ~-1 ~ smithing_table on passengers run kill @s
+execute as @e[type=interaction,tag=TheArmorSmith,tag=!TheArmorSmithWeaker] at @s run function gameify:plating/smack with entity @s
+execute as @e[type=interaction,tag=TheArmorSmith,tag=TheArmorSmithWeaker] at @s run function gameify:plating/smack_weaker with entity @s
 
 execute as @a[predicate=gameify:armor_passive] at @s run function gameify:plating/armor_passive with entity @s
 

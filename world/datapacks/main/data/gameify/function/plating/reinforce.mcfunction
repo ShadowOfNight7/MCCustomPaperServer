@@ -23,3 +23,15 @@ execute as @e[type=armor_stand,tag=ReinforceConsume] at @s run kill @s
 
 #No Reuse
 execute as @s at @s on vehicle run data merge entity @s {Item:{components:{custom_data:{plate_applied:1}}}}
+
+#RemoveTheHammer
+summon armor_stand ~ ~ ~ {Invisible:false,Marker:false,Tags:["ReinforceConsume"]}
+execute as @a[tag=Smithing] at @s if data entity @s SelectedItem.components."minecraft:damage" store result score @s breakingHammer run data get entity @s SelectedItem.components."minecraft:damage"
+execute as @a[tag=Smithing] at @s unless data entity @s SelectedItem.components."minecraft:damage" store result score @s breakingHammer run data get entity @s SelectedItem.components."minecraft:max_damage"
+execute as @a[tag=Smithing] at @s run scoreboard players add @s breakingHammer 1
+execute as @a[tag=Smithing] at @s if score @s breakingHammer matches 5.. if items entity @s weapon.mainhand *[custom_data~{Copper_Hammer:true}] run item replace entity @s weapon.mainhand with air
+execute as @a[tag=Smithing] at @s if score @s breakingHammer matches 20.. if items entity @s weapon.mainhand *[custom_data~{Hammer:true}] run item replace entity @s weapon.mainhand with air
+execute as @a[tag=Smithing] at @s as @e[type=armor_stand,tag=ReinforceConsume] at @s run data modify entity @s equipment.mainhand set from entity @a[tag=Smithing,limit=1] SelectedItem
+execute as @a[tag=Smithing] at @s as @e[type=armor_stand,tag=ReinforceConsume] at @s store result entity @s equipment.mainhand.components."minecraft:damage" int 1 run scoreboard players get @a[tag=Smithing,limit=1] breakingHammer
+execute as @e[type=armor_stand,tag=ReinforceConsume] at @s run item replace entity @a[tag=Smithing] weapon.mainhand from entity @s weapon.mainhand
+execute as @e[type=armor_stand,tag=ReinforceConsume] at @s run kill @s

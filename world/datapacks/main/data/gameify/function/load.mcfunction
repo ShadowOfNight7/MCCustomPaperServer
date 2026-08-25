@@ -160,6 +160,9 @@ scoreboard players set @e itemStats 0
 scoreboard objectives add newItemStats dummy
 scoreboard players set @e newItemStats 0
 
+scoreboard objectives add breakingHammer dummy
+scoreboard players set @e breakingHammer 0
+
 scoreboard objectives add armorPassive.absorption dummy
 scoreboard players set @e armorPassive.absorption 0
 scoreboard objectives add armorPassive.absorption.cooldown dummy
