@@ -19,8 +19,7 @@
         "text": "Iron Hammer",
         "color": "white",
         "italic": false
-      },
-      "minecraft:max_damage": 20
+      }
     },
     "count": 1
   }
