@@ -27,7 +27,7 @@ execute as @s at @s on vehicle run data merge entity @s {Item:{components:{custo
 #RemoveTheHammer
 summon armor_stand ~ ~ ~ {Invisible:false,Marker:false,Tags:["ReinforceConsume"]}
 execute as @a[tag=Smithing] at @s if data entity @s SelectedItem.components."minecraft:damage" store result score @s breakingHammer run data get entity @s SelectedItem.components."minecraft:damage"
-execute as @a[tag=Smithing] at @s unless data entity @s SelectedItem.components."minecraft:damage" store result score @s breakingHammer run data get entity @s SelectedItem.components."minecraft:max_damage"
+execute as @a[tag=Smithing] at @s unless data entity @s SelectedItem.components."minecraft:damage" run scoreboard players set @s breakingHammer 0
 execute as @a[tag=Smithing] at @s run scoreboard players add @s breakingHammer 1
 execute as @a[tag=Smithing] at @s if score @s breakingHammer matches 5.. if items entity @s weapon.mainhand *[custom_data~{Copper_Hammer:true}] run item replace entity @s weapon.mainhand with air
 execute as @a[tag=Smithing] at @s if score @s breakingHammer matches 20.. if items entity @s weapon.mainhand *[custom_data~{Hammer:true}] run item replace entity @s weapon.mainhand with air
