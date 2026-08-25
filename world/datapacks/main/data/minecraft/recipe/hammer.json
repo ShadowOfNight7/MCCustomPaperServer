@@ -20,7 +20,7 @@
         "color": "white",
         "italic": false
       },
-      "max_damage": 20
+      "minecraft:max_damage": 20
     },
     "count": 1
   }
