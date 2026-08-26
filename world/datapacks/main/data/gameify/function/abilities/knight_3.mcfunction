@@ -14,4 +14,4 @@ execute as @s at @s if score @s knightAbility1 matches 10.. run effect give @s a
 
 scoreboard players set @s knightAbility1 0
 
-execute positioned ~ ~1 ~ run particle flash{color:-1446881} ^ ^ ^1.5 0.1 0.1 0.1 0.5 10 force
+execute positioned ~ ~1 ~ run particle flash{color:-1446881} ^ ^ ^1 0.1 0.1 0.1 0.5 10 force
