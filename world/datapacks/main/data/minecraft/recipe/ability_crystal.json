@@ -8,7 +8,7 @@
   "pattern": [
     " G ",
     "GAG",
-    " G"
+    " G "
   ],
   "result": {
     "id": "minecraft:command_block",
