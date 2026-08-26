@@ -479,3 +479,7 @@ scoreboard players set @a playerhit 0
 scoreboard players set @a playerhitplayer 0
 scoreboard players set @a crit 0
 scoreboard players set @a block 0
+
+
+
+
