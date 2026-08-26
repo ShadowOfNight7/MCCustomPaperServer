@@ -315,6 +315,16 @@ execute as @e[tag=ArrowRain,scores={time=20..}] at @s run function gameify:abili
 #Chaplain
 
 
+#Knight
+execute as @a[tag=Knight,scores={knightAbilityInitial=1..},team=Golden] at @s run function gameify:particles/golden_knight_circle with entity @s
+execute as @a[tag=Knight,scores={knightAbilityInitial=1..},team=Royal] at @s run function gameify:particles/royal_knight_circle with entity @s
+execute as @a[tag=Knight,scores={knightAbilityInitial=1}] run function gameify:abilities/knight_3 with entity @s
+
+execute as @a[tag=Knight,scores={knightAbilityInitial2=1..},team=Golden] at @s run function gameify:particles/golden_knight_circle with entity @s
+execute as @a[tag=Knight,scores={knightAbilityInitial2=1..},team=Royal] at @s run function gameify:particles/royal_knight_circle with entity @s
+execute as @a[tag=Knight,scores={knightAbilityInitial2=1}] run function gameify:abilities/knight_4 with entity @s
+
+
 #False Prophet
 execute as @a[tag=FalseProphet] at @s run scoreboard players enable @s conceal
 execute as @a[tag=FalseProphet] at @s run scoreboard players enable @s reveal

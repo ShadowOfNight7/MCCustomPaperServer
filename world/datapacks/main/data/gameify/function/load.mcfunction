@@ -127,6 +127,12 @@ scoreboard objectives add conceal trigger
 scoreboard objectives add knightAbility1 dummy
 scoreboard players set @e knightAbility1 0
 
+scoreboard objectives add knightAbilityInitial dummy
+scoreboard players set @e knightAbilityInitial 0
+
+scoreboard objectives add knightAbilityInitial2 dummy
+scoreboard players set @e knightAbilityInitial2 0
+
 
 
 
