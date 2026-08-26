@@ -13,3 +13,5 @@ execute as @s at @s if score @s knightAbility1 matches 9 run effect give @s abso
 execute as @s at @s if score @s knightAbility1 matches 10.. run effect give @s absorption 180 9 false
 
 scoreboard players set @s knightAbility1 0
+
+particle flash{color:-1446881} ~ ~1 ~ 0.1 0.1 0.1 0.5 100 force
