@@ -39,7 +39,8 @@
       "minecraft:damage_resistant": {
         "types": "#minecraft:is_fire"
       },
-      "minecraft:enchantment_glint_override": true
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:max_stack_size": 1 
     },
     "count": 1
   }
