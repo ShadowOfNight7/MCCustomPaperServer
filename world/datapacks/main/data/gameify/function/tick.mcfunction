@@ -495,6 +495,7 @@ execute as @e[type=#arrows,nbt={crit:true}] at @s if data entity @s weapon.compo
 kill @e[type=#arrows,tag=FastDespawnArrow,nbt={inGround:true}]
 kill @e[type=#arrows,tag=FastDespawnArrow,scores={time=100..}]
 
+execute as @e[type=armor_stand,tag=Dummy] at @s as @e[type=#gameify:hostile_mobs,type=!wither,type=!ender_dragon,type=!warden,type=!elder_guardian,distance=..7.5] facing ~ ~1 ~ if block ^ ^ ^0.2 #air run tp @s ^ ^ ^0.2
 kill @e[type=armor_stand,tag=Dummy,scores={time=100..}]
 
 
