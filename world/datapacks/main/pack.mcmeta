@@ -12,9 +12,6 @@
       {
         "namespace": "minecraft",
         "path": "recipe/anvil.json"
-      },{
-        "namespace": "minecraft",
-        "path": "recipe/shield.json"
       }
     ]
   }

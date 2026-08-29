@@ -1,0 +1,349 @@
+[10:31:31] [ServerMain/INFO]: [bootstrap] Running Java 26 (Java HotSpot(TM) 64-Bit Server VM 26.0.2+10-55; Oracle Corporation null) on Windows 11 10.0 (amd64)
+[10:31:31] [ServerMain/INFO]: [bootstrap] Loading Paper 26.2-65-main@fc9375a (2026-07-22T08:55:19Z) for Minecraft 26.2
+[10:31:31] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[10:31:32] [ServerMain/INFO]: [PluginInitializerManager] Initialized 2 plugins
+[10:31:32] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (2):
+ - ScopedCrossbow (1.0.0), firstplugin (1.0-SNAPSHOT)
+[10:31:35] [DataConverter MCTypeRegistry init thread/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Initialising converters for DataConverter...
+[10:31:35] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[10:31:35] [DataConverter MCTypeRegistry init thread/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Finished initialising converters for DataConverter in 370.3ms
+[10:31:37] [ServerMain/INFO]: Loaded 1665 recipes
+[10:31:37] [ServerMain/INFO]: Loaded 1695 advancements
+[10:31:38] [Server thread/INFO]: Starting minecraft server version 26.2
+[10:31:38] [Server thread/INFO]: Loading properties
+[10:31:38] [Server thread/INFO]: This server is running Paper version 26.2-65-main@fc9375a (2026-07-22T08:55:19Z) (Implementing API version 26.2.build.65-beta)
+[10:31:38] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[10:31:38] [Server thread/INFO]: Using 4 threads for Netty based IO
+[10:31:38] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[10:31:38] [Server thread/INFO]: [MoonriseCommon] Paper is using 3 worker threads, 1 I/O threads
+[10:31:38] [Server console handler/ERROR]: [TerminalConsole] Failed to read console input
+java.io.IOException: The handle is invalid
+	at java.base/java.io.FileInputStream.readBytes(Native Method) ~[?:?]
+	at java.base/java.io.FileInputStream.read(FileInputStream.java:281) ~[?:?]
+	at java.base/java.lang.System$In.read(System.java:1872) ~[?:?]
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:328) ~[?:?]
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:388) ~[?:?]
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:279) ~[?:?]
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:322) ~[?:?]
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:186) ~[?:?]
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:183) ~[?:?]
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:166) ~[?:?]
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:333) ~[?:?]
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:400) ~[?:?]
+	at net.minecrell.terminalconsole.SimpleTerminalConsole.readCommands(SimpleTerminalConsole.java:180) ~[terminalconsoleappender-1.3.0.jar:?]
+	at net.minecrell.terminalconsole.SimpleTerminalConsole.start(SimpleTerminalConsole.java:143) ~[terminalconsoleappender-1.3.0.jar:?]
+	at net.minecraft.server.dedicated.DedicatedServer$1.run(DedicatedServer.java:175) ~[paper-26.2.jar:26.2-65-fc9375a]
+	Suppressed: java.io.IOException: The handle is invalid
+		at java.base/java.io.FileDescriptor.close0(Native Method)
+		at java.base/java.io.FileDescriptor.close(FileDescriptor.java:304)
+		at java.base/java.io.FileInputStream$1.close(FileInputStream.java:507)
+		at java.base/java.io.FileDescriptor.closeAll(FileDescriptor.java:361)
+		at java.base/java.io.FileInputStream.close(FileInputStream.java:505) ~[?:?]
+		at java.base/java.io.BufferedInputStream.close(BufferedInputStream.java:526) ~[?:?]
+		at java.base/sun.nio.cs.StreamDecoder.implClose(StreamDecoder.java:374) ~[?:?]
+		at java.base/sun.nio.cs.StreamDecoder.close(StreamDecoder.java:207) ~[?:?]
+		at java.base/java.io.InputStreamReader.close(InputStreamReader.java:198) ~[?:?]
+		at java.base/java.io.BufferedReader.close(BufferedReader.java:529) ~[?:?]
+		at net.minecrell.terminalconsole.SimpleTerminalConsole.readCommands(SimpleTerminalConsole.java:183) ~[terminalconsoleappender-1.3.0.jar:?]
+		... 2 more
+[10:31:38] [Server thread/INFO]: Default game type: SURVIVAL
+[10:31:38] [Server thread/INFO]: Generating keypair
+[10:31:39] [Server thread/INFO]: Starting Minecraft server on *:25565
+[10:31:39] [Server thread/INFO]: Paper: Using Java compression from Velocity.
+[10:31:39] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
+[10:31:39] [Server thread/ERROR]: [ModernPluginLoadingStrategy] Ambiguous plugin name 'ScopedCrossbow' for files 'plugins\ScopedCrossbow.jar' and 'plugins\ScopedCrossbow-BrandonLP.jar' in 'plugins'
+[10:31:39] [Server thread/INFO]: [ScopedCrossbow] Loading server plugin ScopedCrossbow v1.0.0
+[10:31:39] [Server thread/INFO]: [firstplugin] Loading server plugin firstplugin v1.0-SNAPSHOT
+[10:31:39] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[10:31:39] [Server thread/INFO]: Preparing level "world"
+[10:31:39] [Server thread/INFO]: Loading 0 persistent chunks for level 'minecraft:overworld'...
+[10:31:39] [Server thread/INFO]: Preparing spawn area: 100%
+[10:31:39] [Server thread/INFO]: Prepared spawn area in 3 ms
+[10:31:39] [Server thread/INFO]: Loading 0 persistent chunks for level 'minecraft:the_nether'...
+[10:31:39] [Server thread/INFO]: Prepared spawn area in 0 ms
+[10:31:39] [Server thread/INFO]: Loading 0 persistent chunks for level 'minecraft:the_end'...
+[10:31:39] [Server thread/INFO]: Preparing spawn area: 100%
+[10:31:39] [Server thread/INFO]: Prepared spawn area in 2 ms
+[10:31:39] [Server thread/INFO]: Done preparing level "world" (0.528s)
+[10:31:39] [Server thread/INFO]: [ScopedCrossbow] Enabling ScopedCrossbow v1.0.0
+[10:31:39] [Server thread/INFO]: [ScopedCrossbow] ScopedCrossbow enabled.
+[10:31:39] [Server thread/INFO]: [firstplugin] Enabling firstplugin v1.0-SNAPSHOT
+[10:31:39] [Server thread/INFO]: [firstplugin] Activation Initiated
+[10:31:39] [Server thread/INFO]: [spark] Starting background profiler...
+[10:31:39] [Server thread/INFO]: [spark] The async-profiler engine is not supported for your os/arch (windows11/amd64), so the built-in Java engine will be used instead.
+[10:31:40] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[10:31:40] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[10:31:40] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
+[10:31:40] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[10:31:40] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[10:31:40] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[10:31:40] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[10:31:40] [Server thread/INFO]: Running delayed init tasks
+[10:31:40] [Server thread/INFO]: Done (9.284s)! For help, type "help"
+[10:31:40] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[10:31:40] [Paper Async Task Handler Thread - 1/INFO]: *** Currently you are 50 builds behind ***
+[10:31:40] [Paper Async Task Handler Thread - 1/INFO]: *** It is highly recommended to download the latest build from https://papermc.io/downloads/paper ***
+[10:31:46] [User Authenticator #0/INFO]: UUID of player Pokemon858 is 245b74b6-410a-4eb6-b07e-590d32ad86e3
+[10:31:48] [Server thread/INFO]: Pokemon858 joined the game
+[10:31:48] [Server thread/INFO]: Pokemon858[/127.0.0.1:61901] logged in with entity id 97 at ([minecraft:overworld]-6.09788074221432, 70.20911401805319, 45.833451123182854)
+[10:31:55] [Server thread/INFO]: Pokemon858 issued server command: /relaod
+[10:31:56] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[10:31:56] [Server thread/INFO]: [Pokemon858: Reloading!]
+[10:31:57] [Server thread/INFO]: Loaded 1665 recipes
+[10:31:57] [Server thread/INFO]: Loaded 1695 advancements
+[10:31:57] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[10:32:06] [Server thread/INFO]: Pokemon858 issued server command: /scoreboard players set @s rapidfire 100
+[10:32:06] [Server thread/INFO]: [Pokemon858: Set [rapidfire] for Pokemon858 to 100]
+[10:32:20] [Server thread/INFO]: Pokemon858 issued server command: /scoreboard players set @s rapidfire 100
+[10:32:20] [Server thread/INFO]: [Pokemon858: Set [rapidfire] for Pokemon858 to 100]
+[10:32:36] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[10:32:36] [Server thread/INFO]: [Pokemon858: Reloading!]
+[10:32:37] [Server thread/INFO]: Loaded 1665 recipes
+[10:32:37] [Server thread/INFO]: Loaded 1695 advancements
+[10:32:37] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[10:32:41] [Server thread/INFO]: Pokemon858 issued server command: /scoreboard players set @s rapidfire 100
+[10:32:41] [Server thread/INFO]: [Pokemon858: Set [rapidfire] for Pokemon858 to 100]
+[10:32:51] [Server thread/INFO]: Pokemon858 issued server command: /scoreboard players set @s rapidfire 100
+[10:32:51] [Server thread/INFO]: [Pokemon858: Set [rapidfire] for Pokemon858 to 100]
+[10:34:00] [Server thread/INFO]: Pokemon858 issued server command: /summon minecraft:arrow ~ ~ ~ {Motion:[0d,0d,1d]}
+[10:34:00] [Server thread/INFO]: [Pokemon858: Summoned new Arrow]
+[10:34:02] [Server thread/INFO]: Pokemon858 issued server command: /summon minecraft:arrow ~ ~ ~ {Motion:[0d,0d,1d]}
+[10:34:02] [Server thread/INFO]: [Pokemon858: Summoned new Arrow]
+[10:34:04] [Server thread/INFO]: Pokemon858 issued server command: /summon minecraft:arrow ~ ~ ~ {Motion:[0d,0d,-1d]}
+[10:34:04] [Server thread/INFO]: [Pokemon858: Summoned new Arrow]
+[10:34:05] [Server thread/INFO]: Pokemon858 issued server command: /summon minecraft:arrow ~ ~ ~ {Motion:[0d,0d,-1d]}
+[10:34:05] [Server thread/INFO]: [Pokemon858: Summoned new Arrow]
+[10:34:06] [Server thread/INFO]: Pokemon858 issued server command: /summon minecraft:arrow ~ ~ ~ {Motion:[0d,0d,-1d]}
+[10:34:06] [Server thread/INFO]: [Pokemon858: Summoned new Arrow]
+[10:35:30] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[10:35:30] [Server thread/INFO]: [Pokemon858: Reloading!]
+[10:35:30] [Server thread/INFO]: Loaded 1665 recipes
+[10:35:30] [Server thread/INFO]: Loaded 1695 advancements
+[10:35:30] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[10:35:37] [Server thread/INFO]: Pokemon858 issued server command: /scoreboard players get @s rapidfirecrit 1
+[10:35:43] [Server thread/INFO]: Pokemon858 issued server command: /scoreboard players set @s rapidfirecrit 1
+[10:35:43] [Server thread/INFO]: [Pokemon858: Set [rapidfirecrit] for Pokemon858 to 1]
+[10:35:49] [Server thread/INFO]: Pokemon858 issued server command: /scoreboard players set @s rapidfire 100
+[10:35:49] [Server thread/INFO]: [Pokemon858: Set [rapidfire] for Pokemon858 to 100]
+[10:35:53] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[10:35:53] [Server thread/INFO]: [Pokemon858: Reloading!]
+[10:35:53] [Server thread/INFO]: Loaded 1665 recipes
+[10:35:53] [Server thread/INFO]: Loaded 1695 advancements
+[10:35:53] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[10:35:55] [Server thread/INFO]: Pokemon858 issued server command: /scoreboard players set @s rapidfire 100
+[10:35:55] [Server thread/INFO]: [Pokemon858: Set [rapidfire] for Pokemon858 to 100]
+[10:36:04] [Server thread/INFO]: Pokemon858 issued server command: /scoreboard players set @s rapidfirecrit 1
+[10:36:04] [Server thread/INFO]: [Pokemon858: Set [rapidfirecrit] for Pokemon858 to 1]
+[10:36:05] [Server thread/INFO]: Pokemon858 issued server command: /scoreboard players set @s rapidfire 100
+[10:36:05] [Server thread/INFO]: [Pokemon858: Set [rapidfire] for Pokemon858 to 100]
+[10:37:03] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[10:37:03] [Server thread/INFO]: [Pokemon858: Reloading!]
+[10:37:03] [Server thread/INFO]: Loaded 1665 recipes
+[10:37:03] [Server thread/INFO]: Loaded 1695 advancements
+[10:37:03] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[10:37:04] [Server thread/INFO]: Pokemon858 issued server command: /scoreboard players set @s rapidfirecrit 1
+[10:37:04] [Server thread/INFO]: [Pokemon858: Set [rapidfirecrit] for Pokemon858 to 1]
+[10:37:05] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[10:37:05] [Server thread/INFO]: [Pokemon858: Reloading!]
+[10:37:05] [Server thread/INFO]: Loaded 1665 recipes
+[10:37:05] [Server thread/INFO]: Loaded 1695 advancements
+[10:37:05] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[10:37:07] [Server thread/WARN]: [net.minecraft.server.commands.data.EntityDataAccessor] Serialization errors:
+Zombie['Zombie'/2836, uuid='1c53330f-c428-475e-a56b-fff31ac96c2b', l='ServerLevel[world]', x=-13.50, y=-44.00, z=58.50, cpos=[-1, 3], tl=1, v=true]: Failed to decode value '{mainhand:{components:{enchantments:{vanishing_curse:1},"minecraft:enchantments":{"minecraft:efficiency":2}},count:1,id:"minecraft:stone_shovel"},offhand:{components:{"minecraft:death_protection":{},"minecraft:enchantments":{"minecraft:vanishing_curse":1},"minecraft:item_model":"minecraft:air"},count:1,id:"minecraft:rotten_flesh"}}' from field 'equipment': Duplicate entry for key: 'PatchKey[type=minecraft:enchantments, removed=false]' missed input: {"minecraft:enchantments":{"minecraft:efficiency":2}} missed input: {mainhand:{components:{enchantments:{vanishing_curse:1},"minecraft:enchantments":{"minecraft:efficiency":2}},count:1,id:"minecraft:stone_shovel"}}
+[10:37:07] [Server thread/INFO]: Pokemon858 issued server command: /scoreboard players set @s rapidfirecrit 1
+[10:37:07] [Server thread/INFO]: [Pokemon858: Set [rapidfirecrit] for Pokemon858 to 1]
+[10:37:09] [Server thread/INFO]: Pokemon858 issued server command: /scoreboard players set @s rapidfire 100
+[10:37:09] [Server thread/INFO]: [Pokemon858: Set [rapidfire] for Pokemon858 to 100]
+[10:37:56] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[10:37:56] [Server thread/INFO]: [Pokemon858: Reloading!]
+[10:37:57] [Server thread/INFO]: Loaded 1665 recipes
+[10:37:57] [Server thread/INFO]: Loaded 1695 advancements
+[10:37:57] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[10:37:58] [Server thread/INFO]: Pokemon858 issued server command: /scoreboard players set @s rapidfire 100
+[10:37:58] [Server thread/INFO]: [Pokemon858: Set [rapidfire] for Pokemon858 to 100]
+[10:38:04] [Server thread/INFO]: Pokemon858 issued server command: /scoreboard players set @s rapidfire 10
+[10:38:04] [Server thread/INFO]: [Pokemon858: Set [rapidfire] for Pokemon858 to 10]
+[10:38:16] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[10:38:16] [Server thread/INFO]: [Pokemon858: Reloading!]
+[10:38:16] [Server thread/INFO]: Loaded 1665 recipes
+[10:38:16] [Server thread/INFO]: Loaded 1695 advancements
+[10:38:16] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[10:38:18] [Server thread/INFO]: Pokemon858 issued server command: /scoreboard players set @s rapidfire 10
+[10:38:18] [Server thread/INFO]: [Pokemon858: Set [rapidfire] for Pokemon858 to 10]
+[10:38:20] [Server thread/INFO]: Pokemon858 issued server command: /scoreboard players set @s rapidfire 10
+[10:38:20] [Server thread/INFO]: [Pokemon858: Set [rapidfire] for Pokemon858 to 10]
+[10:38:24] [Server thread/INFO]: Pokemon858 issued server command: /scoreboard players set @s rapidfire 10
+[10:38:24] [Server thread/INFO]: [Pokemon858: Set [rapidfire] for Pokemon858 to 10]
+[10:41:31] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[10:41:31] [Server thread/INFO]: [Pokemon858: Reloading!]
+[10:41:31] [Server thread/INFO]: Loaded 1665 recipes
+[10:41:31] [Server thread/INFO]: Loaded 1695 advancements
+[10:41:31] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[10:41:40] [Server thread/INFO]: Pokemon858 issued server command: /give @s bow[custom_data={rapidfire:true}]
+[10:41:40] [Server thread/INFO]: [Pokemon858: Gave 1 [Bow] to Pokemon858]
+[10:42:06] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[10:42:06] [Server thread/INFO]: [Pokemon858: Reloading!]
+[10:42:06] [Server thread/INFO]: Loaded 1665 recipes
+[10:42:06] [Server thread/INFO]: Loaded 1695 advancements
+[10:42:06] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[10:42:15] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[10:42:15] [Server thread/INFO]: [Pokemon858: Reloading!]
+[10:42:15] [Server thread/INFO]: Loaded 1665 recipes
+[10:42:15] [Server thread/INFO]: Loaded 1695 advancements
+[10:42:16] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[10:42:30] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[10:42:30] [Server thread/INFO]: [Pokemon858: Reloading!]
+[10:42:30] [Server thread/INFO]: Loaded 1665 recipes
+[10:42:30] [Server thread/INFO]: Loaded 1695 advancements
+[10:42:30] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[10:42:33] [Server thread/WARN]: [net.minecraft.server.commands.data.EntityDataAccessor] Serialization errors:
+Zombie['Zombie'/5739, uuid='00bb302f-f6a1-4f1c-92af-7cf6f8a59b21', l='ServerLevel[world]', x=54.50, y=-35.00, z=68.50, cpos=[3, 4], tl=1, v=true]: Failed to decode value '{mainhand:{components:{enchantments:{vanishing_curse:1},"minecraft:enchantments":{"minecraft:efficiency":2,"minecraft:fortune":1}},count:1,id:"minecraft:stone_shovel"},offhand:{components:{"minecraft:death_protection":{},"minecraft:enchantments":{"minecraft:vanishing_curse":1},"minecraft:item_model":"minecraft:air"},count:1,id:"minecraft:rotten_flesh"}}' from field 'equipment': Duplicate entry for key: 'PatchKey[type=minecraft:enchantments, removed=false]' missed input: {"minecraft:enchantments":{"minecraft:efficiency":2,"minecraft:fortune":1}} missed input: {mainhand:{components:{enchantments:{vanishing_curse:1},"minecraft:enchantments":{"minecraft:efficiency":2,"minecraft:fortune":1}},count:1,id:"minecraft:stone_shovel"}}
+[10:42:40] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[10:42:40] [Server thread/INFO]: [Pokemon858: Reloading!]
+[10:42:40] [Server thread/INFO]: Loaded 1665 recipes
+[10:42:40] [Server thread/INFO]: Loaded 1695 advancements
+[10:42:41] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[10:42:50] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[10:42:50] [Server thread/INFO]: [Pokemon858: Reloading!]
+[10:42:50] [Server thread/INFO]: Loaded 1665 recipes
+[10:42:50] [Server thread/INFO]: Loaded 1695 advancements
+[10:42:50] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[10:43:19] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[10:43:19] [Server thread/INFO]: [Pokemon858: Reloading!]
+[10:43:20] [Server thread/INFO]: Loaded 1665 recipes
+[10:43:20] [Server thread/INFO]: Loaded 1695 advancements
+[10:43:20] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[10:45:44] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[10:45:44] [Server thread/INFO]: [Pokemon858: Reloading!]
+[10:45:44] [Server thread/INFO]: Loaded 1665 recipes
+[10:45:44] [Server thread/INFO]: Loaded 1695 advancements
+[10:45:44] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[10:46:00] [Server thread/INFO]: Pokemon858 issued server command: /enchant @s power 5
+[10:46:00] [Server thread/INFO]: [Pokemon858: Applied enchantment Power V to Pokemon858's item]
+[10:46:02] [Server thread/INFO]: Pokemon858 issued server command: /enchant @s punch 2
+[10:46:02] [Server thread/INFO]: [Pokemon858: Applied enchantment Punch II to Pokemon858's item]
+[10:53:41] [Server thread/INFO]: Pokemon858 issued server command: /give @s bow[custom_data={rapidfire:true}]
+[10:53:41] [Server thread/INFO]: [Pokemon858: Gave 1 [Bow] to Pokemon858]
+[10:59:14] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[10:59:14] [Server thread/INFO]: [Pokemon858: Reloading!]
+[10:59:14] [Server thread/INFO]: Loaded 1665 recipes
+[10:59:14] [Server thread/INFO]: Loaded 1695 advancements
+[10:59:14] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[10:59:42] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[10:59:42] [Server thread/INFO]: [Pokemon858: Reloading!]
+[10:59:42] [Server thread/INFO]: Loaded 1665 recipes
+[10:59:42] [Server thread/INFO]: Loaded 1695 advancements
+[10:59:42] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[10:59:48] [Server thread/INFO]: Pokemon858 issued server command: /give @s bow[custom_data={barrage:true}]
+[10:59:48] [Server thread/INFO]: [Pokemon858: Gave 1 [Bow] to Pokemon858]
+[11:01:05] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[11:01:05] [Server thread/INFO]: [Pokemon858: Reloading!]
+[11:01:05] [Server thread/INFO]: Loaded 1665 recipes
+[11:01:05] [Server thread/INFO]: Loaded 1695 advancements
+[11:01:05] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[11:01:39] [Server thread/INFO]: Pokemon858 issued server command: /enchant @s power 5
+[11:01:39] [Server thread/INFO]: [Pokemon858: Applied enchantment Power V to Pokemon858's item]
+[11:01:41] [Server thread/INFO]: Pokemon858 issued server command: /enchant @s punch 2
+[11:01:41] [Server thread/INFO]: [Pokemon858: Applied enchantment Punch II to Pokemon858's item]
+[11:03:00] [Server thread/INFO]: Pokemon858 issued server command: /give @s bow[custom_data={barrage:true,rapidfire:true}]
+[11:03:00] [Server thread/INFO]: [Pokemon858: Gave 1 [Bow] to Pokemon858]
+[11:03:33] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[11:03:33] [Server thread/INFO]: [Pokemon858: Reloading!]
+[11:03:33] [Server thread/INFO]: Loaded 1665 recipes
+[11:03:33] [Server thread/INFO]: Loaded 1695 advancements
+[11:03:33] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[11:03:54] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[11:03:54] [Server thread/INFO]: [Pokemon858: Reloading!]
+[11:03:54] [Server thread/INFO]: Loaded 1665 recipes
+[11:03:54] [Server thread/INFO]: Loaded 1695 advancements
+[11:03:54] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[11:05:39] [Server thread/INFO]: Pokemon858 issued server command: /give @s crossbow[enchantments={quick_charge:10,multishot:3},custom_data={barrage:true}]
+[11:05:39] [Server thread/INFO]: [Pokemon858: Gave 1 [Crossbow] to Pokemon858]
+[11:06:43] [Server thread/INFO]: Pokemon858 issued server command: /give @s crossbow[enchantments={quick_charge:50},custom_data={barrage:true}]
+[11:06:43] [Server thread/INFO]: [Pokemon858: Gave 1 [Crossbow] to Pokemon858]
+[11:07:18] [Server thread/INFO]: Pokemon858 issued server command: /kill @e[type=arrow]
+[11:07:18] [Server thread/INFO]: [Pokemon858: Killed 1155 entities]
+[11:08:36] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[11:08:36] [Server thread/INFO]: [Pokemon858: Reloading!]
+[11:08:36] [Server thread/INFO]: Loaded 1665 recipes
+[11:08:36] [Server thread/INFO]: Loaded 1695 advancements
+[11:08:36] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[11:09:20] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[11:09:20] [Server thread/INFO]: [Pokemon858: Reloading!]
+[11:09:20] [Server thread/INFO]: Loaded 1665 recipes
+[11:09:20] [Server thread/INFO]: Loaded 1695 advancements
+[11:09:20] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[11:10:35] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[11:10:35] [Server thread/INFO]: [Pokemon858: Reloading!]
+[11:10:35] [Server thread/INFO]: Loaded 1665 recipes
+[11:10:35] [Server thread/INFO]: Loaded 1695 advancements
+[11:10:35] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[11:12:40] [Server thread/INFO]: Pokemon858 issued server command: /effect give @e minecraft:glowing infinite
+[11:12:40] [Server thread/INFO]: [Pokemon858: Applied effect Glowing to 225 targets]
+[11:12:43] [Server thread/INFO]: Pokemon858 issued server command: /effect clear @s minecraft:glowing
+[11:12:43] [Server thread/INFO]: [Pokemon858: Removed effect Glowing from Pokemon858]
+[11:14:13] [Server thread/INFO]: Pokemon858 lost connection: Disconnected
+[11:14:13] [Server thread/INFO]: Pokemon858 left the game
+[11:15:24] [User Authenticator #1/INFO]: UUID of player Pokemon858 is 245b74b6-410a-4eb6-b07e-590d32ad86e3
+[11:15:24] [Server thread/INFO]: Pokemon858 joined the game
+[11:15:24] [Server thread/INFO]: Pokemon858[/127.0.0.1:56551] logged in with entity id 27468 at ([minecraft:overworld]43.80042619739356, 95.73778357344096, 29.069877556026658)
+[11:18:55] [Server thread/WARN]: [net.minecraft.server.commands.data.EntityDataAccessor] Serialization errors:
+Zombie['Zombie'/29807, uuid='f59cba34-282a-447b-8481-9c769ef5f4bd', l='ServerLevel[world]', x=15.50, y=24.00, z=86.50, cpos=[0, 5], tl=1, v=true]: Failed to decode value '{mainhand:{components:{enchantments:{vanishing_curse:1},"minecraft:enchantments":{"minecraft:efficiency":2}},count:1,id:"minecraft:stone_shovel"},offhand:{components:{"minecraft:death_protection":{},"minecraft:enchantments":{"minecraft:vanishing_curse":1},"minecraft:item_model":"minecraft:air"},count:1,id:"minecraft:rotten_flesh"}}' from field 'equipment': Duplicate entry for key: 'PatchKey[type=minecraft:enchantments, removed=false]' missed input: {"minecraft:enchantments":{"minecraft:efficiency":2}} missed input: {mainhand:{components:{enchantments:{vanishing_curse:1},"minecraft:enchantments":{"minecraft:efficiency":2}},count:1,id:"minecraft:stone_shovel"}}
+[11:21:42] [Server thread/INFO]: Pokemon858 issued server command: /reload
+[11:21:42] [Server thread/INFO]: [Pokemon858: Reloading!]
+[11:21:43] [Server thread/INFO]: Loaded 1668 recipes
+[11:21:43] [Server thread/INFO]: Loaded 1695 advancements
+[11:21:43] [Server thread/INFO]: [Not Secure] [Server] Loading...
+[11:21:50] [Server thread/INFO]: Pokemon858 issued server command: /recipe give @s *
+[11:21:50] [Server thread/INFO]: [Pokemon858: Unlocked 1668 recipe(s) for Pokemon858]
+[11:32:36] [Server thread/INFO]: Pokemon858 issued server command: /scoreboard players set @s enchant.snap 100
+[11:32:36] [Server thread/INFO]: [Pokemon858: Set [enchant.snap] for Pokemon858 to 100]
+[11:32:43] [Server thread/INFO]: Pokemon858 issued server command: /scoreboard players set @s enchant.snap 100
+[11:32:43] [Server thread/INFO]: [Pokemon858: Set [enchant.snap] for Pokemon858 to 100]
+[11:43:01] [Server thread/WARN]: [net.minecraft.server.commands.data.EntityDataAccessor] Serialization errors:
+Zombie['Zombie'/40685, uuid='e8cc88c9-1288-40f4-9d1d-5ce96d24cc22', l='ServerLevel[world]', x=5.50, y=55.00, z=60.50, cpos=[0, 3], tl=1, v=true]: Failed to decode value '{mainhand:{components:{enchantments:{vanishing_curse:1},"minecraft:enchantments":{"minecraft:efficiency":2,"minecraft:unbreaking":2}},count:1,id:"minecraft:stone_shovel"},offhand:{components:{"minecraft:death_protection":{},"minecraft:enchantments":{"minecraft:vanishing_curse":1},"minecraft:item_model":"minecraft:air"},count:1,id:"minecraft:rotten_flesh"}}' from field 'equipment': Duplicate entry for key: 'PatchKey[type=minecraft:enchantments, removed=false]' missed input: {"minecraft:enchantments":{"minecraft:efficiency":2,"minecraft:unbreaking":2}} missed input: {mainhand:{components:{enchantments:{vanishing_curse:1},"minecraft:enchantments":{"minecraft:efficiency":2,"minecraft:unbreaking":2}},count:1,id:"minecraft:stone_shovel"}}
+[11:46:31] [Server thread/WARN]: [net.minecraft.server.commands.data.EntityDataAccessor] Serialization errors:
+Zombie['Zombie'/43360, uuid='48da75ee-5327-4723-84da-7c34f52fa573', l='ServerLevel[world]', x=42.50, y=33.00, z=36.50, cpos=[2, 2], tl=1, v=true]: Failed to decode value '{mainhand:{components:{enchantments:{vanishing_curse:1},"minecraft:enchantments":{"minecraft:efficiency":1}},count:1,id:"minecraft:stone_axe"},offhand:{components:{"minecraft:death_protection":{},"minecraft:enchantments":{"minecraft:vanishing_curse":1},"minecraft:item_model":"minecraft:air"},count:1,id:"minecraft:rotten_flesh"}}' from field 'equipment': Duplicate entry for key: 'PatchKey[type=minecraft:enchantments, removed=false]' missed input: {"minecraft:enchantments":{"minecraft:efficiency":1}} missed input: {mainhand:{components:{enchantments:{vanishing_curse:1},"minecraft:enchantments":{"minecraft:efficiency":1}},count:1,id:"minecraft:stone_axe"}}
+[11:48:22] [Server thread/WARN]: [net.minecraft.server.commands.data.EntityDataAccessor] Serialization errors:
+Drowned['Drowned'/44127, uuid='88086b30-0a33-46c3-a979-7a9964f83bf3', l='ServerLevel[world]', x=5.50, y=59.00, z=-26.50, cpos=[0, -2], tl=1, v=true]: Failed to decode value '{mainhand:{components:{enchantments:{vanishing_curse:1},"minecraft:enchantments":{"minecraft:unbreaking":1}},count:1,id:"minecraft:stone_shovel"},offhand:{components:{"minecraft:death_protection":{},"minecraft:enchantments":{"minecraft:vanishing_curse":1},"minecraft:item_model":"minecraft:air"},count:1,id:"minecraft:rotten_flesh"}}' from field 'equipment': Duplicate entry for key: 'PatchKey[type=minecraft:enchantments, removed=false]' missed input: {"minecraft:enchantments":{"minecraft:unbreaking":1}} missed input: {mainhand:{components:{enchantments:{vanishing_curse:1},"minecraft:enchantments":{"minecraft:unbreaking":1}},count:1,id:"minecraft:stone_shovel"}}
+[11:51:41] [Server thread/WARN]: [net.minecraft.server.commands.data.EntityDataAccessor] Serialization errors:
+Zombie['Zombie'/45291, uuid='c60d55c5-db22-4194-ad91-b341fb40e039', l='ServerLevel[world]', x=53.50, y=-31.00, z=-13.50, cpos=[3, -1], tl=1, v=true]: Failed to decode value '{mainhand:{components:{enchantments:{vanishing_curse:1},"minecraft:enchantments":{"minecraft:sharpness":3}},count:1,id:"minecraft:stone_shovel"},offhand:{components:{"minecraft:death_protection":{},"minecraft:enchantments":{"minecraft:vanishing_curse":1},"minecraft:item_model":"minecraft:air"},count:1,id:"minecraft:rotten_flesh"}}' from field 'equipment': Duplicate entry for key: 'PatchKey[type=minecraft:enchantments, removed=false]' missed input: {"minecraft:enchantments":{"minecraft:sharpness":3}} missed input: {mainhand:{components:{enchantments:{vanishing_curse:1},"minecraft:enchantments":{"minecraft:sharpness":3}},count:1,id:"minecraft:stone_shovel"}}
+[12:04:59] [Server thread/INFO]: Pokemon858 issued server command: /summon minecraft:acacia_boat
+[12:04:59] [Server thread/INFO]: [Pokemon858: Summoned new Acacia Boat]
+[12:05:18] [Server thread/INFO]: Pokemon858 lost connection: Disconnected
+[12:05:19] [Server thread/INFO]: Pokemon858 left the game
+[13:37:20] [Server thread/INFO]: Stopping server
+[13:37:20] [Server thread/INFO]: [firstplugin] Disabling firstplugin v1.0-SNAPSHOT
+[13:37:20] [Server thread/INFO]: [firstplugin] Deactivation Initiated
+[13:37:20] [Server thread/INFO]: [ScopedCrossbow] Disabling ScopedCrossbow v1.0.0
+[13:37:20] [Server thread/INFO]: Saving players
+[13:37:20] [Server thread/INFO]: Saving worlds
+[13:37:20] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[13:37:20] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'minecraft:overworld'
+[13:37:20] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'minecraft:overworld'
+[13:37:20] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'minecraft:overworld'
+[13:37:20] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 0 entity chunks, 0 poi chunks in world 'minecraft:overworld' in 0.01s
+[13:37:20] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'minecraft:overworld'
+[13:37:20] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'minecraft:overworld'
+[13:37:20] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[13:37:20] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'minecraft:the_nether'
+[13:37:20] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'minecraft:the_nether'
+[13:37:20] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'minecraft:the_nether'
+[13:37:20] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 0 entity chunks, 0 poi chunks in world 'minecraft:the_nether' in 0.00s
+[13:37:20] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'minecraft:the_nether'
+[13:37:20] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'minecraft:the_nether'
+[13:37:20] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
+[13:37:20] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'minecraft:the_end'
+[13:37:20] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'minecraft:the_end'
+[13:37:20] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'minecraft:the_end'
+[13:37:20] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 0 entity chunks, 0 poi chunks in world 'minecraft:the_end' in 0.00s
+[13:37:20] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'minecraft:the_end'
+[13:37:20] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'minecraft:the_end'
+[13:37:20] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[13:37:20] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[13:37:20] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[13:37:20] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[13:37:20] [Server thread/INFO]: Waiting for all RegionFile I/O tasks to complete...
+[13:37:20] [Server thread/INFO]: All RegionFile I/O tasks to complete
+[13:37:20] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of worker pool for up to 60s...
+[13:37:20] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of I/O pool for up to 60s...

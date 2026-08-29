@@ -17,3 +17,6 @@ execute as @s at @s if score @s armorPassive.absorption matches 5 if score @s ra
 
 execute as @s at @s if score @s armorPassive.absorption matches 6 if score @s random matches 1..250 if score @s armorPassive.absorption.cooldown matches 500.. run effect give @s absorption 8 2 false
 execute as @s at @s if score @s armorPassive.absorption matches 6 if score @s random matches 1..250 if score @s armorPassive.absorption.cooldown matches 500.. run scoreboard players set @s armorPassive.absorption.cooldown 0
+
+execute as @s at @s if score @s armorPassive.absorption.cooldown matches 1.. run scoreboard players remove @s armorPassive.absorption.cooldown 15
+execute as @s at @s if score @s armorPassive.absorption.cooldown matches ..-1 run scoreboard players set @s armorPassive.absorption.cooldown 0

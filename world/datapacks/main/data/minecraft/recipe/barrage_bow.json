@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": "minecraft:arrow",
+    "#": "minecraft:bow"
+  },
+  "pattern": [
+    "SSS",
+    "###",
+    "SSS"
+  ],
+  "result": {
+    "id": "minecraft:bow",
+    "components": {
+      "minecraft:custom_data": {
+        "barrage": true
+      },
+      "minecraft:custom_name": {
+        "text": "Barrage Bow",
+        "italic": false
+      },
+      "minecraft:lore": [
+        {
+          "text": "Shoots a large circle of arrows when fully charged.",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    }
+  }
+}
