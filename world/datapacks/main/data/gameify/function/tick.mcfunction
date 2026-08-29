@@ -495,6 +495,8 @@ execute as @e[type=#arrows,nbt={crit:true}] at @s if data entity @s weapon.compo
 kill @e[type=#arrows,tag=FastDespawnArrow,nbt={inGround:true}]
 kill @e[type=#arrows,tag=FastDespawnArrow,scores={time=100..}]
 
+kill @e[type=armor_stand,tag=Dummy,scores={time=100..}]
+
 
 #End
 

@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "food": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "components": {
+            "minecraft:custom_data": {
+              "dummy": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gameify:bows/dummy"
+  }
+}
