@@ -196,6 +196,13 @@ scoreboard players set @e resistanceCooldown 0
 scoreboard objectives add max_snipe_distance dummy
 scoreboard players set @e max_snipe_distance 0
 
+scoreboard objectives add rapidfire dummy
+scoreboard players set @e rapidfire 0
+scoreboard objectives add rapidfiredelay dummy
+scoreboard players set @e rapidfiredelay 0
+scoreboard objectives add rapidfirecrit dummy
+scoreboard players set @e rapidfirecrit 0
+
 
 #Turrets Lol
 scoreboard objectives add turret.cooldown dummy

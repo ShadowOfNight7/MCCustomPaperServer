@@ -484,6 +484,17 @@ execute as @e[type=item,nbt={Item:{id:"minecraft:book"}}] at @s if block ~ ~-1 ~
 
 execute as @e[type=item,nbt={Item:{id:"minecraft:book"}}] at @s if entity @e[type=end_crystal,distance=..1] run function gameify:swords/craft_counter with entity @s
 
+#ExtraBowStuff
+execute as @e[type=#arrows,nbt={crit:true},tag=!AlreadyRapidfired] at @s if data entity @s weapon.components."minecraft:custom_data".rapidfire on origin run scoreboard players set @s rapidfire 12
+execute as @e[type=#arrows,nbt={crit:true}] at @s if data entity @s weapon.components."minecraft:custom_data".rapidfire run tag @s add AlreadyRapidfired
+execute as @e[type=#gameify:mobs,scores={rapidfire=1..}] run function gameify:bows/rapidfire with entity @s
+
+execute as @e[type=#arrows,nbt={crit:true},tag=!Alreadybarrage] at @s if data entity @s weapon.components."minecraft:custom_data".barrage on origin run function gameify:bows/barrage with entity @s
+execute as @e[type=#arrows,nbt={crit:true}] at @s if data entity @s weapon.components."minecraft:custom_data".barrage run kill @s
+
+kill @e[type=#arrows,tag=FastDespawnArrow,nbt={inGround:true}]
+kill @e[type=#arrows,tag=FastDespawnArrow,scores={time=100..}]
+
 
 #End
 
