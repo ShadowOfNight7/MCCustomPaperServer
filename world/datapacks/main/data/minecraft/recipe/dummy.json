@@ -1,0 +1,50 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "minecraft:hay_block",
+    "B": "minecraft:torch",
+    "C": "minecraft:armor_stand",
+    "D": "minecraft:copper_sword"
+  },
+  "pattern": [
+    " A ",
+    "BCD",
+    "   "
+  ],
+  "result": {
+    "id": "command_block",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Dummy",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:lore": [
+        {
+          "text": "Place it down to distract enemies for 5 seconds!",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "(25 second cooldown)",
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      "minecraft:consumable": {
+        "consume_seconds": 0.1,
+        "animation": "none",
+        "has_consume_particles": false
+      },
+      "minecraft:use_cooldown": {
+        "seconds": 25,
+        "cooldown_group": "dummy"
+      },
+      "minecraft:item_model": "minecraft:target",
+      "minecraft:custom_data": {
+        "dummy": true
+      }
+    },
+    "count": 1
+  }
+}
